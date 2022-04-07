@@ -13,7 +13,7 @@ int ask(int row, int col)
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
-	/*"press 5 to check if a shape is a quadrilateral",*/
+	
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
@@ -32,68 +32,6 @@ int ask(int row, int col)
 	
 	return num;
 }
-
-/*int quadrel(int row, int col)
-{
-	clear();
-	char mesg[] = "Enter X";
-	char mesg2[] = "Enter Y";
-	char x1[80],y1[80],x2[80],y2[80],x3[80],y3[80],x4[80],y4[80];
-	
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s1: ",mesg);
-	getstr(x1);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s1: ",mesg2);
-	getstr(y1);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s2: ",mesg);
-	getstr(x2);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s2: ",mesg2);
-	getstr(y2);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s3: ",mesg);
-	getstr(x3);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s3: ",mesg2);
-	getstr(y3);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s4: ",mesg);
-	getstr(x4);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s4: ",mesg2);
-	getstr(y4);
-	clear();
-
-	float fx1,fy1,fx2,fy2,fx3,fy3,fx4,fy4;
-	fx1 = std::stof(x1);
-	fy1 = std::stof(y1);
-	fx2 = std::stof(x2);
-	fy2 = std::stof(y2);
-	fx3 = std::stof(x3);
-	fy3 = std::stof(y3);
-	fx4 = std::stof(x4);
-	fy4 = std::stof(y4);
-	
-
-	switch (quadrilateral(fx1,fy1,fx2,fy2,fx3,fy3,fx4,fy4))
-	{
-	case 1:
-		mvprintw(row/2,col/2,"It is a Parallelogram"  );
-		break;
-	
-	default:
-		mvprintw(row/2,col/2,"It is not a Parallelogram%i", quadrilateral(fx1,fy1,fx2,fy2,fx3,fy3,fx4,fy4)  );
-		break;
-	}
-	
-
-	getch();
- 	endwin();
-	return 0;
-
-}*/
 
 
 int slop(int row, int col)
