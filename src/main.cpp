@@ -9,7 +9,7 @@ int ask(int row, int col)
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
-	"press 5 to check if a shape is a quadrilateral",
+	/*"press 5 to check if a shape is a quadrilateral",*/
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
@@ -28,7 +28,7 @@ int ask(int row, int col)
 	return num;
 }
 
-int quadrel(int row, int col)
+/*int quadrel(int row, int col)
 {
 	clear();
 	char mesg[] = "Enter X";
@@ -88,7 +88,8 @@ int quadrel(int row, int col)
  	endwin();
 	return 0;
 
-}
+}*/
+
 
 
 
@@ -255,7 +256,7 @@ int main()
 			slop(row,col);
 			break;
 		case 5:
-			quadrel(row,col);
+			//quadrel(row,col);
 			break;
 		default:
 		return 1;
