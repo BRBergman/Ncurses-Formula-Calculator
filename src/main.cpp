@@ -2,6 +2,10 @@
 #include <iostream>
 #include "maths.h"
 
+
+
+
+
 int ask(int row, int col)
 {
 	clear();
