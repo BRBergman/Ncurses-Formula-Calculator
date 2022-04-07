@@ -29,6 +29,7 @@ int ask(int row, int col)
 	getstr(numin);
 	int num = std::stoi(numin);
  	endwin();
+	
 	return num;
 }
 
