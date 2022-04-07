@@ -95,17 +95,6 @@ int ask(int row, int col)
 }*/
 
 
-
-
-
-
-
-
-
-
-
-
-
 int slop(int row, int col)
 {
 	clear();
