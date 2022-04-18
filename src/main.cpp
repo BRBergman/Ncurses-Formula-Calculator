@@ -8,6 +8,7 @@
 
 int ask(int row, int col)
 {
+	
 	clear();
 	const char* askev[] = {"press 1 to do the pythagorean theorum ",
 	"press 2 to do the inverse pythagorean theorum",
@@ -60,7 +61,7 @@ int slop(int row, int col)
 	fy1 = std::stof(y1);
 	fx2 = std::stof(x2);
 	fy2 = std::stof(y2);
-
+	beep();
 	mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
 
 	getch();
@@ -95,7 +96,7 @@ int dist(int row, int col)
 	fy1 = std::stof(y1);
 	fx2 = std::stof(x2);
 	fy2 = std::stof(y2);
-
+	beep();
 	mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
 
 	getch();
@@ -121,6 +122,7 @@ int pythag(int row, int col)
 	float b = std::stof(str2);
 	
 	clear();
+	beep();
  	mvprintw(row/2, (col-strlen(mesg2))/2, "C: %f",pythagorean(a,b)  );
  	
 	
@@ -150,6 +152,7 @@ int revpythag(int row, int col)
 	float c = std::stof(str2);
 	
 	clear();
+	beep();
  	mvprintw(row/2, (col-strlen(mesg2))/2, "A: %f",reversepythagorean(b,c)  );
 	
 	
