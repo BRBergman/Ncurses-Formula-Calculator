@@ -103,7 +103,7 @@ int cheiftr(float a, float b, float c)
 		//obtuse
 		return 2;
 	}
-	if (c2 <a2+b2)
+	if (c2 < a2+b2)
 	{
 		//accute
 		return 3;
