@@ -14,6 +14,7 @@ int ask(int row, int col)
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
+	"press 5 to classify a triangle",
 	
 	NULL};
 	
@@ -32,6 +33,59 @@ int ask(int row, int col)
  	endwin();
 	
 	return num;
+}
+
+int classifytri(int row, int col)
+{
+	clear();
+	char mesg[] = "Enter A";
+	char mesg2[] = "Enter B";
+	char mesg3[] = "Enter C";
+	char right[] = "It's a right triangle";
+	char obtuse[] = "It's an obtuse triangle";
+	char accute[] = "It's an accute triangle";
+	char no[] = "It's not a triangle";
+	
+
+	char A[80],B[80],C[80];
+	
+	clear();
+	mvprintw(row/2,(col-strlen(mesg))/2,"%s: ",mesg);
+	getstr(A);
+	clear();
+	mvprintw(row/2,(col-strlen(mesg2))/2,"%s: ",mesg2);
+	getstr(B);
+	clear();
+	mvprintw(row/2,(col-strlen(mesg3))/2,"%s: ",mesg3);
+	getstr(C);
+	clear();
+
+	int AI = std::stoi(A);
+	int BI = std::stoi(B);
+	int CI = std::stoi(C);
+
+	clear();
+	switch (cheiftr(AI,BI,CI))
+	{
+	case 1:
+		//right
+		mvprintw(row/2,(col-strlen(right))/2,"%s1: ",right);
+		break;
+	case 2:
+		//obtuce
+		mvprintw(row/2,(col-strlen(obtuse))/2,"%s1: ",obtuse);
+		break;
+	case 3:
+		// acute
+		mvprintw(row/2,(col-strlen(accute))/2,"%s1: ",accute);
+		break;
+	default:
+		//not a triagel
+		mvprintw(row/2,(col-strlen(no))/2,"%s1: ",no);
+
+		break;
+	}
+	return 0;
 }
 
 
@@ -191,7 +245,7 @@ int main()
 			slop(row,col);
 			break;
 		case 5:
-			//quadrel(row,col);
+			classifytri(row,col);
 			break;
 		default:
 		return 1;
