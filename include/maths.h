@@ -82,3 +82,34 @@ int angles(int sides)
 	return (sides-2) * 180;
 
 }
+
+int cheiftr(float a, float b, float c)
+{
+	// make a case on output so that is does the good
+	if(a+b <= c);
+	{
+		return 0;
+	}
+	double a2 = pow(a,2);
+	double b2 = pow(b,2);
+	double c2 = pow(c,2);
+	if (c2 = a2+b2)
+	{
+		//right
+		return 1;
+	}
+	if (c2 > a2+b2)
+	{
+		//obtuse
+		return 2;
+	}
+	if (c2 <a2+b2)
+	{
+		//accute
+		return 3;
+	}
+	
+	
+	
+
+}
