@@ -59,33 +59,41 @@ int classifytri(int row, int col)
 	mvprintw(row/2,(col-strlen(mesg3))/2,"%s: ",mesg3);
 	getstr(C);
 	clear();
+	mvprintw(row/2,(col-strlen(mesg3))/2,"%s:dsfdsfg ",mesg3);
+	float AI = std::stof(A);
+	float BI = std::stof(B);
+	float CI = std::stof(C);
 
-	int AI = std::stoi(A);
-	int BI = std::stoi(B);
-	int CI = std::stoi(C);
+	int cases = cheiftr(AI,BI,CI);
 
-	clear();
-	switch (cheiftr(AI,BI,CI))
+	printf("a%f, b%f, c%f, out%i",AI,BI,CI,cases);
+
+	
+
+
+
+	switch (cases)
 	{
+	case 0:
+		mvprintw(row/2,(col-strlen(no))/2,"%s: ",no);
+		break;
 	case 1:
 		//right
-		mvprintw(row/2,(col-strlen(right))/2,"%s1: ",right);
+		mvprintw(row/2,(col-strlen(right))/2,"%s: ",right);
 		break;
 	case 2:
 		//obtuce
-		mvprintw(row/2,(col-strlen(obtuse))/2,"%s1: ",obtuse);
+		mvprintw(row/2,(col-strlen(obtuse))/2,"%s: ",obtuse);
 		break;
 	case 3:
 		// acute
-		mvprintw(row/2,(col-strlen(accute))/2,"%s1: ",accute);
-		break;
-	default:
-		//not a triagel
-		mvprintw(row/2,(col-strlen(no))/2,"%s1: ",no);
-
+		mvprintw(row/2,(col-strlen(accute))/2,"%s: ",accute);
 		break;
 	}
+	getch();
+ 	endwin();
 	return 0;
+
 }
 
 
@@ -224,7 +232,7 @@ int main()
 {
 	int row, col;  					/* to store the number of rows and the number of colums of the screen */
 	
-	
+	std::cout << cheiftr(3,4,5);
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 	int num = ask(row,col);

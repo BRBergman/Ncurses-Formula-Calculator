@@ -32,9 +32,7 @@ int quadrilateral (	float x1,float y1,float x2,float y2, float x3,float y3,float
 	double s1 = slope(x1,y1,x2,y2);
 	double s2 = slope(x3,y3,x4,y4);
 	
-	
-	
-	
+
 
 	if (d1 == d2 && s1 == s2)
 	{
@@ -86,15 +84,15 @@ int angles(int sides)
 int cheiftr(float a, float b, float c)
 {
 	// make a case on output so that is does the good
-	if(a+b <= c);
+	if(c >= (a+b))
 	{
 		return 0;
 	}
 	double a2 = pow(a,2);
 	double b2 = pow(b,2);
 	double c2 = pow(c,2);
-	if (c2 = a2+b2)
-	{
+	if (c2 == a2+b2)
+{
 		//right
 		return 1;
 	}
@@ -109,7 +107,5 @@ int cheiftr(float a, float b, float c)
 		return 3;
 	}
 	
-	
-	
-
+	return 0;
 }
