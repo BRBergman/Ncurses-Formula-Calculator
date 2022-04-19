@@ -59,7 +59,7 @@ int classifytri(int row, int col)
 	mvprintw(row/2,(col-strlen(mesg3))/2,"%s: ",mesg3);
 	getstr(C);
 	clear();
-	mvprintw(row/2,(col-strlen(mesg3))/2,"%s:dsfdsfg ",mesg3);
+	
 	float AI = std::stof(A);
 	float BI = std::stof(B);
 	float CI = std::stof(C);
