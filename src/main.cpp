@@ -4,12 +4,11 @@
 
 
 
-
-
 int ask(int row, int col)
 {
 	
 	clear();
+	// add new part here to show up 
 	const char* askev[] = {"press 1 to do the pythagorean theorum ",
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
@@ -30,10 +29,17 @@ int ask(int row, int col)
 	char numin[10];
 	getstr(numin);
 	int num = std::stoi(numin);
- 	endwin();
+ 	
 	
 	return num;
 }
+
+int askagain(int row, int col)
+{
+	
+
+}
+
 
 int classifytri(int row, int col)
 {
@@ -68,30 +74,27 @@ int classifytri(int row, int col)
 
 	printf("a%f, b%f, c%f, out%i",AI,BI,CI,cases);
 
-	
-
-
 
 	switch (cases)
 	{
 	case 0:
-		mvprintw(row/2,(col-strlen(no))/2,"%s: ",no);
+		mvprintw(row/2,(col-strlen(no))/2,"%s",no);
 		break;
 	case 1:
 		//right
-		mvprintw(row/2,(col-strlen(right))/2,"%s: ",right);
+		mvprintw(row/2,(col-strlen(right))/2,"%s",right);
 		break;
 	case 2:
 		//obtuce
-		mvprintw(row/2,(col-strlen(obtuse))/2,"%s: ",obtuse);
+		mvprintw(row/2,(col-strlen(obtuse))/2,"%s",obtuse);
 		break;
 	case 3:
 		// acute
-		mvprintw(row/2,(col-strlen(accute))/2,"%s: ",accute);
+		mvprintw(row/2,(col-strlen(accute))/2,"%s",accute);
 		break;
 	}
 	getch();
- 	endwin();
+ 	
 	return 0;
 
 }
@@ -127,7 +130,7 @@ int slop(int row, int col)
 	mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
 
 	getch();
- 	endwin();
+ 	
 	return 0;
 
 }
@@ -162,7 +165,7 @@ int dist(int row, int col)
 	mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
 
 	getch();
- 	endwin();
+ 	
 	return 0;
 
 }
@@ -192,7 +195,7 @@ int pythag(int row, int col)
 	mvprintw(LINES - 1, col-12, "B: %f", b);
 	
  	getch();
- 	endwin();
+ 	
 
  return 0;
 }
@@ -222,7 +225,7 @@ int revpythag(int row, int col)
 	mvprintw(LINES - 1, col-12, "C: %f", c);
 	
  	getch();
- 	endwin();
+ 	
 
  return 0;
 }
@@ -256,10 +259,23 @@ int main()
 			classifytri(row,col);
 			break;
 		default:
-		return 1;
+		break;
 	}
 	
+	clear();
+	
+	
+	
+	/*char mesg[] = "would you like to preform another equasion?";
+    
+	mvprintw(row/2,(col-strlen(mesg))/2,"%s: ",mesg);
+   	char in[6];
+	getstr(in);*/
+
+	
+	
+	
+	getch();
+	endwin();
 	return 0;
 }
-
-

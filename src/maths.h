@@ -24,9 +24,6 @@ int quadrilateral (	float x1,float y1,float x2,float y2, float x3,float y3,float
 	//top and bottom 
 	double d1 = distance(x1,y1,x2,y2);
 	double d2 = distance(x3,y3,x4,y4);
-	
-	
-	
 
 	//top and bottom
 	double s1 = slope(x1,y1,x2,y2);
