@@ -15,6 +15,7 @@ int ask(int row, int col)
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
 	
+	
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
@@ -275,7 +276,7 @@ int main()
 	
 	
 	
-	getch();
+	
 	endwin();
 	return 0;
 }
