@@ -97,7 +97,6 @@ int classifytri(int row, int col)
 	getch();
  	
 	return 0;
-
 }
 
 
