@@ -9,7 +9,8 @@ int ask(int row, int col)
 	
 	clear();
 	// add new part here to show up 
-	const char* askev[] = {"press 1 to do the pythagorean theorum ",
+	const char* askev[] = {"press 0 to quit",
+	"press 1 to do the pythagorean theorum ",
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
@@ -243,6 +244,10 @@ int main()
 	
 	switch (num)
 	{
+		case 0:
+			clear();
+			endwin();
+			return 0;
 		case 1:
 			pythag(row,col);
 			break;
@@ -259,18 +264,15 @@ int main()
 			classifytri(row,col);
 			break;
 		default:
-		break;
+		return 0 ;
 	}
 	
 	clear();
 	
 	
 	
-	/*char mesg[] = "would you like to preform another equasion?";
     
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s: ",mesg);
-   	char in[6];
-	getstr(in);*/
+	main();
 
 	
 	
