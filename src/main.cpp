@@ -30,8 +30,17 @@ int ask(int row, int col)
 	
 	char numin[10];
 	getstr(numin);
-	int num = std::stoi(numin);
- 	
+	int num;
+	 
+ 	try
+	{
+		num = std::stoi(numin);
+	}//const std::exception& e
+	catch(...)
+	{
+		num = 0;
+	}
+	 
 	
 	return num;
 }
@@ -258,6 +267,8 @@ int main()
 			classifytri(row,col);
 			break;
 		default:
+		clear();
+		endwin();
 		return 0 ;
 	}
 	
