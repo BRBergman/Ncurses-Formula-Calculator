@@ -2,7 +2,7 @@
 #include <iostream>
 #include "maths.h"
 
-
+//add trys and catches to all the pages 
 
 int ask(int row, int col)
 {
