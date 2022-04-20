@@ -46,13 +46,13 @@ int askagain(int row, int col)
 int classifytri(int row, int col)
 {
 	clear();
-	char mesg[] = "Enter A";
-	char mesg2[] = "Enter B";
-	char mesg3[] = "Enter C";
-	char right[] = "It's a right triangle";
-	char obtuse[] = "It's an obtuse triangle";
-	char accute[] = "It's an accute triangle";
-	char no[] = "It's not a triangle";
+	const char mesg[] = "Enter A";
+	const char mesg2[] = "Enter B";
+	const char mesg3[] = "Enter C";
+	const char right[] = "It's a right triangle";
+	const char obtuse[] = "It's an obtuse triangle";
+	const char accute[] = "It's an accute triangle";
+	const char no[] = "It's not a triangle";
 	
 
 	char A[80],B[80],C[80];
@@ -104,8 +104,8 @@ int classifytri(int row, int col)
 int slop(int row, int col)
 {
 	clear();
-	char mesg[] = "Enter X";
-	char mesg2[] = "Enter Y";
+	const char mesg[] = "Enter X";
+	const char mesg2[] = "Enter Y";
 	char x1[80],y1[80],x2[80],y2[80];
 	
 	clear();
@@ -139,8 +139,8 @@ int slop(int row, int col)
 int dist(int row, int col)
 {
 	clear();
-	char mesg[] = "Enter X";
-	char mesg2[] = "Enter Y";
+	const char mesg[] = "Enter X";
+	const char mesg2[] = "Enter Y";
 	char x1[80],y1[80],x2[80],y2[80];
 	
 	clear();
@@ -174,8 +174,8 @@ int dist(int row, int col)
 int pythag(int row, int col)
 {
 	clear();
- 	char mesg[]="Enter A: ";		/* message to be appeared on the screen */
- 	char mesg2[] = "Enter B: ";
+ 	const char mesg[]="Enter A: ";		/* message to be appeared on the screen */
+ 	const char mesg2[] = "Enter B: ";
  	char str[80];
  	char str2[80];
 					
@@ -204,8 +204,8 @@ int pythag(int row, int col)
 int revpythag(int row, int col)
 {
 	clear();
- 	char mesg[]="Enter B: ";		/* message to be appeared on the screen */
- 	char mesg2[] = "Enter C: ";
+ 	const char mesg[]="Enter B: ";		/* message to be appeared on the screen */
+ 	const char mesg2[] = "Enter C: ";
  	char str[80];
  	char str2[80];
 					
