@@ -70,8 +70,6 @@ int classifytri(int row, int col)
 
 	int cases = cheiftr(AI,BI,CI);
 
-	printf("a%f, b%f, c%f, out%i",AI,BI,CI,cases);
-
 
 	switch (cases)
 	{
