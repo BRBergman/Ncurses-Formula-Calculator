@@ -21,8 +21,8 @@ int ask(int row, int col)
 	
 	for (int i = 0; askev[i] != NULL; i++ )
 	{
-		mvprintw(row/2-1+i, (col-strlen(askev[i]))/2, "%s",askev[i] );
-		mvprintw(row/2+2+i,col/2-1, " ");
+		mvprintw(row/2-2+i, (col-strlen(askev[i]))/2, "%s",askev[i] );
+		mvprintw(row/2+1+i,col/2-1, " ");
 	}
 
 	//mvprintw(row-3, (col/2-1) , " ");
@@ -36,11 +36,7 @@ int ask(int row, int col)
 	return num;
 }
 
-int askagain(int row, int col)
-{
-	
 
-}
 
 
 int classifytri(int row, int col)
@@ -269,14 +265,7 @@ int main()
 	
 	clear();
 	
-	
-	
-    
 	main();
-
-	
-	
-	
 	
 	endwin();
 	return 0;
