@@ -106,3 +106,5 @@ int cheiftr(float a, float b, float c)
 	
 	return 0;
 }
+
+
