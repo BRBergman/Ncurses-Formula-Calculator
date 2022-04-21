@@ -89,7 +89,7 @@ int cheiftr(float a, float b, float c)
 	double b2 = pow(b,2);
 	double c2 = pow(c,2);
 	if (c2 == a2+b2)
-{
+	{
 		//right
 		return 1;
 	}
