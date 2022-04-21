@@ -1,4 +1,5 @@
 #include <cmath>
+#include <string>
 
 //defines
 
@@ -70,6 +71,7 @@ double quadperm(float x1,float y1,float x2,float y2, float x3,float y3,float x4,
 
 	return (d1+d2+d3+d4);
 }
+
 int angles(int sides)
 {
 	return (sides-2) * 180;
@@ -104,5 +106,8 @@ int cheiftr(float a, float b, float c)
 	
 	return 0;
 }
+
+
+
 
 
