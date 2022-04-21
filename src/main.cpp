@@ -3,7 +3,14 @@
 #include "maths.h"
 
 //add trys and catches to all the pages 
-
+int error(int row,int col)
+{
+	const char mesg[] = "There is an error. Press any key to continue.";
+	clear();
+	mvprintw(row/2,(col-strlen(mesg)-2)/2,"%s",mesg);
+	getch();
+	return 0;
+}
 int ask(int row, int col)
 {
 	
@@ -73,13 +80,27 @@ int classifytri(int row, int col)
 	getstr(C);
 	clear();
 	
-	float AI = std::stof(A);
-	float BI = std::stof(B);
-	float CI = std::stof(C);
+	
+	float AI;
+	float BI;
+	float CI;
+
+	try
+	{
+		AI = std::stof(A);
+		BI = std::stof(B);
+		CI = std::stof(C);
+
+	}//const std::exception& e
+	catch(...)
+	{
+		error(row,col);
+		return 0;
+	}
 
 	int cases = cheiftr(AI,BI,CI);
 
-
+	beep();
 	switch (cases)
 	{
 	case 0:
@@ -126,10 +147,20 @@ int slop(int row, int col)
 	clear();
 
 	float fx1,fy1,fx2,fy2;
-	fx1 = std::stof(x1);
-	fy1 = std::stof(y1);
-	fx2 = std::stof(x2);
-	fy2 = std::stof(y2);
+	try
+	{
+		fx1 = std::stof(x1);
+		fy1 = std::stof(y1);
+		fx2 = std::stof(x2);
+		fy2 = std::stof(y2);
+	}//const std::exception& e
+	catch(...)
+	{
+		error(row,col);
+		return 0;
+	}
+
+	
 	beep();
 	mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
 
@@ -161,10 +192,18 @@ int dist(int row, int col)
 	clear();
 
 	float fx1,fy1,fx2,fy2;
-	fx1 = std::stof(x1);
-	fy1 = std::stof(y1);
-	fx2 = std::stof(x2);
-	fy2 = std::stof(y2);
+	try
+	{
+		fx1 = std::stof(x1);
+		fy1 = std::stof(y1);
+		fx2 = std::stof(x2);
+		fy2 = std::stof(y2);
+	}//const std::exception& e
+	catch(...)
+	{
+		error(row,col);
+		return 0;
+	}
 	beep();
 	mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
 
@@ -187,9 +226,20 @@ int pythag(int row, int col)
 	clear();
  	mvprintw(row/2,(col-strlen(mesg2))/2,"%s",mesg2);	/* print the message at the center of the screen */
 	getstr(str2);
-	float a = std::stof(str);
-	float b = std::stof(str2);
-	
+	float a;
+	float b;
+	try
+	{
+		a = std::stof(str);
+		b = std::stof(str2);
+	}//const std::exception& e
+	catch(...)
+	{
+		error(row,col);
+		return 0;
+	}
+
+
 	clear();
 	beep();
  	mvprintw(row/2, (col-strlen(mesg2))/2, "C: %f",pythagorean(a,b)  );
@@ -217,8 +267,18 @@ int revpythag(int row, int col)
 	clear();
  	mvprintw(row/2,(col-strlen(mesg2))/2,"%s",mesg2);	/* print the message at the center of the screen */
 	getstr(str2);
-	float b = std::stof(str);
-	float c = std::stof(str2);
+	float b;
+	float c;
+	try
+	{
+		b = std::stof(str);
+		c = std::stof(str2);
+	}//const std::exception& e
+	catch(...)
+	{
+		error(row,col);
+		return 0;
+	}
 	
 	clear();
 	beep();
