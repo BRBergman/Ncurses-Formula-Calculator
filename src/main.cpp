@@ -6,7 +6,7 @@
 //add trys and catches to all the pages 
 int error(int row,int col)
 {
-	const char mesg[] = "There is an error. Press any key to continue.";
+	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
 	mvprintw(row/2,(col-strlen(mesg)-2)/2,"%s",mesg);
 	getch();
