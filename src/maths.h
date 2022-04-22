@@ -108,6 +108,9 @@ int cheiftr(float a, float b, float c)
 }
 
 
-
+int simplsqrt(int index, int radical, int radicand)
+{
+	
+}
 
 

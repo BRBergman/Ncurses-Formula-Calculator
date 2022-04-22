@@ -33,7 +33,6 @@ int ask(int row, int col)
 		mvprintw(row/2+1+i,col/2-1, " ");
 	}
 
-	//mvprintw(row-3, (col/2-1) , " ");
 	
 	
 	char numin[10];
