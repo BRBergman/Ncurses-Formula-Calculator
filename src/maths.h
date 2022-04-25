@@ -107,10 +107,12 @@ int cheiftr(float a, float b, float c)
 	return 0;
 }
 
-
-int simplsqrt(int index, int radical, int radicand)
+/*int quad(float a, float b, float c)
 {
-	
-}
+	int x;
+	(a*(x*x))+(b*x) + c = 0;
+
+	return x;
+}*/
 
 
