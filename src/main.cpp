@@ -5,6 +5,7 @@
 
 
 
+
 //add trys and catches to all the pages 
 int error(int row,int col)
 {
