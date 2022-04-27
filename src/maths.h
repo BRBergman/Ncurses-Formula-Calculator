@@ -108,34 +108,6 @@ int cheiftr(float a, float b, float c)
 	return 0;
 }
 
-int quad(float a, float b, float c)
-{	
-	float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
-   
-    
-    discriminant = b*b - 4*a*c;
-    
-    if (discriminant > 0) {
-        x1 = (-b + sqrt(discriminant)) / (2*a);
-        x2 = (-b - sqrt(discriminant)) / (2*a);
-       
-    }
-    
-    else if (discriminant == 0) {
-        
-        x1 = -b/(2*a);
-        
-    }
 
-    else {
-        realPart = -b/(2*a);
-        imaginaryPart =sqrt(-discriminant)/(2*a);
-        
-    }
-
-
-
-	return realPart, imaginaryPart;
-}
 
 
