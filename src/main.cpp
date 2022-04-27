@@ -3,6 +3,8 @@
 #include <iostream>
 #include "maths.h"
 
+
+
 //add trys and catches to all the pages 
 int error(int row,int col)
 {
@@ -297,6 +299,9 @@ int revpythag(int row, int col)
 
 int main()
 {
+
+
+
 	int row, col;  					/* to store the number of rows and the number of colums of the screen */
 	
 	std::cout << cheiftr(3,4,5);
