@@ -71,7 +71,6 @@ int classifytri()
 	
 	char Word[4][10] = {};
 
-	//std::string Word[4];
 	
 	
 	for (int i = 0; i < 3; i++)
@@ -95,7 +94,7 @@ int classifytri()
 		BI = std::stof(Word[1]);
 		CI = std::stof(Word[2]);
 
-	}//const std::exception& e
+	}
 	catch(...)
 	{
 		error();
