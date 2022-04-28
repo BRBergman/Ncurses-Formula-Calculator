@@ -122,13 +122,10 @@ int classifytri()
 }
 
 
-int slop()
+int slop(bool dist/**/)
 {
 	clear();
 	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
-	
-	char x1[80],y1[80],x2[80],y2[80];
-	
 	
 
 	char Word[4][10] = {};
@@ -161,7 +158,16 @@ int slop()
 
 	clear();
 	beep();
-	mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
+	if (dist)
+	{
+		mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
+
+	}
+	else
+	{
+		
+		mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
+	}
 
 	getch();
  	
@@ -169,13 +175,9 @@ int slop()
 
 }
 
-int dist()
 {
 	clear();
 	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
-	
-	char x1[80],y1[80],x2[80],y2[80];
-	
 	
 
 	char Word[4][10] = {};
@@ -206,6 +208,8 @@ int dist()
 		return 0;
 	}
 	beep();
+	clear();
+	
 	mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
 
 	getch();
@@ -322,10 +326,10 @@ int main()
 			revpythag();
 			break;
 		case 3:
-			dist();
+			slop(true);
 			break;
 		case 4:
-			slop();
+			slop(false);
 			break;
 		case 5:
 			classifytri();
