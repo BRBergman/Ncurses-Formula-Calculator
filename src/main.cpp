@@ -20,7 +20,7 @@ int ask()
 	
 	clear();
 	// add new part here to show up 
-	const char* askev[] = {"press 0 to quit",
+	char* askev[] = {"press 0 to quit",
 	"press 1 to do the pythagorean theorum ",
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
@@ -61,28 +61,29 @@ int ask()
 int classifytri()
 {
 	clear();
-	char mesg[] = "Enter A";
-	const char mesg2[] = "Enter B";
-	const char mesg3[] = "Enter C";
+	char *mesg[] = {"Enter A","Enter B","Enter C"};
+	//const char mesg2[] = "Enter B";
+	//const char mesg3[] = "Enter C";
 	const char right[] = "It's a right triangle";
 	const char obtuse[] = "It's an obtuse triangle";
 	const char accute[] = "It's an accute triangle";
 	const char no[] = "It's not a triangle";
 	
+	char Word[4][10] = {};
 
-	char A[80],B[80],C[80];
+	//std::string Word[4];
 	
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s: ",mesg);
-	getstr(A);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg2))/2,"%s: ",mesg2);
-	getstr(B);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg3))/2,"%s: ",mesg3);
-	getstr(C);
-	clear();
 	
+	for (int i = 0; i < 3; i++)
+	{
+		char x[40];
+		clear();
+		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
+		//getch(Word[i]);
+		getstr(Word[i]);
+		
+	} 
+
 	
 	float AI;
 	float BI;
@@ -90,9 +91,9 @@ int classifytri()
 
 	try
 	{
-		AI = std::stof(A);
-		BI = std::stof(B);
-		CI = std::stof(C);
+		AI = std::stof(Word[0]);
+		BI = std::stof(Word[1]);
+		CI = std::stof(Word[2]);
 
 	}//const std::exception& e
 	catch(...)
