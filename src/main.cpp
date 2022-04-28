@@ -2,12 +2,12 @@
 #include <ncurses.h>			/* ncurses.h includes stdio.h */  
 #include <iostream>
 #include "maths.h"
-
+int row, col;
 
 
 
 //add trys and catches to all the pages 
-int error(int row,int col)
+int error()
 {
 	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
@@ -15,7 +15,7 @@ int error(int row,int col)
 	getch();
 	return 0;
 }
-int ask(int row, int col)
+int ask()
 {
 	
 	clear();
@@ -58,10 +58,10 @@ int ask(int row, int col)
 
 
 
-int classifytri(int row, int col)
+int classifytri()
 {
 	clear();
-	const char mesg[] = "Enter A";
+	char mesg[] = "Enter A";
 	const char mesg2[] = "Enter B";
 	const char mesg3[] = "Enter C";
 	const char right[] = "It's a right triangle";
@@ -97,7 +97,7 @@ int classifytri(int row, int col)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 
@@ -128,7 +128,7 @@ int classifytri(int row, int col)
 }
 
 
-int slop(int row, int col)
+int slop()
 {
 	clear();
 	const char mesg[] = "Enter X";
@@ -159,7 +159,7 @@ int slop(int row, int col)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 
@@ -173,7 +173,7 @@ int slop(int row, int col)
 
 }
 
-int dist(int row, int col)
+int dist()
 {
 	clear();
 	const char mesg[] = "Enter X";
@@ -204,7 +204,7 @@ int dist(int row, int col)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 	beep();
@@ -216,7 +216,7 @@ int dist(int row, int col)
 
 }
  
-int pythag(int row, int col)
+int pythag()
 {
 	clear();
  	const char mesg[]="Enter A: ";		/* message to be appeared on the screen */
@@ -238,7 +238,7 @@ int pythag(int row, int col)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 
@@ -257,7 +257,7 @@ int pythag(int row, int col)
  return 0;
 }
 
-int revpythag(int row, int col)
+int revpythag()
 {
 	clear();
  	const char mesg[]="Enter B: ";		/* message to be appeared on the screen */
@@ -279,7 +279,7 @@ int revpythag(int row, int col)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 	
@@ -303,12 +303,12 @@ int main()
 
 
 
-	int row, col;  					/* to store the number of rows and the number of colums of the screen */
+	  					/* to store the number of rows and the number of colums of the screen */
 	
 	std::cout << cheiftr(3,4,5);
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
-	int num = ask(row,col);
+	int num = ask();
 
 	
 	switch (num)
@@ -318,19 +318,19 @@ int main()
 			endwin();
 			return 0;
 		case 1:
-			pythag(row,col);
+			pythag();
 			break;
 		case 2:
-			revpythag(row,col);
+			revpythag();
 			break;
 		case 3:
-			dist(row,col);
+			dist();
 			break;
 		case 4:
-			slop(row,col);
+			slop();
 			break;
 		case 5:
-			classifytri(row,col);
+			classifytri();
 			break;
 		default:
 		clear();
