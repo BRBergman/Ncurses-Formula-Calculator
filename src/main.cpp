@@ -68,7 +68,6 @@ int classifytri()
 	char Word[4][10] = {};
 
 	
-	
 	for (int i = 0; i < 3; i++)
 	{
 		char x[40];
@@ -126,31 +125,33 @@ int classifytri()
 int slop()
 {
 	clear();
-	const char mesg[] = "Enter X";
-	const char mesg2[] = "Enter Y";
+	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
+	
 	char x1[80],y1[80],x2[80],y2[80];
 	
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s1: ",mesg);
-	getstr(x1);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s1: ",mesg2);
-	getstr(y1);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s2: ",mesg);
-	getstr(x2);
-	clear();
-	mvprintw(row/2,(col-strlen(mesg))/2,"%s2: ",mesg2);
-	getstr(y2);
-	clear();
+	
+
+	char Word[4][10] = {};
+
+	
+	for (int i = 0; i < 4; i++)
+	{
+		char x[40];
+		clear();
+		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
+		//getch(Word[i]);
+		getstr(Word[i]);
+		
+	} 
+
 
 	float fx1,fy1,fx2,fy2;
 	try
 	{
-		fx1 = std::stof(x1);
-		fy1 = std::stof(y1);
-		fx2 = std::stof(x2);
-		fy2 = std::stof(y2);
+		fx1 = std::stof(Word[0]);
+		fy1 = std::stof(Word[1]);
+		fx2 = std::stof(Word[2]);
+		fy2 = std::stof(Word[3]);
 	}//const std::exception& e
 	catch(...)
 	{
@@ -158,7 +159,7 @@ int slop()
 		return 0;
 	}
 
-	
+	clear();
 	beep();
 	mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
 
