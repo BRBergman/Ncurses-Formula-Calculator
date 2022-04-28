@@ -70,7 +70,7 @@ int classifytri()
 	
 	for (int i = 0; i < 3; i++)
 	{
-		char x[40];
+		
 		clear();
 		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
 		//getch(Word[i]);
@@ -122,8 +122,9 @@ int classifytri()
 }
 
 
-int slop(bool dist/**/)
+int slop(bool dist)
 {
+	//true distance formula false slope formula
 	clear();
 	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
 	
@@ -133,15 +134,13 @@ int slop(bool dist/**/)
 	
 	for (int i = 0; i < 4; i++)
 	{
-		char x[40];
+		
 		clear();
 		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
 		//getch(Word[i]);
 		getstr(Word[i]);
 		
 	} 
-
-
 	float fx1,fy1,fx2,fy2;
 	try
 	{
@@ -155,17 +154,15 @@ int slop(bool dist/**/)
 		error();
 		return 0;
 	}
-
 	clear();
 	beep();
 	if (dist)
 	{
+		
 		mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
-
 	}
 	else
 	{
-		
 		mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
 	}
 
@@ -175,49 +172,6 @@ int slop(bool dist/**/)
 
 }
 
-{
-	clear();
-	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
-	
-
-	char Word[4][10] = {};
-
-	
-	for (int i = 0; i < 4; i++)
-	{
-		char x[40];
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
-
-
-	float fx1,fy1,fx2,fy2;
-	try
-	{
-		fx1 = std::stof(Word[0]);
-		fy1 = std::stof(Word[1]);
-		fx2 = std::stof(Word[2]);
-		fy2 = std::stof(Word[3]);
-	}//const std::exception& e
-	catch(...)
-	{
-		error();
-		return 0;
-	}
-	beep();
-	clear();
-	
-	mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
-
-	getch();
- 	
-	return 0;
-
-}
- 
 int pythag()
 {
 	clear();
@@ -302,11 +256,8 @@ int revpythag()
 
 int main()
 {
-
-
-
 	  					/* to store the number of rows and the number of colums of the screen */
-	
+
 	std::cout << cheiftr(3,4,5);
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
