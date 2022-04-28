@@ -61,13 +61,9 @@ int ask()
 int classifytri()
 {
 	clear();
-	char *mesg[] = {"Enter A","Enter B","Enter C"};
-	//const char mesg2[] = "Enter B";
-	//const char mesg3[] = "Enter C";
-	const char right[] = "It's a right triangle";
-	const char obtuse[] = "It's an obtuse triangle";
-	const char accute[] = "It's an accute triangle";
-	const char no[] = "It's not a triangle";
+	const char *mesg[] = {"Enter A","Enter B","Enter C"};
+	const char *tri[] = {"It's a right triangle","It's an obtuse triangle","It's an accute triangle","It's not a triangle"};
+	
 	
 	char Word[4][10] = {};
 
@@ -83,7 +79,6 @@ int classifytri()
 		
 	} 
 
-	
 	float AI;
 	float BI;
 	float CI;
@@ -107,19 +102,19 @@ int classifytri()
 	switch (cases)
 	{
 	case 0:
-		mvprintw(row/2,(col-strlen(no))/2,"%s",no);
+		mvprintw(row/2,(col-strlen(tri[3]))/2,"%s",tri[3]);
 		break;
 	case 1:
 		//right
-		mvprintw(row/2,(col-strlen(right))/2,"%s",right);
+		mvprintw(row/2,(col-strlen(tri[0]))/2,"%s",tri[0]);
 		break;
 	case 2:
 		//obtuce
-		mvprintw(row/2,(col-strlen(obtuse))/2,"%s",obtuse);
+		mvprintw(row/2,(col-strlen(tri[1]))/2,"%s",tri[1]);
 		break;
 	case 3:
 		// acute
-		mvprintw(row/2,(col-strlen(accute))/2,"%s",accute);
+		mvprintw(row/2,(col-strlen(tri[2]))/2,"%s",tri[2]);
 		break;
 	}
 	getch();
