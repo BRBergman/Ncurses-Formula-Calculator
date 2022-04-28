@@ -27,7 +27,6 @@ int ask()
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
 	
-	
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
@@ -35,9 +34,6 @@ int ask()
 		mvprintw(row/2-2+i, (col-strlen(askev[i]))/2, "%s",askev[i] );
 		mvprintw(row/2+1+i,col/2-1, " ");
 	}
-
-	
-	
 	char numin[10];
 	getstr(numin);
 	int num;
@@ -50,8 +46,6 @@ int ask()
 	{
 		num = 0;
 	}
-	 
-	
 	return num;
 }
 
@@ -117,7 +111,6 @@ int classifytri()
 		break;
 	}
 	getch();
- 	
 	return 0;
 }
 
@@ -169,7 +162,6 @@ int slop(bool dist)
 	getch();
  	
 	return 0;
-
 }
 
 int pythag()
