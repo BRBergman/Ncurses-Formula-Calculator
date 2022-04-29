@@ -313,11 +313,8 @@ int main()
 		endwin();
 		return 0 ;
 	}
-	
 	clear();
-	
 	main();
-	
 	endwin();
 	return 0;
 }
