@@ -221,8 +221,7 @@ int revpythag()
 	clear();
  	const char mesg[]="Enter B: ";		/* message to be appeared on the screen */
  	const char mesg2[] = "Enter C: ";
- 	char str[80];
- 	char str2[80];
+ 	char str[80],str2[80];
 					
  	mvprintw(row/2,(col-strlen(mesg))/2,"%s",mesg);
 	getstr(str);

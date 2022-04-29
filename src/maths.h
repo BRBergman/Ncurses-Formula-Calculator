@@ -17,31 +17,6 @@ double slope(float x1,float y1,float x2,float y2)
 	return (y2-y1)/(x2-x1);
 }
 
-	 
-int quadrilateral (	float x1,float y1,float x2,float y2, float x3,float y3,float x4,float y4)
-{
-	//checks if a four sided shape is a parallelogram
-	//top and bottom 
-	double d1 = distance(x1,y1,x2,y2);
-	double d2 = distance(x3,y3,x4,y4);
-
-	//top and bottom
-	double s1 = slope(x1,y1,x2,y2);
-	double s2 = slope(x3,y3,x4,y4);
-	
-
-
-	if (d1 == d2 && s1 == s2)
-	{
-		//parallelogram
-		return 1;
-	}
-
-	
-	return 0;
-}
-
-
 
 double pythagorean(float a, float b)
 {
@@ -107,10 +82,6 @@ int cheiftr(float a, float b, float c)
 	
 	return 0;
 }
-
-
-
-
 double circ(float dia)
 {
 	return M_PI*dia;
