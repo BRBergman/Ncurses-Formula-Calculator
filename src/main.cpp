@@ -20,7 +20,7 @@ int ask()
 	
 	clear();
 	// add new part here to show up 
-	char* askev[] = {"press 0 to quit",
+	const char* askev[] = {"press 0 to quit",
 	"press 1 to do the pythagorean theorum ",
 	"press 2 to do the inverse pythagorean theorum",
 	"press 3 to do the distance formula",
