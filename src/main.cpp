@@ -26,7 +26,7 @@ int ask()
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
-	"press 6 to check the circumphrence of a circle",
+	"press 6 to check the circumference of a circle",
 	
 	NULL};
 	
@@ -53,7 +53,7 @@ int ask()
 
 int circumph()
 {
-	const char *mesg[] = {"What is the Diamiter? ", "The circumphrence is: " };
+	const char *mesg[] = {"What is the Diamiter? ", "The circumference is: " };
 	clear();
 	char str[20];
 	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
