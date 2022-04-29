@@ -96,15 +96,15 @@ int classifytri()
 		
 	} 
 
-	float AI;
-	float BI;
-	float CI;
+	float AF;
+	float BF;
+	float CF;
 
 	try
 	{
-		AI = std::stof(Word[0]);
-		BI = std::stof(Word[1]);
-		CI = std::stof(Word[2]);
+		AF = std::stof(Word[0]);
+		BF = std::stof(Word[1]);
+		CF = std::stof(Word[2]);
 
 	}
 	catch(...)
@@ -113,7 +113,7 @@ int classifytri()
 		return 0;
 	}
 
-	int cases = cheiftr(AI,BI,CI);
+	int cases = cheiftr(AF,BF,CF);
 
 	beep();
 	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
