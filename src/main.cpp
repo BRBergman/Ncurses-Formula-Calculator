@@ -237,14 +237,14 @@ int pythag()
 int revpythag()
 {
 	clear();
- 	const char mesg[]="Enter B: ";		/* message to be appeared on the screen */
- 	const char mesg2[] = "Enter C: ";
+ 	const char *mesg[]={"Enter B: ","Enter C: "};		/* message to be appeared on the screen */
+ 	
  	char str[80],str2[80];
 					
- 	mvprintw(row/2,(col-strlen(mesg))/2,"%s",mesg);
+ 	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
 	getstr(str);
 	clear();
- 	mvprintw(row/2,(col-strlen(mesg2))/2,"%s",mesg2);	/* print the message at the center of the screen */
+ 	mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s",mesg[1]);	/* print the message at the center of the screen */
 	getstr(str2);
 	float b;
 	float c;
@@ -261,7 +261,7 @@ int revpythag()
 	
 	clear();
 	beep();
- 	mvprintw(row/2, (col-strlen(mesg2))/2, "A: %f",reversepythagorean(b,c)  );
+ 	mvprintw(row/2, (col-strlen(mesg[1]))/2, "A: %f",reversepythagorean(b,c)  );
 	
 	
  	mvprintw(LINES - 2, col-12, "B: %f", b);
