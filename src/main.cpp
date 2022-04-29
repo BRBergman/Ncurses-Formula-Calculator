@@ -26,6 +26,7 @@ int ask()
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
+	"press 6 to check the circumphrence of a circle",
 	
 	NULL};
 	
@@ -50,7 +51,30 @@ int ask()
 }
 
 
+int circumph()
+{
+	const char *mesg[] = {"What is the Diamiter? ", "The circumphrence is: " };
+	clear();
+	char str[20];
+	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
+	getstr(str);
+	float diam;
+	try
+	{
+		diam = std::stof(str);
+	}
+	catch(...)
+	{
+		error();
+	}
+	
+	double cases = circ(diam);
 
+	beep();
+	mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s%f",mesg[1],cases);
+	getch();
+	return 0;
+}
 
 int classifytri()
 {
@@ -263,6 +287,9 @@ int main()
 			break;
 		case 5:
 			classifytri();
+			break;
+		case 6:
+			circumph();
 			break;
 		default:
 		clear();
