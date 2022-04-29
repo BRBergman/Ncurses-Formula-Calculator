@@ -53,7 +53,7 @@ int ask()
 
 int circumph()
 {
-	const char *mesg[] = {"What is the Diamiter? ", "The circumference is: " };
+	const char *mesg[] = {"Enter the Diamiter: ", "The circumference is: " };
 	clear();
 	char str[20];
 	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
