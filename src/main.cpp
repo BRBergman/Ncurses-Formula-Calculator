@@ -56,7 +56,7 @@ int classifytri()
 {
 	clear();
 	const char *mesg[] = {"Enter A","Enter B","Enter C"};
-	const char *tri[] = {"It's a right triangle","It's an obtuse triangle","It's an accute triangle","It's not a triangle"};
+	const char *tri[] = {"It's not a triangle","It's a right triangle","It's an obtuse triangle","It's an accute triangle"};
 	
 	
 	char Word[4][10] = {};
@@ -92,24 +92,9 @@ int classifytri()
 	int cases = cheiftr(AI,BI,CI);
 
 	beep();
-	switch (cases)
-	{
-	case 0:
-		mvprintw(row/2,(col-strlen(tri[3]))/2,"%s",tri[3]);
-		break;
-	case 1:
-		//right
-		mvprintw(row/2,(col-strlen(tri[0]))/2,"%s",tri[0]);
-		break;
-	case 2:
-		//obtuce
-		mvprintw(row/2,(col-strlen(tri[1]))/2,"%s",tri[1]);
-		break;
-	case 3:
-		// acute
-		mvprintw(row/2,(col-strlen(tri[2]))/2,"%s",tri[2]);
-		break;
-	}
+	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
+
+
 	getch();
 	return 0;
 }
