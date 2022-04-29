@@ -111,3 +111,7 @@ int cheiftr(float a, float b, float c)
 
 
 
+double circ(float dia)
+{
+	return M_PI*dia;
+}
