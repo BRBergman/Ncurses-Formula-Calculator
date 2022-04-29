@@ -100,6 +100,8 @@ int classifytri()
 }
 
 
+
+
 int slop(bool dist)
 {
 	//true distance formula false slope formula
