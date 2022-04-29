@@ -82,7 +82,12 @@ int cheiftr(float a, float b, float c)
 	
 	return 0;
 }
-double circ(float dia)
+double circ(float rad)
 {
-	return M_PI*dia;
+	return M_PI*(rad*2);
+}
+
+double carea(float rad)
+{
+	return M_PI*pow(rad, 2);
 }

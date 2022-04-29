@@ -27,6 +27,7 @@ int ask()
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
 	"press 6 to check the circumference of a circle",
+	"press 7 to check the area of a circle",
 	
 	NULL};
 	
@@ -51,28 +52,45 @@ int ask()
 }
 
 
-int circumph()
+
+
+
+
+int circumph(bool area)
 {
-	const char *mesg[] = {"Enter the Diamiter: ", "The circumference is: " };
+	const char *mesg[] = {"Enter the Radious: ", "The circumference is: ", "The area is: " };
 	clear();
 	char str[20];
 	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
 	getstr(str);
-	float diam;
+	float rade;
 	try
 	{
-		diam = std::stof(str);
+		rade = std::stof(str);
 	}
 	catch(...)
 	{
 		error();
 	}
+	clear();
+	double cases;
+	if (area)
+	{
+		std::cout << "yes";
+		cases = carea(rade);
+		mvprintw(row/2,(col-strlen(mesg[2]))/2,"%s%f",mesg[2],cases);
+	}
+	else
+	{
+		cases = circ(rade);
+		mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s%f",mesg[1],cases);
+	}
 	
-	double cases = circ(diam);
-
+	 
 	beep();
-	mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s%f",mesg[1],cases);
+	
 	getch();
+	clear();
 	return 0;
 }
 
@@ -288,7 +306,10 @@ int main()
 			classifytri();
 			break;
 		case 6:
-			circumph();
+			circumph(false);
+			break;
+		case 7:
+			circumph(true);
 			break;
 		default:
 		clear();
