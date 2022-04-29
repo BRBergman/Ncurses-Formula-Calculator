@@ -32,8 +32,8 @@ int ask()
 	
 	for (int i = 0; askev[i] != NULL; i++ )
 	{
-		mvprintw(row/2-2+i, (col-strlen(askev[i]))/2, "%s",askev[i] );
-		mvprintw(row/2+1+i,col/2-1, " ");
+		mvprintw(row/2-6+i, (col-strlen(askev[i]))/2, "%s",askev[i] );
+		mvprintw(row/2-2+i,col/2-1, " ");
 	}
 	char numin[10];
 	getstr(numin);
