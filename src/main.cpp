@@ -2,6 +2,7 @@
 #include <ncurses.h>			/* ncurses.h includes stdio.h */  
 #include <iostream>
 #include "maths.h"
+#include <string.h>
 
 int row, col;	  				/* to store the number of rows and the number of colums of the screen */
 
