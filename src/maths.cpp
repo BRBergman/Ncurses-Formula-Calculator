@@ -3,7 +3,7 @@
 #include "maths.h"
 //to be used with maths.h
 
-//defines
+
 
 
 double distance(float x1,float y1,float x2,float y2)
