@@ -3,7 +3,7 @@
 #include <string.h>
 #include <iostream>
 
-
+//to be used with ncextra.h
 
 
 
