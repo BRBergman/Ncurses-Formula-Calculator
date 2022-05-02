@@ -1,7 +1,7 @@
 #include <cmath>
 #include <string>
 #include "maths.h"
-
+//to be used with maths.h
 
 //defines
 

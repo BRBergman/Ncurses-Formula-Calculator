@@ -1,7 +1,4 @@
-
-
-
-//defines
+//to be used with maths.cpp
 
 
 double distance(float x1,float y1,float x2,float y2);
