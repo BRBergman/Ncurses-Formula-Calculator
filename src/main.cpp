@@ -3,20 +3,13 @@
 #include <iostream>
 #include "maths.h"
 #include <string.h>
+#include "ncextra.h"
+int row,col;
+  				/* to store the number of rows and the number of colums of the screen */
 
-int row, col;	  				/* to store the number of rows and the number of colums of the screen */
 
 
 
-//add trys and catches to all the pages 
-int error()
-{
-	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
-	clear();
-	mvprintw(row/2,(col-strlen(mesg)-2)/2,"%s",mesg);
-	getch();
-	return 0;
-}
 int ask()
 {
 	
@@ -72,7 +65,7 @@ int circumph(bool area)
 	}
 	catch(...)
 	{
-		error();
+		error(row,col);
 	}
 	clear();
 	double cases;
@@ -129,7 +122,7 @@ int classifytri()
 	}
 	catch(...)
 	{
-		error();
+		error(row,col);
 		return 0;
 	}
 
@@ -175,7 +168,7 @@ int slop(bool dist)
 	}//const std::exception& e
 	catch(...)
 	{
-		error();
+		error(row,col);
 		return 0;
 	}
 	clear();
@@ -217,7 +210,7 @@ int pythag()
 	}//const std::exception& e
 	catch(...)
 	{
-		error();
+		error(row,col);
 		return 0;
 	}
 
@@ -257,7 +250,7 @@ int revpythag()
 	}//const std::exception& e
 	catch(...)
 	{
-		error();
+		error(row,col);
 		return 0;
 	}
 	
@@ -281,6 +274,7 @@ int main()
 
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
+
 	int num = ask();
 
 	
