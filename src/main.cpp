@@ -66,6 +66,7 @@ int circumph(bool area)
 	catch(...)
 	{
 		error(row,col);
+		return 0;
 	}
 	clear();
 	double cases;
@@ -79,6 +80,7 @@ int circumph(bool area)
 	{
 		cases = circ(rade);
 		mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s%f",mesg[1],cases);
+		
 	}
 	
 	 
