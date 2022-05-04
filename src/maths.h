@@ -1,5 +1,6 @@
+#ifndef MATHS_H
+#define MATHS_H
 //to be used with maths.cpp
-
 
 double distance(float x1,float y1,float x2,float y2);
 
@@ -20,3 +21,7 @@ int cheiftr(float a, float b, float c);
 double circ(float rad);
 
 double carea(float rad);
+
+
+
+#endif
