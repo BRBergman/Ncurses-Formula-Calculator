@@ -241,10 +241,7 @@ int pythag(bool rev)
 		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",pythagorean(a,b)  );
 	}
  	
-	/*
- 	mvprintw(LINES - 2, col-12, "A: %f", a);
-	mvprintw(LINES - 1, col-12, "B: %f", b);
-	*/
+	
  	getch();
  	
 
