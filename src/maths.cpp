@@ -32,11 +32,6 @@ double reversepythagorean(float b, float c)
 	return std::sqrt(pow(c,2) - pow(b,2));
 }
 
-double midseg(float s1,float s2)
-{
-	return (s1+s2)/2;
-}
-
 double quadperm(float x1,float y1,float x2,float y2, float x3,float y3,float x4,float y4)
 {
 	//top and bottom
@@ -47,12 +42,6 @@ double quadperm(float x1,float y1,float x2,float y2, float x3,float y3,float x4,
 	double d4 = distance(x4,y4,x1,y1);
 
 	return (d1+d2+d3+d4);
-}
-
-int angles(int sides)
-{
-	return (sides-2) * 180;
-
 }
 
 int cheiftr(float a, float b, float c)
