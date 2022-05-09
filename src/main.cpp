@@ -190,25 +190,38 @@ int slop(bool dist)
 	return 0;
 }
 
-int pythag()
+int pythag(bool rev)
 {
+	 
+
 	clear();
- 	const char mesg[]="Enter A: ";		/* message to be appeared on the screen */
- 	const char mesg2[] = "Enter B: ";
- 	char str[80];
- 	char str2[80];
-					
- 	mvprintw(row/2,(col-strlen(mesg))/2,"%s",mesg);
-	getstr(str);
-	clear();
- 	mvprintw(row/2,(col-strlen(mesg2))/2,"%s",mesg2);	/* print the message at the center of the screen */
-	getstr(str2);
-	float a;
-	float b;
+ 	char mesg[3][10] = {"Enter A: ","Enter B: ", "Enter C: "}; /* message to be appeared on the screen */
+ 	char Word[2][10] = {};
+
+	int to = 3;
+	int i=1;
+	int min = 1;
+	if (rev)
+	{
+		min = 2;
+		i = 2;
+		to++;
+	}
+	
+	while(i<to)
+	{
+	
+		clear();
+		mvprintw(row/2,(col-strlen(mesg[(i-1)]))/2,"%s",mesg[(i-1)]);
+		//getch(Word[i]);
+		getstr(Word[i-min]);
+		i++;
+	} 
+	float a = 0.0, b = 0.0;
 	try
 	{
-		a = std::stof(str);
-		b = std::stof(str2);
+		a = std::stof(Word[0]);
+		b = std::stof(Word[1]);
 	}//const std::exception& e
 	catch(...)
 	{
@@ -219,56 +232,25 @@ int pythag()
 
 	clear();
 	beep();
- 	mvprintw(row/2, (col-strlen(mesg2))/2, "C: %f",pythagorean(a,b)  );
+	if (rev)
+	{
+		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",reversepythagorean(a,b)  );
+	}
+	else
+	{
+		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",pythagorean(a,b)  );
+	}
  	
-	
+	/*
  	mvprintw(LINES - 2, col-12, "A: %f", a);
 	mvprintw(LINES - 1, col-12, "B: %f", b);
-	
+	*/
  	getch();
  	
 
  return 0;
 }
 
-int revpythag()
-{
-	clear();
- 	const char *mesg[]={"Enter B: ","Enter C: "};		/* message to be appeared on the screen */
- 	
- 	char str[80],str2[80];
-					
- 	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
-	getstr(str);
-	clear();
- 	mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s",mesg[1]);	/* print the message at the center of the screen */
-	getstr(str2);
-	float b;
-	float c;
-	try
-	{
-		b = std::stof(str);
-		c = std::stof(str2);
-	}//const std::exception& e
-	catch(...)
-	{
-		error(row,col);
-		return 0;
-	}
-	
-	clear();
-	beep();
- 	mvprintw(row/2, (col-strlen(mesg[1]))/2, "A: %f",reversepythagorean(b,c)  );
-	
-	
- 	mvprintw(LINES - 2, col-12, "B: %f", b);
-	mvprintw(LINES - 1, col-12, "C: %f", c);
-	
- 	getch();
- 	
-
- return 0;
-}
 
 
 int main()
@@ -276,7 +258,7 @@ int main()
 
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
-
+	
 	int num = ask();
 
 	
@@ -287,10 +269,10 @@ int main()
 			endwin();
 			return 0;
 		case 1:
-			pythag();
+			pythag(false);
 			break;
 		case 2:
-			revpythag();
+			pythag(true);
 			break;
 		case 3:
 			slop(true);
