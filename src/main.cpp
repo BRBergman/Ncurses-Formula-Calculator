@@ -192,7 +192,7 @@ int slop(bool dist)
 
 int pythag(bool rev)
 {
-	 
+	//true for inverse 
 
 	clear();
  	char mesg[3][10] = {"Enter A: ","Enter B: ", "Enter C: "}; /* message to be appeared on the screen */
