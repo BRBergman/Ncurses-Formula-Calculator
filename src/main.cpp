@@ -228,8 +228,6 @@ int pythag(bool rev)
 		error(row,col);
 		return 0;
 	}
-
-
 	clear();
 	beep();
 	if (rev)
@@ -240,12 +238,8 @@ int pythag(bool rev)
 	{
 		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",pythagorean(a,b)  );
 	}
- 	
-	
  	getch();
- 	
-
- return 0;
+	return 0;
 }
 
 
