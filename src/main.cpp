@@ -6,10 +6,6 @@
 #include "ncextra.h"
 int row,col;  				/* to store the number of rows and the number of colums of the screen */
 
-
-
-
-
 int ask()
 {
 	
@@ -47,12 +43,9 @@ int ask()
 }
 
 
-
-
-
-
 int circumph(bool area)
 {
+	//if true does area if false does circumphrince
 	const char *mesg[] = {"Enter the Radious: ", "The circumference is: ", "The area is: " };
 	clear();
 	char str[20];
@@ -72,7 +65,6 @@ int circumph(bool area)
 	double cases;
 	if (area)
 	{
-		std::cout << "yes";
 		cases = carea(rade);
 		mvprintw(row/2,(col-strlen(mesg[2]))/2,"%s%f",mesg[2],cases);
 	}
