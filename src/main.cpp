@@ -103,9 +103,7 @@ int classifytri()
 		
 	} 
 
-	float AF;
-	float BF;
-	float CF;
+	float AF,BF,CF;
 
 	try
 	{
