@@ -2,7 +2,10 @@
 #define NCEXTRA_H
 //to be used with ncextra.cpp
 
-int error(int row, int col);
+extern int row,col;  
+
+int error();
+//int row, int col
 
 
 #endif

@@ -4,8 +4,9 @@
 #include "maths.h"
 #include <string.h>
 #include "ncextra.h"
-int row,col;  				/* to store the number of rows and the number of colums of the screen */
+				/* to store the number of rows and the number of colums of the screen */
 
+int row, col;
 int ask()
 {
 	
@@ -58,7 +59,7 @@ int circumph(bool area)
 	}
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 	clear();
@@ -114,7 +115,7 @@ int classifytri()
 	}
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 
@@ -160,7 +161,7 @@ int slop(bool dist)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 	clear();
@@ -215,7 +216,7 @@ int pythag(bool rev)
 	}//const std::exception& e
 	catch(...)
 	{
-		error(row,col);
+		error();
 		return 0;
 	}
 	clear();

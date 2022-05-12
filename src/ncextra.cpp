@@ -4,10 +4,10 @@
 #include <iostream>
 
 //to be used with ncextra.h
+//int row, int col
 
 
-
-int error(int row, int col)
+int error()
 {
 	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
