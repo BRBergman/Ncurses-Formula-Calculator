@@ -161,7 +161,7 @@ int pythag(bool rev)
 	{
 		min = 2;
 		i = 2;
-		to++;
+		to = 4;
 	}
 	
 	while(i<to)

@@ -6,7 +6,7 @@ extern int row,col;
 
 int error();
 
-
+int ask();
 
 
 #endif
