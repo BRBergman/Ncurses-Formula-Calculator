@@ -4,9 +4,8 @@
 #include "maths.h"
 #include <string.h>
 #include "ncextra.h"
-				/* to store the number of rows and the number of colums of the screen */
 
-int row, col;
+int row, col;		/* to store the number of rows and the number of colums of the screen */
 int ask()
 {
 	
