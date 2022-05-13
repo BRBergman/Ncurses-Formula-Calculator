@@ -9,9 +9,9 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 
 
 
-int circumph(bool area)
+int circumph(bool area)	//if true does area if false does circumphrince
 {
-	//if true does area if false does circumphrince
+	
 	const char *mesg[] = {"Enter the Radious: ", "The circumference is: ", "The area is: " };
 	clear();
 	char str[20];
