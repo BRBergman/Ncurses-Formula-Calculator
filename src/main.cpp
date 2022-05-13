@@ -28,6 +28,7 @@ int circumph(bool area)	//if true does area if false does circumphrince
 		return 0;
 	}
 	clear();
+	beep();
 	double cases;
 	if (area)
 	{
@@ -42,7 +43,7 @@ int circumph(bool area)	//if true does area if false does circumphrince
 	}
 	
 	 
-	beep();
+	
 	
 	getch();
 	clear();
