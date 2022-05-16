@@ -80,3 +80,10 @@ double carea(float rad)
 {
 	return M_PI*pow(rad, 2);
 }
+
+double midpoint(float one, float two)
+{
+	//do twice to get x and y
+
+	return (one+two)/2;
+}

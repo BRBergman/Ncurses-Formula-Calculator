@@ -7,6 +7,44 @@
 
 int row, col;		/* to store the number of rows and the number of colums of the screen */
 
+int mid()
+{
+	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
+	
+
+	char Word[4][10] = {};
+
+	
+	for (int i = 0; i < 4; i++)
+	{
+		
+		clear();
+		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
+		//getch(Word[i]);
+		getstr(Word[i]);
+		
+	} 
+	float fx1,fy1,fx2,fy2;
+	try
+	{
+		fx1 = std::stof(Word[0]);
+		fy1 = std::stof(Word[1]);
+		fx2 = std::stof(Word[2]);
+		fy2 = std::stof(Word[3]);
+	}//const std::exception& e
+	catch(...)
+	{
+		error();
+		return 0;
+	}
+	clear();
+	beep();
+	double first = midpoint(fx1,fx2);
+	double second = midpoint(fy1,fy2);
+
+	mvprintw(row/2,((col/3)),"the midpoint is: X%f, Y%f",first,second);
+	getch();
+}
 
 
 int circumph(bool area)	//if true does area if false does circumphrince
@@ -236,6 +274,9 @@ int main()
 			break;
 		case 7:
 			circumph(true);
+			break;
+		case 8:
+			mid();
 			break;
 		default:
 		clear();

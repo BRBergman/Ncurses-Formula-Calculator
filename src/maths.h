@@ -18,6 +18,6 @@ double circ(float rad);
 
 double carea(float rad);
 
-
+double midpoint(float one, float two);
 
 #endif

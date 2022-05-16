@@ -22,13 +22,14 @@ int ask()
 	clear();
 	// add new part here to show up 
 	const char* askev[] = {"press 0 to quit",
-	"press 1 to do the pythagorean theorum ",
-	"press 2 to do the inverse pythagorean theorum",
+	"press 1 to do the pythagorean theorem ",
+	"press 2 to do the inverse pythagorean theorem",
 	"press 3 to do the distance formula",
 	"press 4 to do the slope formula", 
 	"press 5 to classify a triangle",
 	"press 6 to check the circumference of a circle",
 	"press 7 to check the area of a circle",
+	"press 8 to preform the midpoint formula",
 	
 	NULL};
 	
