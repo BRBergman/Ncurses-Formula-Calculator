@@ -23,7 +23,6 @@ double pythagorean(float a, float b)
 {
 	//a2+b2=c2
 	return std::sqrt(pow(a,2)+pow(b,2));
-	
 }
 
 double reversepythagorean(float b, float c)
