@@ -20,4 +20,7 @@ double carea(float rad);
 
 double midpoint(float one, float two);
 
+double csaria(float radious, float angle);
+
+
 #endif

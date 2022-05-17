@@ -7,6 +7,43 @@
 
 int row, col;		/* to store the number of rows and the number of colums of the screen */
 
+int csar()
+{
+	const char *mesg[] = {"Enter Radious","Enter Angle",};
+	
+
+	char Word[2][10] = {};
+
+	
+	for (int i = 0; i < 2; i++)
+	{
+		
+		clear();
+		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
+		//getch(Word[i]);
+		getstr(Word[i]);
+		
+	} 
+	float fx1,fy1;
+	try
+	{
+		fx1 = std::stof(Word[0]);
+		fy1 = std::stof(Word[1]);
+	}//const std::exception& e
+	catch(...)
+	{
+		error();
+		return 0;
+	}
+	beep();
+	mvprintw(row/2,(col-strlen(mesg[2]))/2,"The Area is: %f",csaria(fx1,fy1));
+	getch();
+
+	return 0;
+}
+
+
+
 int mid()
 {
 	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
@@ -44,6 +81,7 @@ int mid()
 
 	mvprintw(row/2,((col/3)),"the midpoint is: X%f, Y%f",first,second);
 	getch();
+	return 0;
 }
 
 
@@ -277,6 +315,9 @@ int main()
 			break;
 		case 8:
 			mid();
+			break;
+		case 9:
+			csar();
 			break;
 		default:
 		clear();

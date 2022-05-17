@@ -30,6 +30,7 @@ int ask()
 	"press 6 to check the circumference of a circle",
 	"press 7 to check the area of a circle",
 	"press 8 to preform the midpoint formula",
+	"press 9 to find the area of a certan section of a circle",
 	
 	NULL};
 	
