@@ -36,7 +36,8 @@ int csar()
 		return 0;
 	}
 	beep();
-	mvprintw(row/2,(col-strlen(mesg[2]))/2,"The Area is: %f",csaria(fx1,fy1));
+	clear();
+	mvprintw(row/2,(col-strlen(mesg[1]))/2,"The Area is: %f", csaria(fx1,fy1));
 	getch();
 
 	return 0;
