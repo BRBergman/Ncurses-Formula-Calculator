@@ -53,7 +53,3 @@ int ask()
 	}
 	return num;
 }
-
-
-
-
