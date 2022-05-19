@@ -288,7 +288,6 @@ int main()
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 	
-	getkeyandput(mesg);
 	int num = ask();
 	
 	

@@ -56,24 +56,4 @@ int ask()
 
 
 
-int getkeyandput(std::string fmesg[])
-{
-	int s = sizeof(fmesg);
-	
 
-	char Word[][10] = {};
-
-	
-	for (int i = 0; i < s; i++)
-	{
-		
-		clear();
-		mvprintw(row/2,(col-strlen(fmesg[i].c_str()))/2,"%s: ",fmesg[i].c_str());
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
-	
-	
-	return 0;
-}

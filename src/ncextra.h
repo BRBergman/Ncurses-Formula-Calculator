@@ -9,7 +9,6 @@ int error();
 
 int ask();
 
-int getkeyandput(std::string mesg[]);
 
 
 
