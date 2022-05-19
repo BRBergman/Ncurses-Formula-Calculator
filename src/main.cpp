@@ -9,7 +9,7 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 
 int csar()
 {
-	const char *mesg[] = {"Enter Radious","Enter Angle",};
+	const char *mesg[] = {"Enter Radious","Enter Angle"};
 	
 
 	char Word[2][10] = {};
@@ -280,12 +280,17 @@ int pythag(bool rev)
 
 int main()
 {
+	std::string mesg[] = {"1ds","2sdd"};
+
+
+	
 
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 	
+	getkeyandput(mesg);
 	int num = ask();
-
+	
 	
 	switch (num)
 	{
