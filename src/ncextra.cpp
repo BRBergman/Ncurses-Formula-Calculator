@@ -1,4 +1,4 @@
-#include <ncurses.h>
+#include "curses.h"
 #include "ncextra.h"
 #include <string.h>
 #include <iostream>
