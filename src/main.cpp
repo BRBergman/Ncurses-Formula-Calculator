@@ -1,5 +1,4 @@
 /*BRBergman's formula claculator*/
-//#include <ncurses.h>			/* ncurses.h includes stdio.h */  
 #include <ncurses.h>
 #include <iostream>
 #include "maths.h"
