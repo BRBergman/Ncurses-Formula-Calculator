@@ -234,9 +234,6 @@ int pythag(bool rev)
 	float *x = getvars(normal,2);
 	
 	clear();
- 	
- 	
-	clear();
 	beep();
 	if (rev)
 	{
