@@ -48,38 +48,15 @@ int csar()
 
 int mid()
 {
-	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
+	std::string normal[] =  {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
 	
 
-	char Word[4][10] = {};
+	float *x = getvars(normal,4);
 
-	
-	for (int i = 0; i < 4; i++)
-	{
-		
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
-	float fx1,fy1,fx2,fy2;
-	try
-	{
-		fx1 = std::stof(Word[0]);
-		fy1 = std::stof(Word[1]);
-		fx2 = std::stof(Word[2]);
-		fy2 = std::stof(Word[3]);
-	}//const std::exception& e
-	catch(...)
-	{
-		error();
-		return 0;
-	}
 	clear();
 	beep();
-	double first = midpoint(fx1,fx2);
-	double second = midpoint(fy1,fy2);
+	double first = midpoint(x[0],x[2]);
+	double second = midpoint(x[1],x[3]);
 
 	mvprintw(row/2,((col/3)),"the midpoint is: X%f, Y%f",first,second);
 	getch();
