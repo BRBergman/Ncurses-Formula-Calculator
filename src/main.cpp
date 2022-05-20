@@ -229,13 +229,8 @@ int slop(bool dist)
 
 int pythag(bool rev)
 {
-	
 	//true for inverse 
-	
-	
 	std::string normal[] = {"Enter A: ","Enter B: "};
-	
-
 	float *x = getvars(normal,2);
 	
 	clear();
