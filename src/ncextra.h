@@ -11,5 +11,7 @@ int ask();
 
 int mania();
 
+float * intartest(std::string *ar, int num);
+
 
 #endif

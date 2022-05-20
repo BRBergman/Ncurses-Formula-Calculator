@@ -225,53 +225,31 @@ int slop(bool dist)
 	return 0;
 }
 
+//char mesg[3][10] = {"Enter A: ","Enter B: ", "Enter C: "}; /* message to be appeared on the screen */
+
 int pythag(bool rev)
 {
+	
 	//true for inverse 
+	
+	
+	std::string normal[] = {"Enter A: ","Enter B: "};
+	
 
+	float *x = intartest(normal,2);
+	
 	clear();
- 	char mesg[3][10] = {"Enter A: ","Enter B: ", "Enter C: "}; /* message to be appeared on the screen */
- 	char Word[2][10] = {};
-
-	int to = 3;
-	int i=1;
-	int min = 1;
-	if (rev)
-	{
-		min = 2;
-		i = 2;
-		to = 4;
-	}
-	
-	while(i<to)
-	{
-	
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[(i-1)]))/2,"%s",mesg[(i-1)]);
-		//getch(Word[i]);
-		getstr(Word[i-min]);
-		i++;
-	} 
-	float a = 0.0, b = 0.0;
-	try
-	{
-		a = std::stof(Word[0]);
-		b = std::stof(Word[1]);
-	}//const std::exception& e
-	catch(...)
-	{
-		error();
-		return 0;
-	}
+ 	
+ 	
 	clear();
 	beep();
 	if (rev)
 	{
-		mvprintw(row/2, (col-strlen(mesg[1]))/2, "A: %f",reversepythagorean(a,b)  );
+		mvprintw(row/2, (col)/2, "A: %f",reversepythagorean(x[0],x[1])  );
 	}
 	else
 	{
-		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",pythagorean(a,b)  );
+		mvprintw(row/2, (col)/2, "A: %f",pythagorean(x[0],x[1])  );
 	}
  	getch();
 	return 0;
@@ -287,7 +265,7 @@ int main()
 
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
-	mania();
+	//mania();
 	int num = ask();
 	
 	

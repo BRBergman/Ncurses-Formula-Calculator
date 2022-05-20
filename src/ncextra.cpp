@@ -62,6 +62,7 @@ float * intartest(std::string *ar, int num)
 	float x[num];
 	for (int i = 0; i< num; i++)
 	{
+		clear();
 		mvprintw(row/2,(col-strlen(ar[i].c_str()))/2,"%s: ",ar[i].c_str());
 		//getch(Word[i]);
 		getstr(Word[i]);
