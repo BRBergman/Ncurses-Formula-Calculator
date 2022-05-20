@@ -7,7 +7,7 @@
 //int row, int col
 
 
-int error()
+/*int error()
 {
 	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
@@ -52,4 +52,25 @@ int ask()
 		num = 0;
 	}
 	return num;
+}*/
+
+int intartest(char **ar)
+{
+	for (int i = 0; i < sizeof(ar); i++)
+	{
+
+		std::cout << ar[i] << "\n";
+	}
+	
+
+
+	return 0;
+}
+
+int main()
+{
+	char *a[] = {"123","234","345","456","567"};
+	intartest(a);
+
+	return 0;
 }
