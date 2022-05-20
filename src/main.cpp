@@ -10,47 +10,21 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 
 int csar()
 {
-	const char *mesg[] = {"Enter Radious","Enter Angle"};
+	std::string normal[] =  {"Enter Radious","Enter Angle"};
 	
-
-	char Word[2][10] = {};
-
-	
-	for (int i = 0; i < 2; i++)
-	{
-		
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
-	float fx1,fy1;
-	try
-	{
-		fx1 = std::stof(Word[0]);
-		fy1 = std::stof(Word[1]);
-	}//const std::exception& e
-	catch(...)
-	{
-		error();
-		return 0;
-	}
+	float *x = getvars(normal,4);
 	beep();
 	clear();
-	mvprintw(row/2,(col-strlen(mesg[1]))/2,"The Area is: %f", csaria(fx1,fy1));
+	mvprintw(row/2,(col-strlen(mesg[1]))/2,"The Area is: %f", csaria(x[0],x[1]));
 	getch();
 
 	return 0;
 }
 
-
-
 int mid()
 {
 	std::string normal[] =  {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
 	
-
 	float *x = getvars(normal,4);
 
 	clear();
@@ -157,7 +131,7 @@ int main()
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 	//mania();
 	int num = ask();
-	
+
 	switch (num)
 	{
 		case 0:
