@@ -54,10 +54,11 @@ int ask()
 	return num;
 }*/
 
-int intartest(std::string *ar, int ammount)
+int intartest(std::string *ar, int num)
 {
 	
-	for (int i = 0; i < ammount; i++)
+	
+	for (int i = 0; i< num; i++)
 	{
 
 		std::cout << ar[i] << "\n";
@@ -70,8 +71,8 @@ int intartest(std::string *ar, int ammount)
 
 int main()
 {
-	std::string a[] = {"123","234","345","456","567","fdjhkg"};
-	intartest(a, 6);
+	std::string a[] = {"123","234","345","456","567",};
+	intartest(a, 5);
 
 	return 0;
 }
