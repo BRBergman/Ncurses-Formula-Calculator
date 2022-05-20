@@ -70,7 +70,6 @@ float * getvars(std::string *ar, int num)
 		try
 		{
 		x[i] = std::stof(Word[i]);
-		
 		}
 		catch(...)
 		{
@@ -78,7 +77,6 @@ float * getvars(std::string *ar, int num)
 		return 0;
 		}
 	}
-	
 	return x;
 }
 
