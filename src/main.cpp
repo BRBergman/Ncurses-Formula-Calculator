@@ -131,39 +131,14 @@ int circumph(bool area)	//if true does area if false does circumphrince
 int classifytri()
 {
 	clear();
-	const char *mesg[] = {"Enter A","Enter B","Enter C"};
+	std::string normal[] = {"Enter A: ","Enter B: ","Enter C: "};
 	const char *tri[] = {"It's not a triangle","It's a right triangle","It's an obtuse triangle","It's an accute triangle"};
 	
 	
-	char Word[4][10] = {};
+	float *x = getvars(normal,3);
 
-	
-	for (int i = 0; i < 3; i++)
-	{
-		
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
 
-	float AF,BF,CF;
-
-	try
-	{
-		AF = std::stof(Word[0]);
-		BF = std::stof(Word[1]);
-		CF = std::stof(Word[2]);
-
-	}
-	catch(...)
-	{
-		error();
-		return 0;
-	}
-
-	int cases = cheiftr(AF,BF,CF);
+	int cases = cheiftr(x[0],x[1],x[2]);
 
 	beep();
 	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
@@ -180,44 +155,19 @@ int slop(bool dist)
 {
 	//true distance formula false slope formula
 	clear();
-	const char *mesg[] = {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
-	
+	std::string normal[] = {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
+	float *x = getvars(normal,4);
 
-	char Word[4][10] = {};
-
-	
-	for (int i = 0; i < 4; i++)
-	{
-		
-		clear();
-		mvprintw(row/2,(col-strlen(mesg[i]))/2,"%s: ",mesg[i]);
-		//getch(Word[i]);
-		getstr(Word[i]);
-		
-	} 
-	float fx1,fy1,fx2,fy2;
-	try
-	{
-		fx1 = std::stof(Word[0]);
-		fy1 = std::stof(Word[1]);
-		fx2 = std::stof(Word[2]);
-		fy2 = std::stof(Word[3]);
-	}//const std::exception& e
-	catch(...)
-	{
-		error();
-		return 0;
-	}
 	clear();
 	beep();
 	if (dist)
 	{
 		
-		mvprintw(row/2,col/2,"%f",distance(fx1,fy1,fx2,fy2) );
+		mvprintw(row/2,col/2,"%f",distance(x[0],x[1],x[2],x[3]) );
 	}
 	else
 	{
-		mvprintw(row/2,col/2,"%f",slope(fx1,fy1,fx2,fy2) );
+		mvprintw(row/2,col/2,"%f",slope(x[0],x[1],x[2],x[3]) );
 	}
 
 	getch();
