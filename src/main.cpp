@@ -158,7 +158,6 @@ int main()
 	//mania();
 	int num = ask();
 	
-	
 	switch (num)
 	{
 		case 0:
