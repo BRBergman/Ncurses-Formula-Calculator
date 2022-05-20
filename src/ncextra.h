@@ -9,7 +9,7 @@ int error();
 
 int ask();
 
-
+int mania();
 
 
 #endif

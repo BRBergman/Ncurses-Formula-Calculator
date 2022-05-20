@@ -4,10 +4,10 @@
 #include <iostream>
 
 //to be used with ncextra.h
-//int row, int col
+//int row, int col/*
 
 
-/*int error()
+int error()
 {
 	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
@@ -52,27 +52,51 @@ int ask()
 		num = 0;
 	}
 	return num;
-}*/
+}
 
-int intartest(std::string *ar, int num)
+
+float * intartest(std::string *ar, int num)
 {
 	
-	
+	char Word[10][10] = {};
+	float x[num];
 	for (int i = 0; i< num; i++)
 	{
-
-		std::cout << ar[i] << "\n";
+		mvprintw(row/2,(col-strlen(ar[i].c_str()))/2,"%s: ",ar[i].c_str());
+		//getch(Word[i]);
+		getstr(Word[i]);
+		clear();
+		try
+		{
+		x[i] = std::stof(Word[i]);
+		
+		}
+		catch(...)
+		{
+		error();
+		return 0;
+		}
 	}
 	
+	return x;
+}
 
-
+int add()
+{
+	std::string questions[] = {"what is x", "what is y"};
+	float *z  = intartest(questions, 2);
+	float y = z[0]+z[1];
+	mvprintw(row/2,(col)/2,"%f",y);
+	getch();
 	return 0;
 }
 
-int main()
+int mania()
 {
-	std::string a[] = {"123","234","345","456","567",};
-	intartest(a, 5);
+	add();
+	
+
+	
 
 	return 0;
 }

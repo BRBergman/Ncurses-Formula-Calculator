@@ -267,7 +267,7 @@ int pythag(bool rev)
 	beep();
 	if (rev)
 	{
-		mvprintw(row/2, (col-strlen(mesg[1]))/2, "C: %f",reversepythagorean(a,b)  );
+		mvprintw(row/2, (col-strlen(mesg[1]))/2, "A: %f",reversepythagorean(a,b)  );
 	}
 	else
 	{
@@ -281,14 +281,13 @@ int pythag(bool rev)
 
 int main()
 {
-	std::string mesg[] = {"1ds","2sdd"};
 
 
 	
 
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
-	
+	mania();
 	int num = ask();
 	
 	
