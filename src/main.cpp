@@ -236,7 +236,7 @@ int pythag(bool rev)
 	std::string normal[] = {"Enter A: ","Enter B: "};
 	
 
-	float *x = intartest(normal,2);
+	float *x = getvars(normal,2);
 	
 	clear();
  	

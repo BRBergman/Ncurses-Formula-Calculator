@@ -11,7 +11,7 @@ int ask();
 
 int mania();
 
-float * intartest(std::string *ar, int num);
+float * getvars(std::string *ar, int num);
 
 
 #endif

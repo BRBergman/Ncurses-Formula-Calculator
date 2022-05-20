@@ -55,7 +55,7 @@ int ask()
 }
 
 
-float * intartest(std::string *ar, int num)
+float * getvars(std::string *ar, int num)
 {
 	
 	char Word[10][10] = {};
@@ -82,22 +82,16 @@ float * intartest(std::string *ar, int num)
 	return x;
 }
 
+
+//ex on how to use intartest
 int add()
 {
 	std::string questions[] = {"what is x", "what is y"};
-	float *z  = intartest(questions, 2);
+	float *z  = getvars(questions, 2);
 	float y = z[0]+z[1];
 	mvprintw(row/2,(col)/2,"%f",y);
 	getch();
 	return 0;
 }
 
-int mania()
-{
-	add();
-	
 
-	
-
-	return 0;
-}
