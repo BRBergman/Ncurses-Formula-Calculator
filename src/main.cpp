@@ -237,7 +237,7 @@ int pythag(bool rev)
 	beep();
 	if (rev)
 	{
-		mvprintw(row/2, (col)/2, "A: %f",reversepythagorean(x[0],x[1])  );
+		mvprintw(row/2, (col)/2, "Value %f",reversepythagorean(x[0],x[1])  );
 	}
 	else
 	{
