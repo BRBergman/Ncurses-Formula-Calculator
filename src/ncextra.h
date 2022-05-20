@@ -3,6 +3,8 @@
 #include <iostream>
 //to be used with ncextra.cpp
 
+int main();
+
 extern int row,col;  
 
 int error();

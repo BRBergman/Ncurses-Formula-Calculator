@@ -13,6 +13,7 @@ int error()
 	clear();
 	mvprintw(row/2,(col-strlen(mesg)-2)/2,"%s",mesg);
 	getch();
+	main();
 	return 1;
 }
 
