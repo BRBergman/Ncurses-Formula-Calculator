@@ -134,21 +134,15 @@ int classifytri()
 	std::string normal[] = {"Enter A: ","Enter B: ","Enter C: "};
 	const char *tri[] = {"It's not a triangle","It's a right triangle","It's an obtuse triangle","It's an accute triangle"};
 	
-	
 	float *x = getvars(normal,3);
 
-
 	int cases = cheiftr(x[0],x[1],x[2]);
-
 	beep();
 	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
-
 
 	getch();
 	return 0;
 }
-
-
 
 
 int slop(bool dist)
@@ -191,7 +185,7 @@ int pythag(bool rev)
 	}
 	else
 	{
-		mvprintw(row/2, (col)/2, "A: %f",pythagorean(x[0],x[1])  );
+		mvprintw(row/2, (col)/2, "Value %f",pythagorean(x[0],x[1])  );
 	}
  	getch();
 	return 0;
