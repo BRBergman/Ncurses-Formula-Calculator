@@ -86,7 +86,7 @@ int add()
 	std::string questions[] = {"what is x", "what is y"};
 	float *z  = intartest(questions, 2);
 	float y = z[0]+z[1];
-	mvprintw(row/3,(col)/2,"%f",y);
+	mvprintw(row/2,(col)/2,"%f",y);
 	getch();
 	return 0;
 }
