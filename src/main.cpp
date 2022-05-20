@@ -67,39 +67,22 @@ int mid()
 int circumph(bool area)	//if true does area if false does circumphrince
 {
 	
-	const char *mesg[] = {"Enter the Radious: ", "The circumference is: ", "The area is: " };
-	clear();
-	char str[20];
-	mvprintw(row/2,(col-strlen(mesg[0]))/2,"%s",mesg[0]);
-	getstr(str);
-	float rade;
-	try
-	{
-		rade = std::stof(str);
-	}
-	catch(...)
-	{
-		error();
-		return 0;
-	}
+	std::string normal[] =  {"Enter the Radious: ", "The circumference is: ", "The area is: " };
+	float *x = getvars(normal,1);
 	clear();
 	beep();
 	double cases;
 	if (area)
 	{
-		cases = carea(rade);
-		mvprintw(row/2,(col-strlen(mesg[2]))/2,"%s%f",mesg[2],cases);
+		cases = carea(x[0]);
+		mvprintw(row/2,(col)/3+4,"%s%f",normal[2].c_str(),cases);
 	}
 	else
 	{
-		cases = circ(rade);
-		mvprintw(row/2,(col-strlen(mesg[1]))/2,"%s%f",mesg[1],cases);
+		cases = circ(x[0]);
+		mvprintw(row/2,(col)/3+4,"%s%f",normal[1].c_str(),cases);
 		
 	}
-	
-	 
-	
-	
 	getch();
 	clear();
 	return 0;
@@ -167,8 +150,6 @@ int pythag(bool rev)
  	getch();
 	return 0;
 }
-
-
 
 int main()
 {
