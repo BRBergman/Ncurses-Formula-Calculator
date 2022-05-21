@@ -9,9 +9,9 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 
 int csar()
 {
-	std::string normal[] =  {"Enter Radious","Enter Angle"};
+	std::string normal[] =  {"Enter Radious: ","Enter Angle: "};
 	
-	float *x = getvars(normal,4);
+	float *x = getvars(normal,2);
 	beep();
 	clear();
 	mvprintw(row/2,(col)/2,"The Area is: %f", csaria(x[0],x[1]));
