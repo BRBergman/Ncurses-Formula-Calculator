@@ -58,21 +58,20 @@ int ask()
 }
 
 
-float * getvars(std::string *ar, int num)
+float * getvars(std::string *ar, int length)//get string array and int of length
 {
 	
-	char Word[10][10] = {};
-	float x[num];
-	for (int i = 0; i< num; i++)
+	char Word[10][10] = {}; 	//create string array to assign values to
+	float x[length];
+	for (int i = 0; i< length; i++)
 	{
 		clear();
-		mvprintw(row/2,(col-strlen(ar[i].c_str()))/2,"%s",ar[i].c_str());
-		//getch(Word[i]);
-		getstr(Word[i]);
+		mvprintw(row/2,(col-strlen(ar[i].c_str()))/2,"%s",ar[i].c_str()); //print message to center of screen wit hthe string that was provided (think of it as ncurses cout)
+		getstr(Word[i]);		//assign value to the variable (think of it as ncurses cin)
 		clear();
 		try
 		{
-			x[i] = std::stof(Word[i]);
+			x[i] = std::stof(Word[i]); // turn the string we got into a float 
 		}
 		catch(...)
 		{
@@ -80,7 +79,7 @@ float * getvars(std::string *ar, int num)
 			return 0;
 		}
 	}
-	return x;
+	return x; //return a pointer to the array of floats
 }
 
 
