@@ -25,4 +25,3 @@ void invertd(double &val)
 	val = temp;
 	return;
 }
-
