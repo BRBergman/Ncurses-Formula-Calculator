@@ -106,7 +106,7 @@ int slop(bool dist) //true distance formula false slope formula
 int pythag(bool rev)
 {
 	//true for inverse 
-	std::string normal[] = {"Enter A: ","Enter B: "};
+	std::string normal[] = {"Enter X: ","Enter Y: "};
 	float *x = getvars(normal,2);
 	
 	clear();
