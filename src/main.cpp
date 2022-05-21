@@ -22,7 +22,7 @@ int csar()
 
 int mid()
 {
-	std::string normal[] =  {"Enter X1","Enter Y1","Enter X2","Enter Y2"};
+	std::string normal[] =  {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
 	
 	float *x = getvars(normal,4);
 
@@ -113,11 +113,11 @@ int pythag(bool rev)
 	beep();
 	if (rev)
 	{
-		mvprintw(row/2, (col)/2, "Value %f",reversepythagorean(x[0],x[1])  );
+		mvprintw(row/2, (col)/3, "Leg Value: %f",reversepythagorean(x[0],x[1])  );
 	}
 	else
 	{
-		mvprintw(row/2, (col)/2, "Value %f",pythagorean(x[0],x[1])  );
+		mvprintw(row/2, (col)/3, "Hypotonuse Value: %f",pythagorean(x[0],x[1])  );
 	}
  	getch();
 	return 0;
