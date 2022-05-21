@@ -14,7 +14,7 @@ int csar()
 	float *x = getvars(normal,4);
 	beep();
 	clear();
-	mvprintw(row/2,(col-strlen(mesg[1]))/2,"The Area is: %f", csaria(x[0],x[1]));
+	mvprintw(row/2,(col)/2,"The Area is: %f", csaria(x[0],x[1]));
 	getch();
 
 	return 0;

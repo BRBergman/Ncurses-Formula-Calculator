@@ -2,6 +2,8 @@
 #include "ncextra.h"
 #include <string.h>
 #include <iostream>
+#include <stdio.h>
+
 
 //to be used with ncextra.h
 //int row, int col/*
