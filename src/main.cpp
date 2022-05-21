@@ -78,7 +78,7 @@ int classifytri()
 }
 
 
-int slop(bool dist) //true distance formula false slope formula
+int slop(bool dist) //true distance formula false slope formula   
 {
 	clear();
 	std::string normal[] = {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
