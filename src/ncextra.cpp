@@ -72,12 +72,12 @@ float * getvars(std::string *ar, int num)
 		clear();
 		try
 		{
-		x[i] = std::stof(Word[i]);
+			x[i] = std::stof(Word[i]);
 		}
 		catch(...)
 		{
-		error();
-		return 0;
+			error();
+			return 0;
 		}
 	}
 	return x;
