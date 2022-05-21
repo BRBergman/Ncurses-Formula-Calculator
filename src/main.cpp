@@ -37,7 +37,6 @@ int mid()
 	return 0;
 }
 
-
 int circumph(bool area)	//if true does area if false does circumphrince
 {
 	
@@ -79,7 +78,6 @@ int classifytri()
 	return 0;
 }
 
-
 int slop(bool dist) //true distance formula false slope formula   
 {
 	clear();
@@ -102,8 +100,6 @@ int slop(bool dist) //true distance formula false slope formula
  	delete [] x;
 	return 0;
 }
-
-//char mesg[3][10] = {"Enter A: ","Enter B: ", "Enter C: "}; /* message to be appeared on the screen */
 
 int pythag(bool rev)
 {
@@ -130,7 +126,7 @@ int main()
 {
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
-	
+
 	int num = ask();
 
 	switch (num)
