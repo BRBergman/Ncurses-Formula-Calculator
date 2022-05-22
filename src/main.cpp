@@ -16,7 +16,6 @@ int csar()
 	clear();
 	mvprintw(row/2,(col)/2,"The Area is: %f", csaria(x[0],x[1]));
 	getch();
-	delete [] x;
 	return 0;
 }
 
@@ -33,7 +32,6 @@ int mid()
 
 	mvprintw(row/2,((col/3)),"the midpoint is: X%f, Y%f",first,second);
 	getch();
-	delete [] x;
 	return 0;
 }
 
@@ -58,7 +56,6 @@ int circumph(bool area)	//if true does area if false does circumphrince
 	}
 	getch();
 	clear();
-	delete [] x;
 	return 0;
 }
 
@@ -74,7 +71,6 @@ int classifytri()
 	beep();
 	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
 	getch();
-	delete [] x;
 	return 0;
 }
 
@@ -97,7 +93,6 @@ int slop(bool dist) //true distance formula false slope formula
 	}
 
 	getch();
- 	delete [] x;
 	return 0;
 }
 
@@ -118,7 +113,6 @@ int pythag(bool rev)
 		mvprintw(row/2, (col)/3, "Hypotonuse Value: %f",pythagorean(x[0],x[1])  );
 	}
  	getch();
-	delete [] x;
 	return 0;
 }
 
