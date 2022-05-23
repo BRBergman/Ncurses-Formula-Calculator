@@ -90,7 +90,7 @@ double midpoint(float one, float two)
  
 double csaria(float radious, float angle)
 {
-	double top = angle*M_PI*pow(radious,2);
+	double top = angle*(M_PI*pow(radious,2));
 
 	return top/360;
 }
