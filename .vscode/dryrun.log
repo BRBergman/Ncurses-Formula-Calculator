@@ -1,13 +1,6 @@
 make --dry-run --keep-going --print-directory
-make: Entering directory '/home/blake/Desktop/Code/CPP/Ncurses-Formula-Calculator'
- 
-find: 
-'lib'
-: No such file or directory
-
-
-g++ -std=c++17 -Wall -Wextra -g -lncurses -Iinclude -c src/ncextra.cpp  -o src/ncextra.o
-g++ -std=c++17 -Wall -Wextra -g -lncurses -Iinclude -o output/main src/main.o src/maths.o src/ncextra.o  
+make: Entering directory `/Users/bbergman/Desktop/code/cpp/proj1'
+g++ -std=c++17 -Wall -Wextra -g -lncurses -framework GLUT -framework OpenGL -Wno-deprecated -Iinclude -o output/main src/invert.o src/main.o src/maths.o src/ncextra.o  -Llib
 echo Executing 'all' complete!
-make: Leaving directory '/home/blake/Desktop/Code/CPP/Ncurses-Formula-Calculator'
+make: Leaving directory `/Users/bbergman/Desktop/code/cpp/proj1'
  

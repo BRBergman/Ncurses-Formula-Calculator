@@ -17,7 +17,7 @@ int csar()
 	mvprintw(row/2,(col)/2,"The Area is: %f", csaria(x[0],x[1]));
 	getch();
 	return 0;
-}
+}  
 
 int mid()
 {
