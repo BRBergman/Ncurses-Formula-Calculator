@@ -1,6 +1,7 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/bbergman/Desktop/code/cpp/proj1'
-g++ -std=c++17 -Wall -Wextra -g -lncurses -framework GLUT -framework OpenGL -Wno-deprecated -Iinclude -o output/main src/invert.o src/main.o src/maths.o src/ncextra.o  -Llib
+g++ -std=c++17 -Wall -Wextra -g -lncurses  -Iinclude -o output/main src/invert.o src/main.o src/maths.o src/ncextra.o -lncurses -Llib
 echo Executing 'all' complete!
+ 
 make: Leaving directory `/Users/bbergman/Desktop/code/cpp/proj1'
  
