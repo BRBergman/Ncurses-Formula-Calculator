@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue May 24 10:02:46 2022
+# Make data base, printed on Wed May 25 12:26:32 2022
 
 # Variables
 
@@ -49,7 +49,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-632ba509-2d1c-4578-9865-6ebf2fc1c9b6.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-0c5ea1ff-600a-41c7-8192-6df082c5ee33.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -89,7 +89,7 @@ VSCODE_CODE_CACHE_PATH = /Users/bbergman/Library/Application Support/Code/Cached
 # environment
 LOGNAME = bbergman
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from `Makefile', line 42)
 INCLUDEDIRS := include
 # environment
@@ -212,7 +212,7 @@ all: output main
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-23 14:28:27
+#  Last modified 2022-05-24 19:05:38
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -221,7 +221,7 @@ src/main.o:
 # Not a target:
 src/ncextra.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-23 14:24:57
+#  Last modified 2022-05-24 19:05:57
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -315,7 +315,7 @@ main: src/invert.o src/main.o src/maths.o src/ncextra.o
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-23 14:28:27
+#  Last modified 2022-05-24 19:05:57
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 73):
@@ -345,6 +345,6 @@ src/maths.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 24 10:02:46 2022
+# Finished Make data base on Wed May 25 12:26:32 2022
 
  
