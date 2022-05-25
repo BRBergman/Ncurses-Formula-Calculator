@@ -83,7 +83,7 @@ float * getvars(std::string *ar, int length)//get string array and int of length
 }
 
 
-//ex on how to use intartest
+//ex on how to use getvars()
 int add()
 {
 	std::string questions[] = {"what is x", "what is y"};
