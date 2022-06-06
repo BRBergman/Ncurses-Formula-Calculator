@@ -4,6 +4,7 @@
 #include "maths.h"
 #include <string.h>
 #include "ncextra.h"
+#include "invert.h"
 
 int row, col;		/* to store the number of rows and the number of colums of the screen */
 
