@@ -1,4 +1,4 @@
-void inverti(int &val)
+void invert(int &val)
 {
     
 	int temp= val;
@@ -8,7 +8,7 @@ void inverti(int &val)
 	return;
 }
 
-void invertf(float &val)
+void invert(float &val)
 {
 	double temp= val;
 	temp = (temp*-1 );
@@ -17,7 +17,7 @@ void invertf(float &val)
 	return;
 }
 
-void invertd(double &val)
+void invert(double &val)
 {
 	double temp= val;
 	temp = (temp*-1 );

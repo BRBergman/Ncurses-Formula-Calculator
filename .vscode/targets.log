@@ -6,9 +6,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Tue May 31 12:19:36 2022
+# Make data base, printed on Mon Jun  6 09:28:31 2022
 
 # Variables
 
@@ -26,7 +25,6 @@ VSCODE_LOG_NATIVE = false
 INCLUDES := -Iinclude
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
- 
 # automatic
 @F = $(notdir $@)
 # makefile
@@ -50,7 +48,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-caf997ce-4bca-41e3-aa68-2355bf52cf4a.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-da8c1348-393d-42eb-94b0-6c7da9b0e931.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -208,7 +206,6 @@ all: output main
 #  commands to execute (from `Makefile', line 70):
 	@echo Executing 'all' complete!
 	
- 
 
 .PHONY: clean
 #  Implicit rule search has not been done.
@@ -218,7 +215,7 @@ all: output main
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-24 19:05:38
+#  Last modified 2022-05-31 12:20:01
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -227,7 +224,7 @@ src/main.o:
 # Not a target:
 src/ncextra.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-25 12:26:35
+#  Last modified 2022-05-31 12:22:31
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -320,8 +317,9 @@ main: src/invert.o src/main.o src/maths.o src/ncextra.o
 	
 
 output:
+ 
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-25 12:26:35
+#  Last modified 2022-05-31 12:22:31
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 73):
@@ -331,7 +329,7 @@ output:
 # Not a target:
 src/maths.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-23 09:22:52
+#  Last modified 2022-05-31 12:20:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -350,6 +348,6 @@ src/maths.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue May 31 12:19:36 2022
+# Finished Make data base on Mon Jun  6 09:28:31 2022
 
  

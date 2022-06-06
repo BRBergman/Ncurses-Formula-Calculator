@@ -1,11 +1,11 @@
 #ifndef __INVERT_H__
 #define __INVERT_H__
 
-void inverti(int &val);
+void invert(int &val);
 
-void invertf(float &val);
+void invert(float &val);
 
-void invertd(double &val);
+void invert(double &val);
 
 
 
