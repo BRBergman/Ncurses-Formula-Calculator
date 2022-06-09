@@ -1,27 +1,23 @@
 void invert(int &val)
 {
-    
-	int temp= val;
-	temp = (temp*-1 );
-
-	val = temp;
+    val= val*-1;
 	return;
 }
 
 void invert(float &val)
 {
-	double temp= val;
-	temp = (temp*-1 );
-
-	val = temp;
+	val= val*-1;
 	return;
 }
 
 void invert(double &val)
 {
-	double temp= val;
-	temp = (temp*-1 );
+	val= val*-1;
+	return;
+}
 
-	val = temp;
+void invert(bool &val)
+{
+	val = !val;
 	return;
 }

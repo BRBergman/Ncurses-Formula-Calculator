@@ -7,7 +7,7 @@ void invert(float &val);
 
 void invert(double &val);
 
-
+void invert(bool &val);
 
 
 
