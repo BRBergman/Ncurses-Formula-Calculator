@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Tue Jun 14 13:49:26 2022
+# Make data base, printed on Wed Jun 15 12:10:29 2022
 
 # Variables
 
@@ -20,6 +20,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 SRC := src
 # environment
 VSCODE_LOG_NATIVE = false
+ 
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # makefile (from `Makefile', line 50)
@@ -49,7 +50,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-4c4f97f6-3938-4d7a-b134-1da06cd45b63.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-30c8571e-a39c-4d9a-aafe-927e04485d32.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -67,7 +68,7 @@ LIB := lib
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.8GuPKWLXI4/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.hyYznozAZ6/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -171,7 +172,7 @@ OBJECTS := src/invert.o src/main.o src/maths.o src/ncextra.o
 # environment
 LANG = C
 # environment
-VSCODE_PID = 97371
+VSCODE_PID = 1241
 # variable set hash-table stats:
 # Load=80/1024=8%, Rehash=0, Collisions=3/135=2%
 
@@ -181,8 +182,8 @@ VSCODE_PID = 97371
 
 # Directories
 
-# . (device 16777223, inode 1579541): 12 files, no impossibilities.
-# src (device 16777223, inode 1579571): 16 files, no impossibilities.
+# . (device 16777222, inode 1579541): 12 files, no impossibilities.
+# src (device 16777222, inode 1579571): 16 files, no impossibilities.
 
 # 28 files, no impossibilities in 2 directories.
 
@@ -212,8 +213,9 @@ all: output main
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-06 09:32:08
+#  Last modified 2022-06-15 11:51:24
 #  File has been updated.
+ 
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -221,7 +223,7 @@ src/main.o:
 # Not a target:
 src/ncextra.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-09 08:54:30
+#  Last modified 2022-06-15 11:58:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -279,7 +281,7 @@ clean:
 # Not a target:
 src/invert.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-06 09:31:31
+#  Last modified 2022-06-15 11:51:22
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -315,7 +317,7 @@ main: src/invert.o src/main.o src/maths.o src/ncextra.o
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-09 08:56:23
+#  Last modified 2022-06-15 11:58:27
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 73):
@@ -326,7 +328,6 @@ output:
 src/maths.o:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-31 12:20:02
- 
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -345,6 +346,6 @@ src/maths.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Jun 14 13:49:26 2022
+# Finished Make data base on Wed Jun 15 12:10:29 2022
 
  

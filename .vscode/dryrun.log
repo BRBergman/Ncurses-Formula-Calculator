@@ -1,6 +1,7 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/bbergman/Desktop/code/cpp/proj1'
 mkdir -p output
+ 
 g++ -std=c++17 -Wall -Wextra -g -lncurses  -Iinclude -c src/invert.cpp  -o src/invert.o
 g++ -std=c++17 -Wall -Wextra -g -lncurses  -Iinclude -c src/main.cpp  -o src/main.o
 g++ -std=c++17 -Wall -Wextra -g -lncurses  -Iinclude -c src/maths.cpp  -o src/maths.o
