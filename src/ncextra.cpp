@@ -61,7 +61,7 @@ int ask()
 float * getvars(std::string ar[], int length)//get string array and int of length
 {
 	
-	char Word[10][10] = {}; 	//create string array to assign values to
+	char Word[10][10]; 	//create string array to assign values to
 	float x[length];
 	for (int i = 0; i< length; i++)
 	{
