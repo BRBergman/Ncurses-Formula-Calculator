@@ -13,7 +13,7 @@ int error()
 {
 	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
 	clear();
-	mvprintw(row/2,(col-strlen(mesg)-2)/2,"%s",mesg);
+	printcenter(mesg);
 	getch();
 	main();
 	return 1;
@@ -66,7 +66,7 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		mvprintw(row/2,(col-strlen(ar[i].c_str()))/2,"%s",ar[i].c_str()); //print message to center of screen with the string that was provided (think of it as ncurses cout)
+		printcenter(ar[i]); 
 		getstr(Word[i]);		//assign value to the variable (think of it as ncurses cin)
 		clear();
 		try
@@ -96,7 +96,7 @@ int add()
 
 void printcenter(std::string in)
 {
-	mvprintw(row/2,(col-strlen(in.c_str()))/2,"%s",in.c_str());
+	mvprintw(row/2,(col-strlen(in.c_str()))/2,"%s",in.c_str()); //print string to center of screen
 
 	return;
 }
@@ -104,7 +104,7 @@ void printcenter(std::string in)
 void printcenter(char in[])
 {
 
-	mvprintw(row/2,(col-strlen(in))/2,"%s",in);
+	mvprintw(row/2,(col-strlen(in))/2,"%s",in); //print char[] to center of screen
 	return;
 }
 

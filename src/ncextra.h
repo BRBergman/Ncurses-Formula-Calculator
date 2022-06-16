@@ -13,5 +13,8 @@ int ask();
 
 float * getvars(std::string *ar, int num);
 
+void printcenter(std::string in);
+
+void printcenter(char in[]);
 
 #endif
