@@ -67,7 +67,7 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 	{
 		clear();
 		printcenter(ar[i]); 
-		getstr(Word[i]);		//assign value to the variable (think of it as ncurses cin)
+		getstr(Word[i]);	//assign value to the variable (think of it as ncurses cin)
 		clear();
 		try
 		{
@@ -97,13 +97,11 @@ int add()
 void printcenter(std::string in)
 {
 	mvprintw(row/2,(col-strlen(in.c_str()))/2,"%s",in.c_str()); //print string to center of screen
-
 	return;
 }
 
 void printcenter(char in[])
 {
-
 	mvprintw(row/2,(col-strlen(in))/2,"%s",in); //print char[] to center of screen
 	return;
 }
