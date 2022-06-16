@@ -94,6 +94,19 @@ int add()
 	return 0;
 }
 
+void printcenter(std::string in)
+{
+	mvprintw(row/2,(col-strlen(in.c_str()))/2,"%s",in.c_str());
+
+	return;
+}
+
+void printcenter(char in[])
+{
+
+	mvprintw(row/2,(col-strlen(in))/2,"%s",in);
+	return;
+}
 
 
 
