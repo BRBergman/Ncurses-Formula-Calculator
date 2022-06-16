@@ -64,7 +64,9 @@ int classifytri()
 {
 	clear();
 	std::string normal[] = {"Enter A: ","Enter B: ","Enter C: "};
-	const char *tri[] = {"It's not a triangle","It's a right triangle","It's an obtuse triangle","It's an accute triangle"};
+	const char *tri[] = {"It's not a triangle",
+	"It's a right triangle","It's an obtuse triangle",
+	"It's an accute triangle"};
 	
 	float *x = getvars(normal,3);
 
