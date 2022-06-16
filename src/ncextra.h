@@ -11,8 +11,6 @@ int error();
 
 int ask();
 
-int mania();
-
 float * getvars(std::string *ar, int num);
 
 
