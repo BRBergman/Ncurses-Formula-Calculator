@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Thu Jun 16 08:41:58 2022
+# Make data base, printed on Thu Jun 16 12:46:26 2022
 
 # Variables
 
@@ -49,7 +49,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-1cf4eaeb-076b-41f9-8ffe-7eea4193be5c.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-11de9bad-e04c-4576-906c-093539065ee1.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -216,7 +216,7 @@ all: output main
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 11:51:24
+#  Last modified 2022-06-16 11:56:03
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -225,7 +225,7 @@ src/main.o:
 # Not a target:
 src/ncextra.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 12:14:55
+#  Last modified 2022-06-16 09:15:18
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -319,7 +319,7 @@ main: src/invert.o src/main.o src/maths.o src/ncextra.o
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-15 12:14:56
+#  Last modified 2022-06-16 12:00:00
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 73):
@@ -330,7 +330,7 @@ output:
 src/maths.o:
 #  Implicit rule search has been done.
  
-#  Last modified 2022-05-31 12:20:02
+#  Last modified 2022-06-16 11:47:10
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -349,6 +349,6 @@ src/maths.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 16 08:41:58 2022
+# Finished Make data base on Thu Jun 16 12:46:26 2022
 
  
