@@ -25,14 +25,14 @@ int mid()
 {
 	std::string normal[] =  {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
 	
-	float *x = getvars(normal,4);
+	float *f = getvars(normal,4);
 
 	clear();
 	beep();
-	double first = midpoint(x[0],x[2]);
-	double second = midpoint(x[1],x[3]);
+	double x = midpoint(f[0],f[2]);
+	double y = midpoint(f[1],f[3]);
 
-	mvprintw(row/2,((col/3)),"the midpoint is: X%f, Y%f",first,second);
+	mvprintw(row/2,((col/3)),"the midpoint coordinant is: (%f,%f)",x,y);
 	getch();
 	return 0;
 }

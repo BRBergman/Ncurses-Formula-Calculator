@@ -1,6 +1,7 @@
 #include <cmath>
 #include <string>
 #include "maths.h"
+#include <iostream>
 //to be used with maths.h
 
 
