@@ -6,7 +6,8 @@
 #include "ncextra.h"
 #include "invert.h"
 
-int row, col;		/* to store the number of rows and the number of colums of the screen (i know its a global variable but like deal with it)*/
+int row, col;		/* to store the number of rows and the number of colums of the screen 
+(i know its a global variable but like deal with it)*/
 
 int csar()
 {
