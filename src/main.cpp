@@ -32,7 +32,7 @@ int mid()
 	double x = midpoint(f[0],f[2]);
 	double y = midpoint(f[1],f[3]);
 
-	mvprintw(row/2,((col/3)),"the midpoint coordinant is: (%f,%f)",x,y);
+	mvprintw(row/2,((col/3)),"The Midpoint Coordinant is: (%f,%f)",x,y);
 	getch();
 	return 0;
 }
