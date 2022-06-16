@@ -124,8 +124,16 @@ int main()
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 
-	int num = ask();
+	int num;
 
+	try
+	{
+		num = ask();
+	}
+	catch(...)
+	{
+		num = 0;
+	}
 	switch (num)
 	{
 		case 0:
