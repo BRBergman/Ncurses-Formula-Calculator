@@ -101,4 +101,3 @@ void printcenter(char in[])
 	mvprintw(row/2,(col-strlen(in))/2,"%s",in); //print char[] to center of screen
 	return;
 }
-
