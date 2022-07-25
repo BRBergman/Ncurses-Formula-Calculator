@@ -102,5 +102,3 @@ void printcenter(char in[])
 	return;
 }
 
-
-
