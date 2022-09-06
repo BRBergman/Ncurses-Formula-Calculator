@@ -120,7 +120,7 @@ int pythag(bool rev)
 	return 0;
 }
 
-int main()
+int mains()
 {
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */

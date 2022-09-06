@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Thu Jun 16 12:46:26 2022
+# Make data base, printed on Wed Aug 17 17:42:57 2022
 
 # Variables
 
@@ -49,7 +49,7 @@ VSCODE_VERBOSE_LOGGING = true
 # environment
 __CFBundleIdentifier = com.microsoft.VSCode
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-11de9bad-e04c-4576-906c-093539065ee1.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/vscode-ipc-63b46579-64c3-4cf3-8816-ed07fa1a1661.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -59,7 +59,7 @@ MD := mkdir -p
 # makefile (from `Makefile', line 43)
 LIBDIRS := lib
 # environment
-LaunchInstanceID = E9292C3D-E5B0-48EE-BC6B-7854E2BB1C1A
+LaunchInstanceID = 0CD03C44-F87B-483E-B166-1852CDB6C2C6
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -69,7 +69,7 @@ LIB := lib
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.VeAtEroXbQ/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.QSb4kON3hO/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -87,7 +87,7 @@ HOME = /Users/bbergman
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/bbergman/Library/Application Support/Code/CachedData/4af164ea3a06f701fe3e89a2bcbb421d2026b68f
+VSCODE_CODE_CACHE_PATH = /Users/bbergman/Library/Application Support/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
 # environment
 LOGNAME = bbergman
 # environment
@@ -131,7 +131,7 @@ TMPDIR = /var/folders/h7/q5j_n0_n3w5_ybx43yclm6z80ywp5_/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/bbergman/Library/Application Support/Code/1.68.0-main.sock
+VSCODE_IPC_HOOK = /Users/bbergman/Library/Application Support/Code/1.68.1-main.sock
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -141,7 +141,7 @@ MFLAGS = -Rrqp
 # makefile (from `Makefile', line 40)
 MAIN := main
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.8177776.8177782
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.9568100.9568111
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -175,7 +175,7 @@ OBJECTS := src/invert.o src/main.o src/maths.o src/ncextra.o
 # environment
 LANG = C
 # environment
-VSCODE_PID = 751
+VSCODE_PID = 779
 # variable set hash-table stats:
 # Load=82/1024=8%, Rehash=0, Collisions=3/137=2%
 
@@ -185,10 +185,10 @@ VSCODE_PID = 751
 
 # Directories
 
-# . (device 16777225, inode 1579541): 12 files, no impossibilities.
-# src (device 16777225, inode 1579571): 16 files, no impossibilities.
+# . (device 16777224, inode 1579541): 12 files, no impossibilities.
+# src (device 16777224, inode 1579571): 17 files, no impossibilities.
 
-# 28 files, no impossibilities in 2 directories.
+# 29 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
@@ -216,7 +216,7 @@ all: output main
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-16 11:56:03
+#  Last modified 2022-07-25 13:09:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -225,7 +225,7 @@ src/main.o:
 # Not a target:
 src/ncextra.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-16 09:15:18
+#  Last modified 2022-07-25 13:09:56
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -283,7 +283,7 @@ clean:
 # Not a target:
 src/invert.o:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-15 11:51:22
+#  Last modified 2022-07-25 13:09:54
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -319,7 +319,7 @@ main: src/invert.o src/main.o src/maths.o src/ncextra.o
 
 output:
 #  Implicit rule search has not been done.
-#  Last modified 2022-06-16 12:00:00
+#  Last modified 2022-07-25 13:10:28
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 73):
@@ -349,6 +349,6 @@ src/maths.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Thu Jun 16 12:46:26 2022
+# Finished Make data base on Wed Aug 17 17:42:57 2022
 
  
