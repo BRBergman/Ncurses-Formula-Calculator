@@ -105,18 +105,18 @@ void printcenter(char in[])
 void printcenter(float in)
 {
 	int conv = std::to_string(in).length();
-	mvprintw(row/2,(col-conv)/2,"%d",in); //print string to center of screen
+	mvprintw(row/2,(col-conv)/2,"%d",in); //print float to center of screen
 	return;
 }
 void printcenter(double in)
 {
 	int conv = std::to_string(in).length();
-	mvprintw(row/2,(col-conv)/2,"%d",in); //print string to center of screen
+	mvprintw(row/2,(col-conv)/2,"%d",in); //print double to center of screen
 	return;
 }
 void printcenter(int in)
 {
 	int conv = std::to_string(in).length();
-	mvprintw(row/2,(col-conv)/2,"%i",in); //print string to center of screen
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
 	return;
 }
