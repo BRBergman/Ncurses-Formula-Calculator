@@ -96,3 +96,10 @@ double csaria(float radious, float angle)
 	return top/360;
 }
 
+double slopeintercept(float m, float x, float b)
+{
+	double calc =(m*x)+b;
+
+	return calc;
+}
+

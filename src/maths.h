@@ -22,5 +22,7 @@ double midpoint(float one, float two);
 
 double csaria(float radious, float angle);
 
+double slopeintercept(float m, float x, float b);
+
 
 #endif

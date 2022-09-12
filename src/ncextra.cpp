@@ -120,3 +120,11 @@ void printcenter(int in)
 	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
 	return;
 }
+
+std::string combinetext(std::string, float)
+{
+	
+
+
+
+}
