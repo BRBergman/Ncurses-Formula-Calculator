@@ -5,18 +5,17 @@
 #include <string.h>
 #include "ncextra.h"
 #include "invert.h"
+#include "combinetext.h"
 
 int row, col;		/* to store the number of rows and the number of colums of the screen 
 (i know its a global variable but like deal with it)*/
 int intercept()
 {
-std::string normal[] = {"Enter M","Enter X", "Enter B"};
+std::string normal[] = {"Enter M: ","Enter X: ", "Enter B: "};
 	float *x = getvars(normal, 3);
 	beep();
 	clear();
-
 	printcenter(combinetext("Y is: ", slopeintercept(x[0],x[1],x[2])));
-	//mvprintw(row/2,(col)/2,"Y is: %f",slopeintercept(x[0],x[1],x[2]));
 	getch();
 }
 
@@ -27,7 +26,7 @@ int csar()
 	float *x = getvars(normal,2);
 	beep();
 	clear();
-	mvprintw(row/2,(col)/2,"The Area is: %f", csaria(x[0],x[1]));
+	printcenter(combinetext("The Area is: ", csaria(x[0],x[1])));
 	getch();
 	return 0;
 }  
@@ -35,14 +34,11 @@ int csar()
 int mid()
 {
 	std::string normal[] =  {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
-	
 	float *f = getvars(normal,4);
-
 	clear();
 	beep();
 	double x = midpoint(f[0],f[2]);
 	double y = midpoint(f[1],f[3]);
-
 	mvprintw(row/2,((col/3)),"The Midpoint Coordinant is: (%f,%f)",x,y);
 	getch();
 	return 0;

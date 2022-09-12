@@ -23,7 +23,6 @@ void printcenter(double in);
 
 void printcenter(int in);
 
-std::string combinetext(char text[] , float equasion);
 
 
 #endif

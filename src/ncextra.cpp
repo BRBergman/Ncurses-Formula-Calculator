@@ -121,10 +121,3 @@ void printcenter(int in)
 	return;
 }
 
-std::string combinetext(char text[] , float equasion)
-{
-	
-	std::string combined = text + std::to_string(equasion);
-
-	return combined;
-}
