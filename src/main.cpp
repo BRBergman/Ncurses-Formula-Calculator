@@ -14,8 +14,10 @@ std::string normal[] = {"Enter M","Enter X", "Enter B"};
 	float *x = getvars(normal, 3);
 	beep();
 	clear();
-	mvprintw(row/2,(col)/2,"Y is: %f",slopeintercept(x[0],x[1],x[2]));
 
+	printcenter(combinetext("Y is: ", slopeintercept(x[0],x[1],x[2])));
+	//mvprintw(row/2,(col)/2,"Y is: %f",slopeintercept(x[0],x[1],x[2]));
+	getch();
 }
 
 int csar()
@@ -129,7 +131,7 @@ int pythag(bool rev)
 	return 0;
 }
 
-int mains()
+int main()
 {
 	initscr();	 					/* start the curses mode */
 	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
