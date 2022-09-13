@@ -21,7 +21,7 @@ int ask()
 	clear();
 	// add new part here to show up 
 	const char* askev[] = {"quit",
-	"do the pythagorean theorem ",
+	"do the pythagorean theorem",
 	"do the inverse pythagorean theorem",
 	"do the distance formula",
 	"do the slope formula", 
@@ -45,7 +45,7 @@ int ask()
  	try
 	{
 		num = std::stoi(numin);
-	}//const std::exception& e
+	}
 	catch(...)
 	{
 		num = 0;
