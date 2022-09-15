@@ -13,7 +13,7 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 (i know its a global variable but like deal with it)*/
 int intercept()
 {
-std::string normal[] = {"Enter M: ","Enter X: ", "Enter B: "};
+	std::string normal[] = {"Enter M: ","Enter X: ", "Enter B: "};
 	float *x = getvars(normal, 3);
 	beep();
 	clear();
