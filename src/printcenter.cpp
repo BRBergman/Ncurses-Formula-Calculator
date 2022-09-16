@@ -5,13 +5,11 @@ void printcenter(std::string in)
 	mvprintw(row/2,(col-strlen(in.c_str()))/2,"%s",in.c_str()); //print string to center of screen
 	return;
 }
-
 void printcenter(char in[])
 {
 	mvprintw(row/2,(col-strlen(in))/2,"%s",in); //print char[] to center of screen
 	return;
 }
-
 void printcenter(float in)
 {
 	int conv = std::to_string(in).length();
