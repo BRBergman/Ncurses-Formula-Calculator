@@ -17,7 +17,7 @@ int intercept()
 	float *x = getvars(normal, 3);
 	beep();
 	clear();
-	printcenter(combinetext("Y is: ", slopeintercept(x[0],x[1],x[2])));
+	mvprintw(row/2,((col/3)),"Y is: %f",slopeintercept(x[0],x[1],x[2]));
 	getch();
 }
 
@@ -28,7 +28,7 @@ int csar()
 	float *x = getvars(normal,2);
 	beep();
 	clear();
-	printcenter(combinetext("The Area is: ", csaria(x[0],x[1])));
+	mvprintw(row/2,((col/3)),"The Area is: ", csaria(x[0],x[1]));
 	getch();
 	return 0;
 }  
@@ -97,21 +97,20 @@ int slop(bool dist) //true distance formula false slope formula
 	beep();
 	if (dist)
 	{
-		
-		mvprintw(row/2,col/2,"%f",distance(x[0],x[1],x[2],x[3]) );
+		double y = distance(x[0],x[1],x[2],x[3]);
+		printcenter(combinetext("The Distance Is: ",y));
 	}
 	else
 	{
-		mvprintw(row/2,col/2,"%f",slope(x[0],x[1],x[2],x[3]) );
+		double y = slope(x[0],x[1],x[2],x[3]);
+		printcenter(combinetext("The Slope Is: ",y));
 	}
-
 	getch();
 	return 0;
 }
 
-int pythag(bool rev)
+int pythag(bool rev) //true for inverse
 {
-	//true for inverse 
 	std::string normal[] = {"Enter X: ","Enter Y: "};
 	float *x = getvars(normal,2);
 	
@@ -119,11 +118,13 @@ int pythag(bool rev)
 	beep();
 	if (rev)
 	{
-		mvprintw(row/2, (col)/3, "Leg Value: %f",reversepythagorean(x[0],x[1])  );
+		double z = reversepythagorean(x[0],x[1]);
+		printcenter(combinetext("Leg Value: ",z));
 	}
 	else
 	{
-		mvprintw(row/2, (col)/3, "Hypotonuse Value: %f",pythagorean(x[0],x[1])  );
+		double z = pythagorean(x[0],x[1]);
+		printcenter(combinetext("Hypotonuse Value: ",z));
 	}
  	getch();
 	return 0;
