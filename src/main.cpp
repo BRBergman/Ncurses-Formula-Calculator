@@ -77,12 +77,11 @@ int classifytri()
 	const char *tri[] = {"It's not a triangle",
 	"It's a right triangle","It's an obtuse triangle",
 	"It's an accute triangle"};
-	
 	float *x = getvars(normal,3);
-
 	int cases = cheiftr(x[0],x[1],x[2]);
 	beep();
-	mvprintw(row/2,(col-strlen(tri[cases]))/2,"%s",tri[cases]);
+	std::string y = tri[cases];
+	printcenter(y);
 	getch();
 	return 0;
 }
@@ -95,14 +94,15 @@ int slop(bool dist) //true distance formula false slope formula
 
 	clear();
 	beep();
+	double y = 0;
 	if (dist)
 	{
-		double y = distance(x[0],x[1],x[2],x[3]);
+		y = distance(x[0],x[1],x[2],x[3]);
 		printcenter(combinetext("The Distance Is: ",y));
 	}
 	else
 	{
-		double y = slope(x[0],x[1],x[2],x[3]);
+		y = slope(x[0],x[1],x[2],x[3]);
 		printcenter(combinetext("The Slope Is: ",y));
 	}
 	getch();
@@ -116,15 +116,16 @@ int pythag(bool rev) //true for inverse
 	
 	clear();
 	beep();
+	double y = 0;
 	if (rev)
 	{
-		double z = reversepythagorean(x[0],x[1]);
-		printcenter(combinetext("Leg Value: ",z));
+		y = reversepythagorean(x[0],x[1]);
+		printcenter(combinetext("Leg Value: ",y));
 	}
 	else
 	{
-		double z = pythagorean(x[0],x[1]);
-		printcenter(combinetext("Hypotonuse Value: ",z));
+		y = pythagorean(x[0],x[1]);
+		printcenter(combinetext("Hypotonuse Value: ",y));
 	}
  	getch();
 	return 0;
