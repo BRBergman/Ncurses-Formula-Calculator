@@ -18,7 +18,9 @@ int intercept()
 	beep();
 	clear();
 	mvprintw(row/2,((col/3)),"Y is: %f",slopeintercept(x[0],x[1],x[2]));
+	free(x);
 	getch();
+	return 0;
 }
 
 int csar()
