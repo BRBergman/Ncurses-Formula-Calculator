@@ -8,7 +8,7 @@
 
 int error()
 {
-	const char mesg[] = "There is an error. One or more of the values you entered is not valid. Press any key to continue.";
+	const char mesg[] = "There is an error. The value you entered is not valid. Press any key to continue.";
 	clear();
 	printcenter(mesg);
 	getch();
@@ -18,7 +18,6 @@ int error()
 
 int ask()
 {
-	
 	clear();
 	// add new part here to show up 
 	const char* askev[] = {"quit",
@@ -65,7 +64,6 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 		clear();
 		printcenter(ar[i]); 
 		getstr(Word[i]);	//assign value to the variable (think of it as ncurses cin)
-		clear();
 		try
 		{
 			x[i] = std::stof(Word[i]); // turn the string we got into a float 
@@ -73,7 +71,6 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 		catch(...)
 		{
 			error();
-			return 0;
 		}
 	}
 	return x; //return a pointer to the array of floats
