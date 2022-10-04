@@ -31,6 +31,7 @@ int ask()
 	"preform the midpoint formula",
 	"find the area of a certan section of a circle",
 	
+	
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
