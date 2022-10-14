@@ -86,6 +86,5 @@ int add()
 	float *z  = getvars(questions, 2);
 	float y = z[0]+z[1];
 	mvprintw(row/2,(col)/2,"%f",y);
-	getch();
 	return 0;
 }
