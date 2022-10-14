@@ -104,7 +104,6 @@ double slopeintercept(float m, float x, float b)
 
 double scitonum(double num, double ex)
 {
-	double f = 0.0;
-	f = f*pow(10,ex);
+	double f = num*pow(10,ex);
 	return f;
 }
