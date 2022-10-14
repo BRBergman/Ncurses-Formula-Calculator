@@ -73,6 +73,8 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 			error();
 		}
 	}
+	clear();
+	beep();
 	return x; //return a pointer to the array of floats
 }
 

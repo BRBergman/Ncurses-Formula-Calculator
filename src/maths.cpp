@@ -99,14 +99,12 @@ double csaria(float radious, float angle)
 double slopeintercept(float m, float x, float b)
 {
 	double calc =(m*x)+b;
-
 	return calc;
 }
 
-double scitonum(double num, int ex)
+double scitonum(double num, double ex)
 {
-	double f;
+	double f = 0.0;
 	f = f*pow(10,ex);
-
 	return f;
 }
