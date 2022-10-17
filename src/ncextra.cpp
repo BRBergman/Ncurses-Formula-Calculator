@@ -70,7 +70,9 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 		}
 		catch(...)
 		{
+			clear();
 			error();
+			return 0;
 		}
 	}
 	clear();
