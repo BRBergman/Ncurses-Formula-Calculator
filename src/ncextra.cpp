@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdio.h>
 #include "printcenter.h"
+#include <vector>
 
 
 int error()
@@ -55,6 +56,35 @@ int ask()
 }
 
 
+std::vector<float> getvecvars(std::vector<std::string> ar)
+{
+	//getvecvars(l);
+	int length = ar.size();
+	std::vector<std::string> Word(length);
+	std::vector<float> x(length);
+	char ihatethis[10];
+	for (int i = 0; i< length; i++)
+	{
+		clear();
+		printcenter(ar[i]); 
+		getstr(ihatethis);
+		Word[i] = ihatethis;
+		//assign value to the variable (think of it as ncurses cin)
+		try
+		{
+			x[i] = std::stof(Word[i]); // turn the string we got into a float 
+		}
+		catch(...)
+		{
+			clear();
+			error();
+			return x;
+		}
+	}
+	clear();
+	beep();
+	return x;
+}
 float * getvars(std::string ar[], int length)//get string array and int of length
 {
 	char Word[length][10]; 	//create string array to assign values to
@@ -79,6 +109,7 @@ float * getvars(std::string ar[], int length)//get string array and int of lengt
 	beep();
 	return x; //return a pointer to the array of floats
 }
+
 
 
 //ex on how to use getvars()

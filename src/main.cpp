@@ -14,10 +14,13 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 (i know its a global variable but like deal with it)*/
 int sciencetonormal()
 {
-	std::string normal[] = {"Enter the Number","Enter the Exponant"};
-	float *x = getvars(normal, 2);
-	double y = scitonum(x[0],x[1]);
-	printcenter(combinetext("Your Number is: %f",y));
+	//std::string normal[] = {"Enter the Number","Enter the Exponant"};
+	std::vector<std::string> testtext{"Enter the Number: ","Enter the Exponant: "};
+	std::vector<float> test = getvecvars(testtext);
+	//float *x = getvars(normal, 2);
+	//double y = scitonum(x[0],x[1]);
+	double y = scitonum(test[0],test[1]);
+	printcenter(combinetext("Your Number is: ",y));
 	return 0;
 }
 int intercept()
@@ -165,6 +168,9 @@ int main()
 			break;
 		case 10:
 			intercept();
+			break;
+		case 11:
+			sciencetonormal();
 			break;
 		default:
 		clear();

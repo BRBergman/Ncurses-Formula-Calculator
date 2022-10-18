@@ -1,6 +1,7 @@
 #ifndef NCEXTRA_H
 #define NCEXTRA_H
 #include <iostream>
+#include <vector>
 //to be used with ncextra.cpp
 
 int main();
@@ -10,6 +11,8 @@ extern int row,col;
 int error();
 
 int ask();
+
+std::vector<float> getvecvars(std::vector<std::string> ar);
 
 float * getvars(std::string *ar, int num);
 
