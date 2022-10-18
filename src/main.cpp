@@ -14,35 +14,31 @@ int row, col;		/* to store the number of rows and the number of colums of the sc
 (i know its a global variable but like deal with it)*/
 int sciencetonormal()
 {
-	//std::string normal[] = {"Enter the Number","Enter the Exponant"};
-	std::vector<std::string> testtext{"Enter the Number: ","Enter the Exponant: "};
-	std::vector<float> test = getvecvars(testtext);
-	//float *x = getvars(normal, 2);
-	//double y = scitonum(x[0],x[1]);
-	double y = scitonum(test[0],test[1]);
+	std::vector<std::string> normal{"Enter the Number: ","Enter the Exponant: "};
+	std::vector<float> x = getvecvars(normal);
+	double y = scitonum(x[0],x[1]);
 	printcenter(combinetext("Your Number is: ",y));
 	return 0;
 }
 int intercept()
 {
-	std::string normal[] = {"Enter M: ","Enter X: ", "Enter B: "};
-	float *x = getvars(normal, 3);
-	mvprintw(row/2,((col/3)),"Y is: %f",slopeintercept(x[0],x[1],x[2]));
+	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
+	std::vector<float> x = getvecvars(normal);
+	printcenter(combinetext("Y is: ",slopeintercept(x[0],x[1],x[2])));
 	return 0;
 }
-
 int csar()
 {
-	std::string normal[] =  {"Enter Radious: ","Enter Angle: "};
-	float *x = getvars(normal,2);
+	std::vector<std::string> normal{"Enter Radious: ","Enter Angle: "};
+	std::vector<float> x = getvecvars(normal);
 	mvprintw(row/2,((col/3)),"The Area is: ", csaria(x[0],x[1]));
 	return 0;
 }  
 
 int mid()
 {
-	std::string normal[] =  {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
-	float *f = getvars(normal,4);
+	std::vector<std::string> normal{"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
+	std::vector<float> f = getvecvars(normal);
 	double x = midpoint(f[0],f[2]);
 	double y = midpoint(f[1],f[3]);
 	mvprintw(row/2,((col/3)),"The Midpoint Coordinant is: (%f,%f)",x,y);
@@ -51,8 +47,8 @@ int mid()
 
 int circumph(bool area)	//if true does area if false does circumphrince
 {
-	std::string normal[] =  {"Enter the Radious: ", "The circumference is: ", "The area is: " };
-	float *x = getvars(normal,1);
+	std::vector<std::string> normal{"Enter the Radious: ", "The circumference is: ", "The area is: " };
+	std::vector<float> x = getvecvars(normal);
 	double cases;
 	if (area)
 	{
@@ -63,7 +59,6 @@ int circumph(bool area)	//if true does area if false does circumphrince
 	{
 		cases = circ(x[0]);
 		mvprintw(row/2,(col)/3+4,"%s%f",normal[1].c_str(),cases);
-		
 	}
 	return 0;
 }
@@ -71,22 +66,20 @@ int circumph(bool area)	//if true does area if false does circumphrince
 int classifytri()
 {
 	clear();
-	std::string normal[] = {"Enter A: ","Enter B: ","Enter C: "};
-	const char *tri[] = {"It's not a triangle",
+	std::string tri[] = {"It's not a triangle",
 	"It's a right triangle","It's an obtuse triangle",
 	"It's an accute triangle"};
-	float *x = getvars(normal,3);
-	int cases = cheiftr(x[0],x[1],x[2]);
-	std::string y = tri[cases];
-	printcenter(y);
+	std::vector<std::string> normal{"Enter A: ","Enter B: ","Enter C: "};
+	std::vector<float> x = getvecvars(normal);
+	printcenter(tri[cheiftr(x[0],x[1],x[2])]);
 	return 0;
 }
 
 int slop(bool dist) //true distance formula false slope formula   
 {
 	clear();
-	std::string normal[] = {"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
-	float *x = getvars(normal,4);
+	std::vector<std::string> normal{"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
+	std::vector<float> x = getvecvars(normal);
 	double y = 0;
 	if (dist)
 	{
@@ -103,8 +96,8 @@ int slop(bool dist) //true distance formula false slope formula
 
 int pythag(bool rev) //true for inverse
 {
-	std::string normal[] = {"Enter X: ","Enter Y: "};
-	float *x = getvars(normal,2);
+	std::vector<std::string> normal{"Enter X: ","Enter Y: "};
+	std::vector<float> x = getvecvars(normal);
 	double y = 0;
 	if (rev)
 	{
