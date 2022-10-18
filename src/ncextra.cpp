@@ -6,7 +6,7 @@
 #include "printcenter.h"
 #include <vector>
 
-
+//use if the user messes something up
 int error()
 {
 	const char mesg[] = "There is an error. The value you entered is not valid. Press any key to continue.";
@@ -55,26 +55,22 @@ int ask()
 	return num;
 }
 
-
-std::vector<float> getvecvars(std::vector<std::string> ar)
+//print strings and return inputs as a vector
+std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in float vector out
 {
-	//getvecvars(l);
-	int length = ar.size();
-	std::vector<std::string> Word(length);
-	std::vector<float> x(length);
-	char ihatethis[10];
+	int length = ar.size(); //get size of input vector
+	std::vector<float> x(length);	//the float vector that we return
+	char word[20];					//char array to get inputs from
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printcenter(ar[i]); 
-		getstr(ihatethis);
-		Word[i] = ihatethis;
-		//assign value to the variable (think of it as ncurses cin)
+		printcenter(ar[i]); 		//print a message to the center of the screen
+		getstr(word);				//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
-			x[i] = std::stof(Word[i]); // turn the string we got into a float 
+			x[i] = std::stof(word); // turn the string in "word" into a float 
 		}
-		catch(...)
+		catch(...)					//uh oh something went wrong
 		{
 			clear();
 			error();
@@ -84,40 +80,4 @@ std::vector<float> getvecvars(std::vector<std::string> ar)
 	clear();
 	beep();
 	return x;
-}
-float * getvars(std::string ar[], int length)//get string array and int of length
-{
-	char Word[length][10]; 	//create string array to assign values to
-	float x[length];
-	for (int i = 0; i< length; i++)
-	{
-		clear();
-		printcenter(ar[i]); 
-		getstr(Word[i]);	//assign value to the variable (think of it as ncurses cin)
-		try
-		{
-			x[i] = std::stof(Word[i]); // turn the string we got into a float 
-		}
-		catch(...)
-		{
-			clear();
-			error();
-			return 0;
-		}
-	}
-	clear();
-	beep();
-	return x; //return a pointer to the array of floats
-}
-
-
-
-//ex on how to use getvars()
-int add()
-{
-	std::string questions[] = {"what is x", "what is y"};
-	float *z  = getvars(questions, 2);
-	float y = z[0]+z[1];
-	mvprintw(row/2,(col)/2,"%f",y);
-	return 0;
 }

@@ -67,7 +67,8 @@ int classifytri()
 {
 	clear();
 	std::string tri[] = {"It's not a triangle",
-	"It's a right triangle","It's an obtuse triangle",
+	"It's a right triangle",
+	"It's an obtuse triangle",
 	"It's an accute triangle"};
 	std::vector<std::string> normal{"Enter A: ","Enter B: ","Enter C: "};
 	std::vector<float> x = getvecvars(normal);
@@ -96,7 +97,11 @@ int slop(bool dist) //true distance formula false slope formula
 
 int pythag(bool rev) //true for inverse
 {
-	std::vector<std::string> normal{"Enter X: ","Enter Y: "};
+	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
+	if (rev)
+	{
+		normal[1] = "Enter Hypotinuse: ";
+	}
 	std::vector<float> x = getvecvars(normal);
 	double y = 0;
 	if (rev)
