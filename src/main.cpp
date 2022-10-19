@@ -109,12 +109,9 @@ int pythag(bool rev) //true for inverse
 	}
 	return 0;
 }
-
-int main()
+int answer()
 {
 	clear();
-	initscr();	 					/* start the curses mode */
-	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
 	int num;
 	try
 	{
@@ -167,7 +164,15 @@ int main()
 	}
 	getch();
 	clear();
-	main();
+	answer();
+	return 0;
+}
+
+int main()
+{
+	initscr();	 					/* start the curses mode */
+	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
+	answer();
 	endwin();
 	return 0;
 }
