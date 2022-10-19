@@ -24,7 +24,5 @@ double csaria(float radious, float angle);
 
 double slopeintercept(float m, float x, float b);
 
-double scitonum(double num, double ex);
-
 
 #endif

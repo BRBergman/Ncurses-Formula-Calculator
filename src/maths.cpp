@@ -101,9 +101,3 @@ double slopeintercept(float m, float x, float b)
 	double calc =(m*x)+b;
 	return calc;
 }
-
-double scitonum(double num, double ex)
-{
-	double f = num*pow(10,ex);
-	return f;
-}

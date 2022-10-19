@@ -12,14 +12,7 @@
 
 int row, col;		/* to store the number of rows and the number of colums of the screen 
 (i know its a global variable but like deal with it)*/
-int sciencetonormal()
-{
-	std::vector<std::string> normal{"Enter the Number: ","Enter the Exponant: "};
-	std::vector<float> x = getvecvars(normal);
-	double y = scitonum(x[0],x[1]);
-	printcenter(combinetext("Your Number is: ",y));
-	return 0;
-}
+
 int intercept()
 {
 	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
@@ -166,9 +159,6 @@ int main()
 			break;
 		case 10:
 			intercept();
-			break;
-		case 11:
-			sciencetonormal();
 			break;
 		default:
 		clear();
