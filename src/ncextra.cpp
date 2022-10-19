@@ -55,7 +55,6 @@ int ask()
 	return num;
 }
 
-//print strings and return inputs as a vector
 std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in float vector out
 {
 	int length = ar.size(); //get size of input vector

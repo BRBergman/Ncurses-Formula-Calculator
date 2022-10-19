@@ -12,6 +12,7 @@ int error();
 
 int ask();
 
+//print strings and return inputs as a float vector
 std::vector<float> getvecvars(std::vector<std::string> ar);
 
 void printcenter(std::string in);
