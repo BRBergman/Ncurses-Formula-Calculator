@@ -9,7 +9,7 @@
 //use if the user messes something up
 int error()
 {
-	const char mesg[] = "There is an error. The value you entered is not valid. Press any key to continue.";
+	std::string mesg = "There is an error. The value you entered is not valid. Press any key to continue.";
 	clear();
 	printcenter(mesg);
 	getch();
@@ -70,9 +70,8 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 		}
 		catch(...)					//uh oh something went wrong
 		{
-			clear();
 			error();
-			return x;
+			break;
 		}
 	}
 	clear();
