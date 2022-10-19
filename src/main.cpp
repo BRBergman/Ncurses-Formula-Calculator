@@ -29,7 +29,7 @@ int intercept()
 }
 int csar()
 {
-	std::vector<std::string> normal{"Enter Radious: ","Enter Angle: "};
+	std::vector<std::string> normal{"Enter Radius: ","Enter Angle: "};
 	std::vector<float> x = getvecvars(normal);
 	mvprintw(row/2,((col/3)),"The Area is: ", csaria(x[0],x[1]));
 	return 0;
@@ -47,7 +47,7 @@ int mid()
 
 int circumph(bool area)	//if true does area if false does circumphrince
 {
-	std::vector<std::string> normal{"Enter the Radious: ", "The circumference is: ", "The area is: " };
+	std::vector<std::string> normal{"Enter the Radius: ", "The circumference is: ", "The area is: " };
 	std::vector<float> x = getvecvars(normal);
 	double cases;
 	if (area)
