@@ -38,12 +38,11 @@ int ask()
 	for (int i = 0; askev[i] != NULL; i++ )
 	{
 		mvprintw(row/2-7+i, (col-strlen(askev[i])-11)/2, "Press %i to %s",i,askev[i] );
-		mvprintw(row/2-4+i,col/2-1, " ");
+		mvprintw(row/2-5+i,col/2-1, " ");
 	}
 	char numin[10];
 	getstr(numin);
 	int num;
-	 
  	try
 	{
 		num = std::stoi(numin);
