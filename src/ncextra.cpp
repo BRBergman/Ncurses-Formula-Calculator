@@ -31,14 +31,14 @@ int ask()
 	"check the area of a circle",
 	"preform the midpoint formula",
 	"find the area of a certan section of a circle",
-	
-	
+	"find the y intercept of a line",
+
 	NULL};
 	
 	for (int i = 0; askev[i] != NULL; i++ )
 	{
-		mvprintw(row/2-6+i, (col-strlen(askev[i])-11)/2, "Press %i to %s",i,askev[i] );
-		mvprintw(row/2-2+i,col/2-1, " ");
+		mvprintw(row/2-7+i, (col-strlen(askev[i])-11)/2, "Press %i to %s",i,askev[i] );
+		mvprintw(row/2-4+i,col/2-1, " ");
 	}
 	char numin[10];
 	getstr(numin);
