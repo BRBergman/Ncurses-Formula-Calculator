@@ -88,27 +88,22 @@ int slop(bool dist) //true distance formula false slope formula
 	return 0;
 }
 
-int pythag(bool rev) //true for inverse
+int pythag()
 {
 	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
-	if (rev)
-	{
-		normal[1] = "Enter Hypotinuse: ";
-	}
 	std::vector<float> x = getvecvars(normal);
-	double y = 0;
-	if (rev)
-	{
-		y = reversepythagorean(x[0],x[1]);
-		printcenter(combinetext("Leg Value: ",y));
-	}
-	else
-	{
-		y = pythagorean(x[0],x[1]);
-		printcenter(combinetext("Hypotonuse Value: ",y));
-	}
+	printcenter(combinetext("Hypotonuse Value: ",pythagorean(x[0],x[1])));
 	return 0;
 }
+
+int revpythag()
+{
+	std::vector<std::string> normal{"Enter Leg: ","Enter Hypotonuse: "};
+	std::vector<float> x = getvecvars(normal);
+	printcenter(combinetext("Leg Value: ",reversepythagorean(x[0],x[1])));
+	return 0;
+}
+
 int answer()
 {
 	clear();
@@ -128,10 +123,10 @@ int answer()
 			endwin();
 			return 0;
 		case 1:
-			pythag(false);
+			pythag();
 			break;
 		case 2:
-			pythag(true);
+			revpythag();
 			break;
 		case 3:
 			slop(true);
