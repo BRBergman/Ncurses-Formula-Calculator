@@ -13,7 +13,7 @@ int error()
 	clear();
 	printcenter(mesg);
 	getch();
-	main();
+	answer();
 	return 1;
 }
 

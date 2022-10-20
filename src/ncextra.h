@@ -4,7 +4,7 @@
 #include <vector>
 //to be used with ncextra.cpp
 
-int main();
+int answer();
 
 extern int row,col;  
 
