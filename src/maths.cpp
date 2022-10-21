@@ -19,7 +19,6 @@ double slope(float x1,float y1,float x2,float y2)
 	return (y2-y1)/(x2-x1);
 }
 
-
 double pythagorean(float a, float b)
 {
 	//a2+b2=c2
