@@ -2,6 +2,7 @@
 #define NCEXTRA_H
 #include <iostream>
 #include <vector>
+#include <cstring>
 //to be used with ncextra.cpp
 
 int answer();
