@@ -18,6 +18,7 @@ int intercept()
 	printcenter(combinetext("Y is: ",slopeintercept(x[0],x[1],x[2])));
 	return 0;
 }
+
 int csar()
 {
 	std::vector<std::string> normal{"Enter Radius: ","Enter Angle: "};
