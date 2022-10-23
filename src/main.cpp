@@ -39,18 +39,18 @@ int mid()
 
 int circumph(bool area)	//if true does area if false does circumphrince
 {
-	std::vector<std::string> normal{"Enter the Radius: ", "The circumference is: ", "The area is: " };
+	std::vector<std::string> normal{"Enter the Radius: "};
 	std::vector<float> x = getvecvars(normal);
 	double cases;
 	if (area)
 	{
 		cases = carea(x[0]);
-		mvprintw(row/2,(col)/3+4,"%s%f",normal[2].c_str(),cases);
+		printcenter(combinetext("The area is: ",cases));
 	}
 	else
 	{
 		cases = circ(x[0]);
-		mvprintw(row/2,(col)/3+4,"%s%f",normal[1].c_str(),cases);
+		printcenter(combinetext("The circumference is: ",cases));
 	}
 	return 0;
 }
