@@ -64,10 +64,6 @@
         "__bits": "cpp",
         "compare": "cpp",
         "concepts": "cpp",
-        "variant": "cpp",
-        "*.tcc": "cpp",
-        "deque": "cpp",
-        "memory_resource": "cpp",
-        "fstream": "cpp"
+        "variant": "cpp"
     }
 }
