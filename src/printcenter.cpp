@@ -1,5 +1,5 @@
 #include "printcenter.h"
-#include "combinetext.h"
+
 
 void printcenter(std::string in)
 {
