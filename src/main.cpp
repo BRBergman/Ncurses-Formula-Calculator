@@ -22,7 +22,7 @@ int csar()
 {
 	std::vector<std::string> normal{"Enter Radius: ","Enter Angle: "};
 	std::vector<float> x = getvecvars(normal);
-	mvprintw(row/2,((col/3)),"The Area is: ", csaria(x[0],x[1]));
+	printcenter(combinetext("The Area is: ", csaria(x[0],x[1])));
 	return 0;
 }  
 
