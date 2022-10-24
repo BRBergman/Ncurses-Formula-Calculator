@@ -1,4 +1,5 @@
 #include "printcenter.h"
+#include "combinetext.h"
 
 void printcenter(std::string in)
 {
@@ -29,3 +30,50 @@ void printcenter(int in)
 	return;
 }
 
+void printcenter(std::string text, int equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}
+
+void printcenter(char text[] , int equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}
+
+void printcenter(std::string text, float equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}
+
+void printcenter(char text[] , float equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}
+
+void printcenter(std::string text, double equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}
+
+void printcenter(char text[] , double equasion)
+{
+	std::string in = text + std::to_string(equasion);
+	int conv = in.length();
+	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
+	return;
+}

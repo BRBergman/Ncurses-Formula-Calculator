@@ -13,10 +13,18 @@ void printcenter(float in);
 void printcenter(double in);
 //print a message to the center of the screen
 void printcenter(int in);
-
-
-
-
+//print a message to the center of the screen
+void printcenter(std::string text, int equasion);
+//print a message to the center of the screen
+void printcenter(char text[] , int equasion);
+//print a message to the center of the screen
+void printcenter(std::string text, float equasion);
+//print a message to the center of the screen
+void printcenter(char text[] , float equasion);
+//print a message to the center of the screen
+void printcenter(std::string text, double equasion);
+//print a message to the center of the screen
+void printcenter(char text[] , double equasion);
 
 
 
