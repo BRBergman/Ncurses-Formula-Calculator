@@ -4,7 +4,6 @@
 #include "maths.h" 
 #include <string.h>
 #include "ncextra.h"
-#include "invert.h"
 #include "printcenter.h"
 
 
