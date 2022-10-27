@@ -100,3 +100,17 @@ double slopeintercept(float m, float x, float b)
 	double calc =(m*x)+b;
 	return calc;
 }
+
+double vformaqfunc(float x, float y, float h, float k)
+{
+	//y = a(x-h)^2+k
+	double g =x-h;
+	//y = a(g)^2+k
+	double f = std::pow(g,2);
+	//y = a*f+k
+	double l = y-l;
+	//l = a*f
+	double ans = l/f;
+	//ans = a
+	return ans;
+}
