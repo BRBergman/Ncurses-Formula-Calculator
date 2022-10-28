@@ -14,7 +14,7 @@ int intercept()
 {
 	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter(combinetext("Y is: ",slopeintercept(x[0],x[1],x[2])));
+	printcenter("Y is: ",slopeintercept(x[0],x[1],x[2]));
 	return 0;
 }
 
@@ -22,7 +22,7 @@ int csar()
 {
 	std::vector<std::string> normal{"Enter Radius: ","Enter Angle: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter(combinetext("The Area is: ", csaria(x[0],x[1])));
+	printcenter("The Area is: ", csaria(x[0],x[1]));
 	return 0;
 }  
 
@@ -44,12 +44,12 @@ int circumph(bool area)	//if true does area if false does circumphrince
 	if (area)
 	{
 		cases = carea(x[0]);
-		printcenter(combinetext("The area is: ",cases));
+		printcenter("The area is: ",cases);
 	}
 	else
 	{
 		cases = circ(x[0]);
-		printcenter(combinetext("The circumference is: ",cases));
+		printcenter("The circumference is: ",cases);
 	}
 	return 0;
 }
@@ -76,12 +76,12 @@ int slop(bool dist) //true distance formula false slope formula
 	if (dist)
 	{
 		y = distance(x[0],x[1],x[2],x[3]);
-		printcenter(combinetext("The Distance Is: ",y));
+		printcenter("The Distance Is: ",y);
 	}
 	else
 	{
 		y = slope(x[0],x[1],x[2],x[3]);
-		printcenter(combinetext("The Slope Is: ",y));
+		printcenter("The Slope Is: ",y);
 	}
 	return 0;
 }
@@ -90,7 +90,8 @@ int pythag()
 {
 	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter(combinetext("Hypotonuse Value: ",pythagorean(x[0],x[1])));
+	//printcenter("Hypotonuse Value: ",pythagorean(x[0],x[1]));
+	printcenter("Hypotonuse Value: ",pythagorean(x[0],x[1])); //try putting this in getvecvars 
 	return 0;
 }
 
@@ -98,7 +99,7 @@ int revpythag()
 {
 	std::vector<std::string> normal{"Enter Leg: ","Enter Hypotonuse: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter(combinetext("Leg Value: ",reversepythagorean(x[0],x[1])));
+	printcenter("Leg Value: ",reversepythagorean(x[0],x[1]));
 	return 0;
 }
 
@@ -163,8 +164,8 @@ int answer()
 
 int main()
 {
-	initscr();	 					/* start the curses mode */
-	getmaxyx(stdscr,row,col); 		/* get the number of rows and columns */
+	initscr();	 					
+	getmaxyx(stdscr,row,col); 		
 	answer();
 	endwin();
 	return 0;

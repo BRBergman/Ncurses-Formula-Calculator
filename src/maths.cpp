@@ -101,7 +101,7 @@ double slopeintercept(float m, float x, float b)
 	return calc;
 }
 
-double vformaqfunc(float x, float y, float h, float k)
+/*double vformaqfunc(float x, float y, float h, float k)
 {
 	//idk if this will work right
 	//y = a(x-h)^2+k
@@ -114,4 +114,4 @@ double vformaqfunc(float x, float y, float h, float k)
 	double ans = l/f;
 	//ans = a
 	return ans;
-}
+}*/

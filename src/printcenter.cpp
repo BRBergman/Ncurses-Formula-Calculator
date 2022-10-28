@@ -29,3 +29,35 @@ void printcenter(int in)
 	mvprintw(row/2,(col-conv)/2,"%i",in); //print int to center of screen
 	return;
 }
+void printcenter(char text[] , float equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+void printcenter(std::string text , float equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+void printcenter(char text[] , int equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+void printcenter(std::string text , int equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+void printcenter(char text[] , double equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+void printcenter(std::string text , double equasion)
+{
+	printcenter(combinetext(text,equasion));
+	return;
+}
+
+
