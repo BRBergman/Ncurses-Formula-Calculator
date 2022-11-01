@@ -1,4 +1,3 @@
-#include <iostream>
 #include "combinetext.h"
 
 std::string combinetext (const char *format, ...)
