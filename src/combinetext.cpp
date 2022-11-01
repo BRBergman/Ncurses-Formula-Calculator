@@ -1,36 +1,15 @@
 #include <iostream>
 #include "combinetext.h"
-std::string combinetext(char text[] , float equasion)
-{
-	std::string combined = text + std::to_string(equasion);
-	return combined;
-}
 
-std::string combinetext(std::string text , float equasion)
+std::string combinetext (const char *format, ...)
 {
-	std::string combined = text + std::to_string(equasion);
-	return combined;
-}
-
-std::string combinetext(char text[] , int equasion)
-{
-	std::string combined = text + std::to_string(equasion);
-	return combined;
-}
-
-std::string combinetext(std::string text , int equasion)
-{
-	std::string combined = text + std::to_string(equasion);
-	return combined;
-}
-
-std::string combinetext(char text[] , double equasion)
-{
-	std::string combined = text + std::to_string(equasion);
-	return combined;
-}
-std::string combinetext(std::string text , double equasion)
-{
-	std::string combined = text + std::to_string(equasion);
-	return combined;
+	int done = 0;
+   	char buffer[256];
+  	va_list args;
+  	va_start (args, format);
+  	done = vsprintf (buffer,format, args);
+  	perror (buffer);
+  	va_end (args);
+	std::string in = buffer;
+	return in;
 }
