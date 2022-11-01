@@ -7,9 +7,9 @@
 #include <string>
 //to be used with ncextra.cpp
 
-int answer();
-
 extern int row,col;  
+
+int answer();
 
 int error();
 
