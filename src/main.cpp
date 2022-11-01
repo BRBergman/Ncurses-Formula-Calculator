@@ -162,10 +162,14 @@ int answer()
 	return 0;
 }
 
+
 int main()
 {
 	initscr();	 					
 	getmaxyx(stdscr,row,col); 		
+	int i = 6;
+	princenter("hello %d %d %d",i, 7, 8);
+	getch();
 	answer();
 	endwin();
 	return 0;

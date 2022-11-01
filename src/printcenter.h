@@ -5,7 +5,8 @@
 #include <stdarg.h>
 #include "ncextra.h"
 //print a message to the center of the screen
-void printcenter(std::string in);
+//void printcenter(std::string in);
+void princenter (const char *format, ...);
 //print a message to the center of the screen
 void printcenter(char in[]);
 //print a message to the center of the screen
