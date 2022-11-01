@@ -1,8 +1,5 @@
 /*BRBergman's formula claculator*/
-#include <ncurses.h>
-#include <iostream>
 #include "maths.h" 
-#include <string.h>
 #include "ncextra.h"
 #include "combinetext.h"
 #include "printcenter.h"

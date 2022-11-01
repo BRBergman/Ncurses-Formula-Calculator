@@ -1,10 +1,5 @@
-#include <ncurses.h>
 #include "ncextra.h"
-#include <string.h>
-#include <iostream>
-#include <stdio.h>
 #include "printcenter.h"
-#include <vector>
 
 //use if the user messes something up
 int error()
