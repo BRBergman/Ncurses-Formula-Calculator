@@ -14,7 +14,7 @@ int intercept()
 {
 	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter("Y is: ",slopeintercept(x[0],x[1],x[2]));
+	printcenter("Y is: %f",slopeintercept(x[0],x[1],x[2]));
 	return 0;
 }
 
@@ -22,7 +22,7 @@ int csar()
 {
 	std::vector<std::string> normal{"Enter Radius: ","Enter Angle: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter("The Area is: ", csaria(x[0],x[1]));
+	printcenter("The Area is: %f", csaria(x[0],x[1]));
 	return 0;
 }  
 
@@ -32,7 +32,7 @@ int mid()
 	std::vector<float> f = getvecvars(normal);
 	double x = midpoint(f[0],f[2]);
 	double y = midpoint(f[1],f[3]);
-	mvprintw(row/2,((col/3)),"The Midpoint Coordinant is: (%f,%f)",x,y);
+	printcenter("The Midpoint Coordinant is: (%f,%f)",x,y);
 	return 0;
 }
 
@@ -44,12 +44,12 @@ int circumph(bool area)	//if true does area if false does circumphrince
 	if (area)
 	{
 		cases = carea(x[0]);
-		printcenter("The area is: ",cases);
+		printcenter("The area is: %f",cases);
 	}
 	else
 	{
 		cases = circ(x[0]);
-		printcenter("The circumference is: ",cases);
+		printcenter("The circumference is: %f",cases);
 	}
 	return 0;
 }
@@ -63,7 +63,7 @@ int classifytri()
 	"It's an accute triangle"};
 	std::vector<std::string> normal{"Enter A: ","Enter B: ","Enter C: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter(tri[cheiftr(x[0],x[1],x[2])]);
+	printcenter(tri[cheiftr(x[0],x[1],x[2])].c_str());
 	return 0;
 }
 
@@ -76,12 +76,12 @@ int slop(bool dist) //true distance formula false slope formula
 	if (dist)
 	{
 		y = distance(x[0],x[1],x[2],x[3]);
-		printcenter("The Distance Is: ",y);
+		printcenter("The Distance Is: %f",y);
 	}
 	else
 	{
 		y = slope(x[0],x[1],x[2],x[3]);
-		printcenter("The Slope Is: ",y);
+		printcenter("The Slope Is: %f",y);
 	}
 	return 0;
 }
@@ -91,7 +91,7 @@ int pythag()
 	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
 	std::vector<float> x = getvecvars(normal);
 	//printcenter("Hypotonuse Value: ",pythagorean(x[0],x[1]));
-	printcenter("Hypotonuse Value: ",pythagorean(x[0],x[1])); //try putting this in getvecvars 
+	printcenter("Hypotonuse Value: %f",pythagorean(x[0],x[1])); //try putting this in getvecvars 
 	return 0;
 }
 
@@ -99,7 +99,7 @@ int revpythag()
 {
 	std::vector<std::string> normal{"Enter Leg: ","Enter Hypotonuse: "};
 	std::vector<float> x = getvecvars(normal);
-	printcenter("Leg Value: ",reversepythagorean(x[0],x[1]));
+	printcenter("Leg Value: %f",reversepythagorean(x[0],x[1]));
 	return 0;
 }
 
@@ -167,9 +167,6 @@ int main()
 {
 	initscr();	 					
 	getmaxyx(stdscr,row,col); 		
-	int i = 6;
-	princenter("hello %d %d %d",i, 7, 8);
-	getch();
 	answer();
 	endwin();
 	return 0;
