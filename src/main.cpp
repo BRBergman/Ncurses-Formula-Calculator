@@ -87,7 +87,6 @@ int pythag()
 {
 	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
 	std::vector<float> x = getvecvars(normal);
-	//printcenter("Hypotonuse Value: ",pythagorean(x[0],x[1]));
 	printcenter("Hypotonuse Value: %f",pythagorean(x[0],x[1])); //try putting this in getvecvars 
 	return 0;
 }
