@@ -111,21 +111,9 @@ int revpythag()
 int answer()
 {
 	clear();
-	int num;
-	try
-	{
-		num = ask();
-	}
-	catch(...)
-	{
-		num = 0;
-	}
+	int num = ask();
 	switch (num)
 	{
-		case 0:
-			clear();
-			endwin();
-			return 0;
 		case 1:
 			pythag();
 			break;
@@ -160,16 +148,13 @@ int answer()
 			sttover();
 			break;
 		default:
-		clear();
-		endwin();
-		return 0 ;
+			return 0 ;
 	}
 	getch();
 	clear();
 	answer();
 	return 0;
 }
-
 
 int main()
 {
