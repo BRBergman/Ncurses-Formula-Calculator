@@ -16,7 +16,6 @@ int sttover()
 	return 0;
 }
 
-
 int intercept()
 {
 	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
