@@ -27,8 +27,8 @@ int ask()
 	"preform the midpoint formula",
 	"find the area of a certan section of a circle",
 	"find the y intercept of a line",
-	"get the vertex from a standard form equasion"
-	};
+	"get the vertex from a standard form equasion"};
+
 	int size = sizeof(askev)/sizeof(askev[0]);
 	for (int i = 0; i < size; i++ )
 	{
@@ -57,7 +57,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printcenter(ar[i].c_str()); 		//print a message to the center of the screen
+		printcenter(ar[i].c_str()); //print a message to the center of the screen
 		getstr(word);				//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
