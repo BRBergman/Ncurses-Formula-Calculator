@@ -16,7 +16,7 @@ int ask()
 {
 	clear();
 	// add new part here to show up 
-	const char* askev[] = {"quit",
+	std::string askev[] = {"quit",
 	"do the pythagorean theorem",
 	"do the inverse pythagorean theorem",
 	"do the distance formula",
@@ -27,13 +27,12 @@ int ask()
 	"preform the midpoint formula",
 	"find the area of a certan section of a circle",
 	"find the y intercept of a line",
-	"get the vertex from a standard form equasion",
-
-	NULL};
-	
-	for (int i = 0; askev[i] != NULL; i++ )
+	"get the vertex from a standard form equasion"
+	};
+	int size = sizeof(askev)/sizeof(askev[0]);
+	for (int i = 0; i < size; i++ )
 	{
-		printcenter(7-i,0,"Press %i to %s",i,askev[i]);
+		printcenter(7-i,0,"Press %i to %s",i,askev[i].c_str());
 		printcenter(5-i,-1,"");
 	}
 	char numin[10];
