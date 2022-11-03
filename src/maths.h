@@ -1,5 +1,7 @@
 #ifndef MATHS_H
 #define MATHS_H
+#include <string>
+#include <vector>
 //to be used with maths.cpp
 
 double distance(float x1,float y1,float x2,float y2);
@@ -18,11 +20,14 @@ double circ(float rad);
 
 double carea(float rad);
 
-double midpoint(float one, float two);
+std::vector<double> midpoint(float x1,float y1,float x2,float y2);
 
 double csaria(float radious, float angle);
 
 double slopeintercept(float m, float x, float b);
+
+std::vector<double> standardtovertex(float a, float b, float c);
+
 
 
 #endif

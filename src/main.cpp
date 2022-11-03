@@ -7,6 +7,16 @@
 
 int row, col;		// to store the number of rows and the number of colums of the screen. 
 
+int sttover()
+{
+	std::vector<std::string> normal{"Enter A: ","Enter B: ", "Enter C: "};
+	std::vector<float> x = getvecvars(normal);
+	std::vector<double> ans = standardtovertex(x[0],x[1],x[2]);
+	printcenter("(%f,%f)",ans[0],ans[1]);
+	return 0;
+}
+
+
 int intercept()
 {
 	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
@@ -26,10 +36,9 @@ int csar()
 int mid()
 {
 	std::vector<std::string> normal{"Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
-	std::vector<float> f = getvecvars(normal);
-	double x = midpoint(f[0],f[2]);
-	double y = midpoint(f[1],f[3]);
-	printcenter("The Midpoint Coordinant is: (%f,%f)",x,y);
+	std::vector<float> x = getvecvars(normal);
+	std::vector<double> y = midpoint(x[0],x[1],x[2],x[3]);
+	printcenter("The Midpoint Coordinant is: (%f,%f)",y[0],y[1]);
 	return 0;
 }
 
@@ -146,6 +155,9 @@ int answer()
 			break;
 		case 10:
 			intercept();
+			break;
+		case 11:
+			sttover();
 			break;
 		default:
 		clear();

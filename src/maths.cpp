@@ -1,7 +1,7 @@
 #include <cmath>
-#include <string>
 #include "maths.h"
 #include <iostream>
+#include "combinetext.h"
 //to be used with maths.h
 
 
@@ -81,11 +81,11 @@ double carea(float rad)
 	return M_PI*pow(rad, 2);
 }
 
-double midpoint(float one, float two)
+std::vector<double> midpoint(float x1,float y1,float x2,float y2)
 {
 	//do twice to get x and y
-
-	return (one+two)/2;
+	std::vector<double> ans{(x1+x2)/2,(y1+y2)/2};
+	return ans;
 }
  
 double csaria(float radious, float angle)
@@ -104,3 +104,13 @@ double slopeintercept(float m, float x, float b)
 //make standard to vertex and vertex to standard
 //y = a(x)^2 + bx + c 	| standard
 //y = a (x - h)^2 + k	| vertex
+//xv = h
+//yv=k
+
+std::vector<double> standardtovertex(float a, float b, float c)
+{
+	float h = (b*-1)/(2*a);
+	float k = (pow(a*h,2)+(b*h)+c);
+	std::vector<double> hk{h,k};	
+	return hk;
+}
