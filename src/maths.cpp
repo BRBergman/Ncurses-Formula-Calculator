@@ -104,8 +104,8 @@ double slopeintercept(float m, float x, float b)
 //make standard to vertex and vertex to standard
 //y = a(x)^2 + bx + c 	| standard
 //y = a (x - h)^2 + k	| vertex
-//xv = h
-//yv=k
+//xv = h = -b/(2*a)
+//yv = k = a(h)^2 + bh + c 
 
 std::vector<double> standardtovertex(float a, float b, float c)
 {
