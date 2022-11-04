@@ -9,7 +9,7 @@
 
 extern int row,col;  
 
-int answer();
+int main();
 
 int error();
 

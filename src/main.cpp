@@ -4,7 +4,7 @@
 #include "combinetext.h"
 #include "printcenter.h"
 
-
+bool init = false;
 int row, col;		// to store the number of rows and the number of colums of the screen. 
 
 int sttover()
@@ -107,8 +107,16 @@ int revpythag()
 	return 0;
 }
 
-int answer()
+
+
+int main()
 {
+	if (!init)
+	{
+		initscr();
+		init = true;
+		getmaxyx(stdscr,row,col);
+	}	 					 		
 	clear();
 	int num = ask();
 	switch (num)
@@ -147,19 +155,12 @@ int answer()
 			sttover();
 			break;
 		default:
+			endwin();
 			return 0 ;
 	}
 	getch();
 	clear();
-	answer();
-	return 0;
-}
-
-int main()
-{
-	initscr();	 					
-	getmaxyx(stdscr,row,col); 		
-	answer();
+	main();
 	endwin();
 	return 0;
 }

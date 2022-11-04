@@ -8,7 +8,7 @@ int error()
 	clear();
 	printcenter(mesg.c_str());
 	getch();
-	answer();
+	main();
 	return 1;
 }
 
