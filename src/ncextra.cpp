@@ -8,7 +8,6 @@ int error()
 	clear();
 	printcenter(mesg.c_str());
 	getch();
-	main();
 	return 1;
 }
 
