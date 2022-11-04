@@ -9,7 +9,6 @@ int printcenter (const char *format, ...)
   	va_list args;
   	va_start (args, format);
   	done = vsprintf (buffer,format, args);
-  	perror (buffer);
   	va_end (args);
 	std::string in = buffer;
 	mvprintw(row/2,(col-done)/2,"%s",in.c_str()); //print string to center of screen
@@ -24,7 +23,6 @@ int printcenter (int ver, int hoz, const char *format, ...)
   	va_list args;
   	va_start (args, format);
   	done = vsprintf (buffer,format, args);
-  	perror (buffer);
   	va_end (args);
 	std::string in = buffer;
 	mvprintw(row/2-ver,(col-done)/2-hoz,"%s",in.c_str()); //print string to center of screen
