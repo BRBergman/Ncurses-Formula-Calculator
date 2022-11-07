@@ -161,6 +161,5 @@ int main()
 	getch();
 	clear();
 	main();
-	endwin();
 	return 0;
 }

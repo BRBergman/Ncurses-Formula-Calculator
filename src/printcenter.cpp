@@ -20,7 +20,7 @@ int printcenter (int ver, int hoz, const char *format, ...)
 {
 	int done = 0;
    	char buffer[256];
-  	va_list args;
+	va_list args;
   	va_start (args, format);
   	done = vsprintf (buffer,format, args);
   	va_end (args);
