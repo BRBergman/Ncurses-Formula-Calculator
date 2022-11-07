@@ -12,7 +12,7 @@ int sttover()
 	std::vector<std::string> normal{"Enter A: ","Enter B: ", "Enter C: "};
 	std::vector<float> x = getvecvars(normal);
 	std::vector<double> ans = standardtovertex(x[0],x[1],x[2]);
-	printcenter("The vetrex point is: (%f,%f)",ans[0],ans[1]);
+	printcenter("The vertex point is: (%f,%f)",ans[0],ans[1]);
 	return 0;
 }
 

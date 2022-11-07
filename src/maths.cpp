@@ -110,7 +110,9 @@ double slopeintercept(float m, float x, float b)
 std::vector<double> standardtovertex(float a, float b, float c)
 {
 	float h = (b*-1)/(2*a);
-	float k = (pow(a*h,2)+(b*h)+c);
+	float k1 =a*(pow(h,2));
+	float k2 =(b*h);
+	float k = k1+k2+c;
 	std::vector<double> hk{h,k};	
 	return hk;
 }
