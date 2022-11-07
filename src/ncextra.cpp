@@ -1,12 +1,12 @@
 #include "ncextra.h"
-#include "printcenter.h"
+#include "printnc.h"
 
 //use if the user messes something up
 int error()
 {
 	std::string mesg = "There is an error. The value you entered is not valid. Press any key to continue.";
 	clear();
-	printcenter(mesg.c_str());
+	printnccenter(mesg.c_str());
 	getch();
 	return 1;
 }
@@ -31,8 +31,8 @@ int ask()
 	int size = sizeof(askev)/sizeof(askev[0]);
 	for (int i = 0; i < size; i++ )
 	{
-		printcenter(7-i,0,"Press %i to %s",i,askev[i].c_str());
-		printcenter(5-i,-1,"");
+		printnccenter(7-i,0,"Press %i to %s",i,askev[i].c_str());
+		printnccenter(5-i,-1,"");
 	}
 	char numin[10];
 	getstr(numin);
@@ -56,7 +56,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printcenter(ar[i].c_str()); //print a message to the center of the screen
+		printnccenter(ar[i].c_str()); //print a message to the center of the screen
 		getstr(word);				//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
