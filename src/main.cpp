@@ -116,7 +116,7 @@ int main()
 		initscr();
 		init = true;
 		getmaxyx(stdscr,row,col);
-	}	 					 		
+	}		
 	clear();
 	getch();
 	int num = ask();
