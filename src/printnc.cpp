@@ -26,3 +26,15 @@ int printnccenter (int ver, int hoz, const char *format, ...)
 	mvprintw(row/2-ver,(col-done)/2-hoz,"%s",in.c_str()); //print string to center of screen
 	return done;
 }
+
+int printnc (int ver, int hoz, const char *format, ...)
+{
+   	char buffer[256];
+  	va_list args;
+  	va_start (args, format);
+  	int done = vsprintf (buffer,format, args);
+  	va_end (args);
+	std::string in = buffer;
+	mvprintw(ver,hoz,"%s",in.c_str()); //print string to center of screen
+	return done;
+}

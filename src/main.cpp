@@ -118,6 +118,7 @@ int main()
 		getmaxyx(stdscr,row,col);
 	}	 					 		
 	clear();
+	getch();
 	int num = ask();
 	switch (num)
 	{
