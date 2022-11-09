@@ -4,9 +4,10 @@
 //use if the user messes something up
 int error()
 {
-	std::string mesg = "There is an error. The value you entered is not valid. Press any key to continue.";
 	clear();
-	printnccenter(mesg.c_str());
+	printnccenter(2,0,"There is an error. The value you entered is not valid.");
+	printnccenter(1,0,"It has been replaced with a zero.");
+	printnccenter(-1,0,"Press any key to continue.");
 	getch();
 	return 1;
 }
@@ -14,8 +15,7 @@ int error()
 int ask()
 {
 	clear();
-	printnc("Made By BRBergman!\nFeel Free to Contribute.");
-	// add new part here to show up 
+	printnc(row-2,"Made By BRBergman!\nFeel Free to Contribute.");
 	std::string askev[] = {"quit",
 	"do the pythagorean theorem",
 	"do the inverse pythagorean theorem",
@@ -51,22 +51,21 @@ int ask()
 
 std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in float vector out
 {
-	int length = ar.size(); //get size of input vector
-	std::vector<float> x(length);	//the float vector that we return
-	char word[20];					//char array to get inputs from
+	int length = ar.size(); 			//get size of input vector
+	std::vector<float> x(length);		//the float vector that we return
+	char word[20];						//char array to get inputs from
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printnccenter(ar[i].c_str()); //print a message to the center of the screen
-		getstr(word);				//assign value to the variable "word" (think of it as ncurses cin)
+		printnccenter(ar[i].c_str()); 	//print a message to the center of the screen
+		getstr(word);					//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
-			x[i] = std::stof(word); // turn the string in "word" into a float 
+			x[i] = std::stof(word); 	// turn the string in "word" into a float 
 		}
-		catch(...)					//uh oh something went wrong
+		catch(...)						//uh oh something went wrong
 		{
 			error();
-			break;
 		}
 	}
 	clear();
