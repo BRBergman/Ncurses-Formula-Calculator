@@ -12,6 +12,7 @@ std::string combinetext (const char *format, ...)
 	return in;
 }
 
+//example of how to use
 int ctexample()
 {
 	int num1 = 5;
