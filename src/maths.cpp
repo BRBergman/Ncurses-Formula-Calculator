@@ -128,8 +128,6 @@ std::string factor(int a, int b, int c)
 	int mul =a*c;
 	int num[2];
 	int dis;
-	int ab;
-	int bc;
 	//step 1 get factored values |ex: 16 1,16;2,8;3, (done for positives,idk about negatives)
 	//see if factors of mul added together are = to b
 	for(int i = 1; i <= abs(mul); ++i) 
@@ -149,12 +147,13 @@ std::string factor(int a, int b, int c)
 					num[1] = dis;
 				}
 			}
-
 		}
 	}
 
-	ab = std::gcd(abs(a),abs(num[0]));
-	bc = std::gcd(abs(c),abs(num[1]));
+
+	/*
+	int ab = std::gcd(abs(a),abs(num[0]));
+	int bc = std::gcd(abs(c),abs(num[1]));
 	if(num[0] <0 && a <0)
 	{
 		ab*=-1;
@@ -166,7 +165,41 @@ std::string factor(int a, int b, int c)
 	
 	int faca = num[0]/ab;
 	int facb = num[1]/bc;
+	*/
+	//printf("%d,%d,%d\n%d|%d\n(%dx+%d)(%dx+%d)\n",a,b,c,num[0],num[1],ab,bc,facb,faca);
+	printf("%d,%d\n",num[0],num[1]);
+	//				18,		-2
+	int gcfa;
+	int gcfc;
+	int ax;
+	int bx;
+	if (b>0)
+	{
+		gcfa = num[0]/std::gcd(a,num[0]);
+		gcfc = c/std::gcd(c,num[1]);
+		ax = abs(a/std::gcd(a,num[0]));
+		bx = abs(num[1]/std::gcd(c,num[1]));
+		if(num[0] <0 && a <0)
+		{
+			gcfa*=-1;
+		}
+		if(num[1] <0 && c <0)
+		{
+			gcfc*=-1;
+		}
+		if (gcfa != gcfc)
+		{
+			//error
+		}
+	}
+	else
+	{
 
-	printf("%d,%d,%d\n%d|%d\n(%dx+%d)(%dx+%d)\n",a,b,c,num[0],num[1],ab,bc,facb,faca);
+
+	}
+	
+
+
+	std::cout << gcfa <<gcfc << ax << bx<< std::endl;
     return "rerun" ;
 }
