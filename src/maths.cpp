@@ -167,6 +167,6 @@ std::string factor(int a, int b, int c)
 	int faca = num[0]/ab;
 	int facb = num[1]/bc;
 
-	printf("%d,%d,%d\n%d|%d\n(%dx+%d)(%dx,%d)\n",a,b,c,num[0],num[1],ab,bc,facb,faca);
+	printf("%d,%d,%d\n%d|%d\n(%dx+%d)(%dx+%d)\n",a,b,c,num[0],num[1],ab,bc,facb,faca);
     return "rerun" ;
 }
