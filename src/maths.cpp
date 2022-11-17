@@ -135,7 +135,7 @@ std::string factor(int a, int b, int c)
 		if (mul % i == 0)
 		{
 			dis = mul/i;
-			if (i+dis == abs(b))
+			if (i+dis == b)
 			{
 				num[0] = i;
 				if (b<0)
@@ -169,37 +169,10 @@ std::string factor(int a, int b, int c)
 	//printf("%d,%d,%d\n%d|%d\n(%dx+%d)(%dx+%d)\n",a,b,c,num[0],num[1],ab,bc,facb,faca);
 	printf("%d,%d\n",num[0],num[1]);
 	//				18,		-2
-	int gcfa;
-	int gcfc;
-	int ax;
-	int bx;
-	if (b>0)
-	{
-		gcfa = num[0]/std::gcd(a,num[0]);
-		gcfc = c/std::gcd(c,num[1]);
-		ax = abs(a/std::gcd(a,num[0]));
-		bx = abs(num[1]/std::gcd(c,num[1]));
-		if(num[0] <0 && a <0)
-		{
-			gcfa*=-1;
-		}
-		if(num[1] <0 && c <0)
-		{
-			gcfc*=-1;
-		}
-		if (gcfa != gcfc)
-		{
-			//error
-		}
-	}
-	else
-	{
+	int ab = num[0]/a;
+	int bc = c/num[1];
 
 
-	}
-	
-
-
-	std::cout << gcfa <<gcfc << ax << bx<< std::endl;
+	printf("%d,%d'n",ab,bc);
     return "rerun" ;
 }
