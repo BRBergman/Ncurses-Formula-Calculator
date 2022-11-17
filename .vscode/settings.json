@@ -69,7 +69,8 @@
         "deque": "cpp",
         "memory_resource": "cpp",
         "fstream": "cpp",
-        "version": "cpp"
+        "version": "cpp",
+        "numeric": "cpp"
     },
     "makefile.launchConfigurations": [
         {

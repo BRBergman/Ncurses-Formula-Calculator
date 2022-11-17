@@ -118,6 +118,7 @@ int main()
 		init = true;
 	}		
 	factor(3,16,-12);
+	//factor(1,16,64);
 	int num = ask();
 	switch (num)
 	{
