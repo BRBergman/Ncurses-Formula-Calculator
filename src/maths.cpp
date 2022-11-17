@@ -132,11 +132,17 @@ std::string factor(int a, int b, int c)
 			int dis = mul/i;
 			if (mul % i == 0)
 			{
-				if (i+dis == b)
+				if (i+dis == abs(b))
 				{
-					num[0] = mul;
-					num[1] = dis;
-					printf("%d|%d\n",i,dis);
+					num[0] = i;
+					if (b<0)
+					{
+						num[1] = dis*-1;
+					}
+					else
+					{
+						num[1] = dis;
+					}
 				}
 			}
 		}
@@ -144,8 +150,26 @@ std::string factor(int a, int b, int c)
 	else
 	{
 		//do negatives here
-
+		for(int i = 1; i >= mul; ++i) 
+		{
+			int dis = mul/i;
+			if (mul % i == 0)
+			{
+				if (i+dis == abs(b))
+				{
+					num[0] = i;
+					if (b<0)
+					{
+						num[1] = dis*-1;
+					}
+					else
+					{
+						num[1] = dis;
+					}
+				}
+			}
+		}
 	}
-	
+	printf("%d|%d\n",num[0],num[1]);
     return "rerun" ;
 }

@@ -117,7 +117,7 @@ int main()
 		getmaxyx(stdscr,row,col);
 		init = true;
 	}		
-	factor(1,16,64);
+	factor(3,16,-12);
 	int num = ask();
 	switch (num)
 	{
