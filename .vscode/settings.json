@@ -70,5 +70,12 @@
         "memory_resource": "cpp",
         "fstream": "cpp",
         "version": "cpp"
-    }
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/bbergman/Desktop/code/cpp/proj1/output",
+            "binaryPath": "/Users/bbergman/Desktop/code/cpp/proj1/output/main",
+            "binaryArgs": []
+        }
+    ]
 }

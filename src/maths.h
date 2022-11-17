@@ -28,6 +28,9 @@ double slopeintercept(float m, float x, float b);
 
 std::vector<double> standardtovertex(float a, float b, float c);
 
+std::string factor(int a, int b, int c);
+
+
 
 
 #endif

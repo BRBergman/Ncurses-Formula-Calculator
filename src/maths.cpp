@@ -116,3 +116,36 @@ std::vector<double> standardtovertex(float a, float b, float c)
 	std::vector<double> hk{h,k};	
 	return hk;
 }
+
+std::string factor(int a, int b, int c)
+{
+	//enter in standard form
+	int mul =a*c;
+	int num[2];
+
+	//step 1 get factored values |ex: 16 1,16;2,8;3, (done for positives,idk about negatives)
+	//see if factors of mul added together are = to b
+	if (mul >1)
+	{
+		for(int i = 1; i <= mul; ++i) 
+		{
+			int dis = mul/i;
+			if (mul % i == 0)
+			{
+				if (i+dis == b)
+				{
+					num[0] = mul;
+					num[1] = dis;
+					printf("%d|%d\n",i,dis);
+				}
+			}
+		}
+	}
+	else
+	{
+		//do negatives here
+
+	}
+	
+    return "rerun" ;
+}
