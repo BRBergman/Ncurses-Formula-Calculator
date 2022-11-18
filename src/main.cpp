@@ -4,7 +4,7 @@
 #include "combinetext.h"
 #include "printnc.h"
 
-bool init = true;
+bool init = false;
 int row, col;		// to store the number of rows and the number of colums of the screen. 
 
 int sttover()
