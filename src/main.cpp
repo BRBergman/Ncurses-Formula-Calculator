@@ -1,7 +1,6 @@
 /*BRBergman's formula claculator*/
 #include "maths.h" 
 #include "ncextra.h"
-#include "combinetext.h"
 #include "printnc.h"
 
 bool init = false;
@@ -61,7 +60,7 @@ void mid()
 	return;
 }
 
-void circumph()	//if true does area if false does circumphrince
+void circumph()
 {
 	std::vector<std::string> normal{"Enter the Radius: "};
 	std::vector<float> x = getvecvars(normal);
@@ -74,11 +73,11 @@ void cylarea()
 	std::vector<std::string> normal{"Enter the Radius: "};
 	std::vector<float> x = getvecvars(normal);
 	printnccenter("The area is: %f",carea(x[0]));
+	return;
 }
 
 void classifytri()
 {
-	clear();
 	std::string tri[] = {"It's not a triangle",
 	"It's a right triangle",
 	"It's an obtuse triangle",

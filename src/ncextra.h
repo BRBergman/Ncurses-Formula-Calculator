@@ -2,7 +2,6 @@
 #define NCEXTRA_H
 #include <iostream>
 #include <vector>
-#include <cstring>
 #include <ncurses.h>
 #include <string>
 //to be used with ncextra.cpp

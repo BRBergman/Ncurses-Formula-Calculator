@@ -1,7 +1,6 @@
 #include <cmath>
 #include "maths.h"
 #include <iostream>
-#include "combinetext.h"
 #include <numeric>
 //to be used with maths.h
 
