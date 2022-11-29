@@ -118,7 +118,7 @@ std::vector<double> standardtovertex(float a, float b, float c)
 	return hk;
 }
 
-
+//quadratic formula
 // -b+-sqrt(b^2-4ac)
 //			/2a
 
@@ -139,10 +139,5 @@ std::vector<float> quadraticformula(float a, float b, float c)
 		rerun.resize(1);
 		rerun[0] = (b*-1)/(2*a);
 	}
-	else
-	{
-		// no real sol
-	}
-
 	return rerun;
 }
