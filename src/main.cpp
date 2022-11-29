@@ -7,6 +7,29 @@
 bool init = false;
 int row, col;		// to store the number of rows and the number of colums of the screen. 
 
+int quadform()
+{
+	std::vector<std::string> normal{"Enter A: ","Enter B: ", "Enter C: "};
+	std::vector<float> x = getvecvars(normal);
+	std::vector<float> quad = quadraticformula(x[0],x[1],x[2]);
+	int s = quad.size();
+	if (s==2)
+	{
+		printnccenter("The Points Are %f, %f",quad[0],quad[1]);
+	}
+	else if (s==1)
+	{
+		printnccenter("The Points Is %f",quad[0]);
+	}
+	else
+	{
+		printnccenter("There Are No Real Points");
+	}
+
+	return 0;	
+}
+
+
 int sttover()
 {
 	std::vector<std::string> normal{"Enter A: ","Enter B: ", "Enter C: "};
@@ -111,6 +134,7 @@ int revpythag()
 
 int main()
 {
+	
 	if (!init)
 	{
 		initscr();
@@ -152,6 +176,9 @@ int main()
 			break;
 		case 11:
 			sttover();
+			break;
+		case 12:
+			quadform();
 			break;
 		default:
 			endwin();
