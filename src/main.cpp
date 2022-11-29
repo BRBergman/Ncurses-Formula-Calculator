@@ -14,15 +14,15 @@ int quadform()
 	std::vector<float> quad = quadraticformula(x[0],x[1],x[2]);
 	switch (quad.size())
 	{
-	case 2:
-		printnccenter("The Points Are %f, %f",quad[0],quad[1]);
-		break;
-	case 1:
-		printnccenter("The Points Is %f",quad[0]);		
-		break;
-	default:
-		printnccenter("There Are No Real Points");
-		break;
+		case 2:
+			printnccenter("The Points Are: %f, %f",quad[0],quad[1]);
+			break;
+		case 1:
+			printnccenter("The Points Is: %f",quad[0]);		
+			break;
+		default:
+			printnccenter("There Are No Real Points");
+			break;
 	}
 	return 0;	
 }

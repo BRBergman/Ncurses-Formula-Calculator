@@ -32,21 +32,8 @@ double reversepythagorean(float b, float c)
 	return std::sqrt(pow(c,2) - pow(b,2));
 }
 
-double quadperm(float x1,float y1,float x2,float y2, float x3,float y3,float x4,float y4)
-{
-	//top and bottom
-	double d1 = distance(x1,y1,x2,y2);
-	double d2 = distance(x3,y3,x4,y4);
-	//sides
-	double d3 = distance(x2,y2,x3,y3);
-	double d4 = distance(x4,y4,x1,y1);
-
-	return (d1+d2+d3+d4);
-}
-
 int cheiftr(float a, float b, float c)
 {
-	// make a case on output so that is does the good
 	if(c >= (a+b))
 	{
 		return 0;
@@ -69,7 +56,6 @@ int cheiftr(float a, float b, float c)
 		//accute
 		return 3;
 	}
-	
 	return 0;
 }
 double circ(float rad)
@@ -84,15 +70,14 @@ double carea(float rad)
 
 std::vector<double> midpoint(float x1,float y1,float x2,float y2)
 {
-	//do twice to get x and y
+	//returns x and y
 	std::vector<double> ans{(x1+x2)/2,(y1+y2)/2};
 	return ans;
 }
- 
+
 double csaria(float radious, float angle)
 {
 	double top = angle*(M_PI*pow(radious,2));
-
 	return top/360;
 }
 
@@ -126,16 +111,14 @@ std::vector<float> quadraticformula(float a, float b, float c)
 {
 	std::vector<float> rerun;
 	float discriminant = std::sqrt(pow(b,2)-(4*a*c));
-	if (discriminant>0)
+	if (discriminant>0)				//two sol
 	{
-		//two sol
 		rerun.resize(2);
 		rerun[0] = ((b*-1)+discriminant)/(a*2);
 		rerun[1] = ((b*-1)-discriminant)/(a*2);
 	}
-	else if (discriminant == 0)
+	else if (discriminant == 0)		//one sol
 	{
-		//one sol
 		rerun.resize(1);
 		rerun[0] = (b*-1)/(2*a);
 	}
