@@ -17,4 +17,6 @@ int ask();
 //print strings and return inputs as a float vector
 std::vector<float> getvecvars(std::vector<std::string> ar);
 
+std::vector<float> getfancyvars(std::vector<std::string> strin);
+
 #endif

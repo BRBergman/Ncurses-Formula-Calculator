@@ -106,9 +106,10 @@ void slop()
 
 void pythag()
 {
-	std::vector<std::string> normal{"Enter Leg: ","Enter Leg: "};
-	std::vector<float> x = getvecvars(normal);
-	printnccenter("Hypotonuse Value: %f",pythagorean(x[0],x[1])); //try putting this in getvecvars 
+	std::vector<std::string> normal = {"Pythagorean Theorum, Find the Hypotonuse ","Enter Leg #1: ","Enter Leg #2: "};
+
+	std::vector<float> x = getfancyvars(normal);
+	printnccenter("Hypotonuse Value: %f",pythagorean(x[0],x[1]));  
 	return;
 }
 
