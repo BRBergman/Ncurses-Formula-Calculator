@@ -33,8 +33,10 @@ double reversepythagorean(float b, float c)
 
 int cheiftr(float a, float b, float c)
 {
+	//check if triangle
 	if(c >= (a+b))
 	{
+		//not a triangle
 		return 0;
 	}
 	double a2 = pow(a,2);
@@ -105,10 +107,11 @@ std::vector<double> standardtovertex(float a, float b, float c)
 //quadratic formula
 // -b+-sqrt(b^2-4ac)
 //			/2a
+// make case for if b = 0; might already work, idk
 
 std::vector<float> quadraticformula(float a, float b, float c)
 {
-	std::vector<float> rerun;
+	std::vector<float> rerun;		//default no sol
 	float discriminant = std::sqrt(pow(b,2)-(4*a*c));
 	if (discriminant>0)				//two sol
 	{
