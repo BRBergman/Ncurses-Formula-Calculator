@@ -1,5 +1,6 @@
 #include "ncextra.h"
 #include "printnc.h"
+#include "combinetext.h"
 
 //use if the user messes something up
 int error()
@@ -70,6 +71,35 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 		}
 	}
 	clear();
+	beep();
+	return x;
+}
+
+
+//todo: make function that will go from one spot to enter text to another by pressing enter(9) or tab(10)
+
+
+std::vector<float> getfancyvars(std::vector<std::string> strin)
+{
+	clear();
+	int length = strin.size();
+	char in[10];
+	printnccenter(1,0,strin[0].c_str());
+	std::vector<float> x;
+	x.resize(length-1);
+	for (int i = 1; i < length; i++)
+	{
+		printnccenter(-i,0,strin[i].c_str());
+		getstr(in);
+		try
+		{
+			x[i-1] =0+std::stof(in) ; 	// turn the string in "word" into a float 
+		}
+		catch(...)						//uh oh something went wrong
+		{
+			error();
+		}
+	}
 	beep();
 	return x;
 }
