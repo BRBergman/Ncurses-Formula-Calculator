@@ -1,7 +1,6 @@
 #include <cmath>
 #include "maths.h"
 #include <iostream>
-#include <numeric>
 //to be used with maths.h
 
 
@@ -78,6 +77,7 @@ std::vector<double> midpoint(float x1,float y1,float x2,float y2)
 
 double csaria(float radious, float angle)
 {
+	//cylander section angle 
 	double top = angle*(M_PI*pow(radious,2));
 	return top/360;
 }

@@ -7,8 +7,9 @@
             ],
             "defines": [],
             "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks",
-                "~/Library/Frameworks"
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/**",
+                "~/Library/Frameworks/**",
+                "~/Desktop/**"
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c17",
