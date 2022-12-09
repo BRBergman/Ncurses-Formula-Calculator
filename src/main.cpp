@@ -27,8 +27,8 @@ void quadform()
 
 void sttover()
 {
-	std::vector<std::string> normal{"Enter A: ","Enter B: ", "Enter C: "};
-	std::vector<float> x = getvecvars(normal);
+	std::vector<std::string> normal{"Get The Vertex Point From Standard Form","Enter A: ","Enter B: ", "Enter C: "};
+	std::vector<float> x = getfancyvars(normal);
 	std::vector<double> ans = standardtovertex(x[0],x[1],x[2]);
 	printnccenter("The vertex point is: (%f,%f)",ans[0],ans[1]);
 	return;
@@ -36,8 +36,8 @@ void sttover()
 
 void intercept()
 {
-	std::vector<std::string> normal{"Enter M: ","Enter X: ", "Enter B: "};
-	std::vector<float> x = getvecvars(normal);
+	std::vector<std::string> normal{"Find The Y Intercept","Enter M: ","Enter X: ", "Enter B: "};
+	std::vector<float> x = getfancyvars(normal);
 	printnccenter("Y is: %f",slopeintercept(x[0],x[1],x[2]));
 	return;
 }
@@ -53,7 +53,7 @@ void csar()
 void mid()
 {
 	std::vector<std::string> normal{"Find the Midpoint","Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
-	std::vector<float> x = getvecvars(normal);
+	std::vector<float> x = getfancyvars(normal);
 	std::vector<double> y = midpoint(x[0],x[1],x[2],x[3]);
 	printnccenter("The Midpoint Coordinant is: (%f,%f)",y[0],y[1]);
 	return;
@@ -61,17 +61,17 @@ void mid()
 
 void circumph()
 {
-	std::vector<std::string> normal{"Enter the Radius: "};
-	std::vector<float> x = getvecvars(normal);
-	printnccenter("The circumference is: %f",circ(x[0]));
+	std::vector<std::string> normal{"FInd The Circumference","Enter the Radius: "};
+	std::vector<float> x = getfancyvars(normal);
+	printnccenter("The Circumference is: %f",circ(x[0]));
 	return;
 }
 
 void cylarea()
 {
-	std::vector<std::string> normal{"Find the area of a cylander","Enter the Radius: "};
-	std::vector<float> x = getvecvars(normal);
-	printnccenter("The area is: %f",carea(x[0]));
+	std::vector<std::string> normal{"Find The Area of a Cylinder","Enter the Radius: "};
+	std::vector<float> x = getfancyvars(normal);
+	printnccenter("The Area is: %f",carea(x[0]));
 	return;
 }
 
