@@ -67,6 +67,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 		}
 		catch(...)						//uh oh something went wrong
 		{
+			x[i]=0;
 			error();
 		}
 	}
@@ -93,10 +94,11 @@ std::vector<float> getfancyvars(std::vector<std::string> strin)
 		getstr(in);
 		try
 		{
-			x[i-1] =0+std::stof(in) ; 	// turn the string in "word" into a float 
+			x[i-1]=0+std::stof(in) ; 	// turn the string in "word" into a float 
 		}
 		catch(...)						//uh oh something went wrong
 		{
+			x[i-1]=0;
 			error();
 		}
 	}
