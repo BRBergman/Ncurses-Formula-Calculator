@@ -1,0 +1,3 @@
+[submodule "BergmaNcurses"]
+	path = BergmaNcurses
+	url = https://github.com/BRBergman/BergmaNcurses
