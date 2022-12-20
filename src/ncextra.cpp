@@ -6,9 +6,9 @@
 int error()
 {
 	clear();
-	printnccenter(2,0,"There is an error. The value you entered is not valid.");
-	printnccenter(1,0,"It has been replaced with a zero.");
-	printnccenter(-1,0,"Press any key to continue.");
+	printnccenter(stdscr,2,0,"There is an error. The value you entered is not valid.");
+	printnccenter(stdscr,1,0,"It has been replaced with a zero.");
+	printnccenter(stdscr,-1,0,"Press any key to continue.");
 	getch();
 	return 1;
 }
@@ -16,7 +16,7 @@ int error()
 int ask()
 {
 	clear();
-	printnc(row-2,"Made By BRBergman!\nFeel Free to Contribute.");
+	printnc(stdscr,"Made By BRBergman!\nFeel Free to Contribute.");
 	std::string askev[] = {"quit",
 	"do the pythagorean theorem",
 	"do the inverse pythagorean theorem",
@@ -34,8 +34,8 @@ int ask()
 	int size = sizeof(askev)/sizeof(askev[0]);
 	for (int i = 0; i < size; i++ )
 	{
-		printnccenter(7-i,0,"Press %i to %s",i,askev[i].c_str());
-		printnccenter(5-i,-1,"");
+		printnccenter(stdscr,7-i,0,"Press %i to %s",i,askev[i].c_str());
+		printnccenter(stdscr,5-i,-1,"");
 	}
 	char numin[10];
 	getstr(numin);
@@ -59,7 +59,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printnccenter(ar[i].c_str()); 	//print a message to the center of the screen
+		printnccenter(stdscr,ar[i].c_str()); 	//print a message to the center of the screen
 		getstr(word);					//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
@@ -84,12 +84,12 @@ std::vector<float> getfancyvars(std::vector<std::string> strin)
 	clear();
 	int length = strin.size();
 	char in[10];
-	printnccenter(1,0,strin[0].c_str());
+	printnccenter(stdscr,1,0,strin[0].c_str());
 	std::vector<float> x;
 	x.resize(length-1);
 	for (int i = 1; i < length; i++)
 	{
-		printnccenter(-i,0,strin[i].c_str());
+		printnccenter(stdscr,-i,0,strin[i].c_str());
 		getstr(in);
 		try
 		{
