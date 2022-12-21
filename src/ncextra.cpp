@@ -79,7 +79,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 //todo: make function that will go from one spot to enter text to another by pressing enter(9) or tab(10)
 
 
-std::vector<float> getfancyvars(std::vector<std::string> strin)
+std::vector<float> getfancyvars(WINDOW *scr, std::vector<std::string> strin)
 {
 	clear();
 	int length = strin.size();
@@ -89,7 +89,7 @@ std::vector<float> getfancyvars(std::vector<std::string> strin)
 	x.resize(length-1);
 	for (int i = 1; i < length; i++)
 	{
-		printnccenter(stdscr,-i,0,strin[i].c_str());
+		printnccenter(scr,-i,0,strin[i].c_str());
 		getstr(in);
 		try
 		{
