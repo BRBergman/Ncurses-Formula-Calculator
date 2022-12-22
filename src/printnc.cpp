@@ -29,7 +29,7 @@ int wprintnccenter (WINDOW *win, int ver, int hoz, const char *format, ...)
 	return done;
 }
 
-int printnc (WINDOW *win, int ver, int hoz, const char *format, ...)
+int wprintnc (WINDOW *win, int ver, int hoz, const char *format, ...)
 {
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
@@ -41,7 +41,7 @@ int printnc (WINDOW *win, int ver, int hoz, const char *format, ...)
 	mvwprintw(win,ver,hoz,"%s",in.c_str()); //print string to center of screen
 	return done;
 }
-int printnc (WINDOW *win, int ver, const char *format, ...)
+int wprintnc (WINDOW *win, int ver, const char *format, ...)
 {
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
@@ -54,7 +54,7 @@ int printnc (WINDOW *win, int ver, const char *format, ...)
 	return done;
 }
 
-int printnc (WINDOW *win, const char *format, ...)
+int wprintnc (WINDOW *win, const char *format, ...)
 {
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];

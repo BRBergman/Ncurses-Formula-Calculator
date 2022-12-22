@@ -16,7 +16,7 @@ int error()
 int ask()
 {
 	clear();
-	printnc(stdscr,"Made By BRBergman!\nFeel Free to Contribute.");
+	printnc("Made By BRBergman!\nFeel Free to Contribute.");
 	std::string askev[] = {"quit",
 	"do the pythagorean theorem",
 	"do the inverse pythagorean theorem",
