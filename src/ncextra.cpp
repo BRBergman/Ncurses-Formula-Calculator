@@ -6,9 +6,9 @@
 int error()
 {
 	clear();
-	printnccenter(stdscr,2,0,"There is an error. The value you entered is not valid.");
-	printnccenter(stdscr,1,0,"It has been replaced with a zero.");
-	printnccenter(stdscr,-1,0,"Press any key to continue.");
+	wprintnccenter(stdscr,2,0,"There is an error. The value you entered is not valid.");
+	wprintnccenter(stdscr,1,0,"It has been replaced with a zero.");
+	wprintnccenter(stdscr,-1,0,"Press any key to continue.");
 	getch();
 	return 1;
 }
@@ -34,8 +34,8 @@ int ask()
 	int size = sizeof(askev)/sizeof(askev[0]);
 	for (int i = 0; i < size; i++ )
 	{
-		printnccenter(stdscr,7-i,0,"Press %i to %s",i,askev[i].c_str());
-		printnccenter(stdscr,5-i,-1,"");
+		wprintnccenter(stdscr,7-i,0,"Press %i to %s",i,askev[i].c_str());
+		wprintnccenter(stdscr,5-i,-1,"");
 	}
 	char numin[10];
 	getstr(numin);
@@ -59,7 +59,7 @@ std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in fl
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		printnccenter(stdscr,ar[i].c_str()); 	//print a message to the center of the screen
+		wprintnccenter(stdscr,ar[i].c_str()); 	//print a message to the center of the screen
 		getstr(word);					//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
@@ -84,12 +84,12 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	clear();
 	int length = strin.size();
 	char in[10];
-	printnccenter(stdscr,1,0,strin[0].c_str());
+	wprintnccenter(stdscr,1,0,strin[0].c_str());
 	std::vector<float> x;
 	x.resize(length-1);
 	for (int i = 1; i < length; i++)
 	{
-		printnccenter(scr,-i,0,strin[i].c_str());
+		wprintnccenter(scr,-i,0,strin[i].c_str());
 		getstr(in);
 		try
 		{

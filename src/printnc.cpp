@@ -2,7 +2,7 @@
 #include <stdarg.h>
 int printncrow,printnccol;
 
-int printnccenter (WINDOW *win, const char *format, ...)
+int wprintnccenter (WINDOW *win, const char *format, ...)
 {
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
@@ -16,7 +16,7 @@ int printnccenter (WINDOW *win, const char *format, ...)
 }
 //		mvprintw(row/2-7+i, (col-strlen(askev[i])-11)/2, "Press %i to %s",i,askev[i] );
 
-int printnccenter (WINDOW *win, int ver, int hoz, const char *format, ...)
+int wprintnccenter (WINDOW *win, int ver, int hoz, const char *format, ...)
 {
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
