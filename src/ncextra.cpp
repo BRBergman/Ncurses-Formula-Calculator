@@ -51,7 +51,7 @@ int ask()
 	return num;
 }
 
-std::vector<float> getvecvars(std::vector<std::string> ar) //String vector in float vector out
+std::vector<float> wgetvecvars(std::vector<std::string> ar) //String vector in float vector out
 {
 	int length = ar.size(); 			//get size of input vector
 	std::vector<float> x(length);		//the float vector that we return
