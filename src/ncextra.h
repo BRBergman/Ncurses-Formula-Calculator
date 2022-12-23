@@ -19,8 +19,12 @@ std::vector<float> wgetvecvars(std::vector<std::string> ar);
 
 std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin);
 
-#define getfancyvars(strin) wgetfancyvars(stdscr,strin)
+std::vector<float> getfancyvars(std::vector<std::string> strin);
 
-#define getvecvars(strin) wgetvecvars(stdscr,strin)
+std::vector<float> getvecvars(std::vector<std::string> strin);
+
+//#define getfancyvars(strin) wgetfancyvars(stdscr,strin)
+
+//#define getvecvars(strin) wgetvecvars(stdscr,strin)
 
 #endif

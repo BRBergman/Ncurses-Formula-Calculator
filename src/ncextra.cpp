@@ -51,7 +51,7 @@ int ask()
 	return num;
 }
 
-std::vector<float> wgetvecvars(std::vector<std::string> ar) //String vector in float vector out
+std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //String vector in float vector out
 {
 	int length = ar.size(); 			//get size of input vector
 	std::vector<float> x(length);		//the float vector that we return
@@ -59,8 +59,8 @@ std::vector<float> wgetvecvars(std::vector<std::string> ar) //String vector in f
 	for (int i = 0; i< length; i++)
 	{
 		clear();
-		wprintnccenter(stdscr,ar[i].c_str()); 	//print a message to the center of the screen
-		getstr(word);					//assign value to the variable "word" (think of it as ncurses cin)
+		wprintnccenter(scr,ar[i].c_str()); 	//print a message to the center of the screen
+		wgetstr(scr,word);					//assign value to the variable "word" (think of it as ncurses cin)
 		try
 		{
 			x[i] = std::stof(word); 	// turn the string in "word" into a float 
@@ -84,13 +84,13 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	clear();
 	int length = strin.size();
 	char in[10];
-	wprintnccenter(stdscr,1,0,strin[0].c_str());
+	wprintnccenter(scr,1,0,strin[0].c_str());
 	std::vector<float> x;
 	x.resize(length-1);
 	for (int i = 1; i < length; i++)
 	{
 		wprintnccenter(scr,-i,0,strin[i].c_str());
-		getstr(in);
+		wgetstr(scr,in);
 		try
 		{
 			x[i-1] =0+std::stof(in) ; 	// turn the string in "word" into a float 
@@ -102,4 +102,14 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	}
 	beep();
 	return x;
+}
+
+std::vector<float> getfancyvars(std::vector<std::string> strin)
+{
+	return wgetfancyvars(stdscr,strin);
+}
+
+std::vector<float> getvecvars(std::vector<std::string> strin)
+{
+	return wgetvecvars(stdscr,strin);
 }
