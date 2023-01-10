@@ -29,7 +29,6 @@ std::vector<double> standardtovertex(float a, float b, float c);
 
 std::vector<float> quadraticformula(float a, float b, float c);
 
-float findapoly(std::vector<xzero> xintercepts);
 
 
 
