@@ -91,14 +91,7 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	{
 		wprintnccenter(scr,-i,0,strin[i].c_str());
 		wgetstr(scr,in);
-		try
-		{
-			x[i-1] =0+std::stof(in) ; 	// turn the string in "word" into a float 
-		}
-		catch(...)						//uh oh something went wrong
-		{
-			error();
-		}
+		fts(x,in,i-1);
 	}
 	beep();
 	return x;
@@ -112,4 +105,16 @@ std::vector<float> getfancyvars(std::vector<std::string> strin)
 std::vector<float> getvecvars(std::vector<std::string> strin)
 {
 	return wgetvecvars(stdscr,strin);
+}
+
+std::vector<xzero> vecftoxz(std::vector<float> in)
+{
+	std::vector<xzero> rerun;
+	rerun.resize(in.size());
+	for (size_t i = 1; i < in.size(); i+=2)
+	{
+		rerun[i].value = in[i];
+		rerun[i+1].doesbounce = (bool)in[i+1];
+	}
+	return rerun;
 }

@@ -126,3 +126,18 @@ std::vector<float> quadraticformula(float a, float b, float c)
 	}
 	return rerun;
 }
+
+float findapoly(std::vector<xzero> xintercepts)
+{
+	float a = 1;
+	size_t size=xintercepts.size();
+	for (size_t i = 0; i < size; i++)
+	{
+		if (xintercepts[i].doesbounce == true)
+		{
+			xintercepts[i].value *= xintercepts[i].value;
+		}
+		a *= xintercepts[i].value;
+	}
+	return a;
+}

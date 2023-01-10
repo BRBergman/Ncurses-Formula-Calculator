@@ -4,6 +4,7 @@
 #include <vector>
 #include <ncurses.h>
 #include <string>
+#include "maths_typedefs.h"
 //to be used with ncextra.cpp
 
 extern int row,col;  
@@ -14,6 +15,8 @@ int error();
 
 int ask();
 
+#define fts(flout,strin,offset) try {flout[offset]=0+std::stof(strin);}catch(...){error();}
+
 //print strings and return inputs as a float vector
 std::vector<float> wgetvecvars(std::vector<std::string> ar);
 
@@ -23,8 +26,6 @@ std::vector<float> getfancyvars(std::vector<std::string> strin);
 
 std::vector<float> getvecvars(std::vector<std::string> strin);
 
-//#define getfancyvars(strin) wgetfancyvars(stdscr,strin)
-
-//#define getvecvars(strin) wgetvecvars(stdscr,strin)
+std::vector<xzero> vecftoxz(std::vector<float> in);
 
 #endif
