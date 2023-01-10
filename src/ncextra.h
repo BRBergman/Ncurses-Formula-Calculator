@@ -15,7 +15,7 @@ int error();
 
 int ask();
 
-#define fts(flout,strin,offset) try {flout[offset]=0+std::stof(strin);}catch(...){error();}
+#define strto(out,strin,fletter) try {out=0+std::sto ## fletter(strin);}catch(...){out=0;}
 
 //print strings and return inputs as a float vector
 std::vector<float> wgetvecvars(std::vector<std::string> ar);
@@ -26,6 +26,6 @@ std::vector<float> getfancyvars(std::vector<std::string> strin);
 
 std::vector<float> getvecvars(std::vector<std::string> strin);
 
-std::vector<xzero> vecftoxz(std::vector<float> in);
+
 
 #endif

@@ -9,11 +9,7 @@ typedef struct stdform
 {
     float a,b,c;
 }stdform;
-typedef struct xzero
-{
-	float value;
-	bool doesbounce;
-}xzero;
+
 
 
 #endif // __MATHS_TYPEDEFS_H__

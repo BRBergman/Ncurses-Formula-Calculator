@@ -6,20 +6,7 @@
 
 
 bool init = false;
-// to store the number of rows and the number of colums of the screen. 
-void polyfunctionsfinda()
-{
-	std::vector<std::string> normal{"Find A", "Enter X1", "Does it bounce?", "Enter X2", "Does it bounce?"};
-	std::vector<float> x = getfancyvars(normal);
-	float y = findapoly(vecftoxz(x));
-	printnccenter("what is y");
-	char z[10];
-	float c[1];
-	getstr(z);
-	fts(c,z,0);
-	printnccenter("A is %f", c[0]/y);
-	return;	
-}
+
 
 void quadform()
 {
@@ -139,7 +126,6 @@ void revpythag()
 
 int main()
 {
-	
 	if (!init)
 	{
 		initscr();

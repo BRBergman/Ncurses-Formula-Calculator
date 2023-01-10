@@ -40,14 +40,7 @@ int ask()
 	char numin[10];
 	getstr(numin);
 	int num;
- 	try
-	{
-		num = std::stoi(numin);
-	}
-	catch(...)
-	{
-		num = 0;
-	}
+	strto(num,numin,i);
 	return num;
 }
 
@@ -61,14 +54,7 @@ std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //Strin
 		clear();
 		wprintnccenter(scr,ar[i].c_str()); 	//print a message to the center of the screen
 		wgetstr(scr,word);					//assign value to the variable "word" (think of it as ncurses cin)
-		try
-		{
-			x[i] = std::stof(word); 	// turn the string in "word" into a float 
-		}
-		catch(...)						//uh oh something went wrong
-		{
-			error();
-		}
+		strto(x[i],word,f);
 	}
 	clear();
 	beep();
@@ -91,11 +77,12 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	{
 		wprintnccenter(scr,-i,0,strin[i].c_str());
 		wgetstr(scr,in);
-		fts(x,in,i-1);
-	}
+		strto(x[i-1],in,f);
+	} 
 	beep();
 	return x;
 }
+
 
 std::vector<float> getfancyvars(std::vector<std::string> strin)
 {
@@ -107,14 +94,3 @@ std::vector<float> getvecvars(std::vector<std::string> strin)
 	return wgetvecvars(stdscr,strin);
 }
 
-std::vector<xzero> vecftoxz(std::vector<float> in)
-{
-	std::vector<xzero> rerun;
-	rerun.resize(in.size());
-	for (size_t i = 1; i < in.size(); i+=2)
-	{
-		rerun[i].value = in[i];
-		rerun[i+1].doesbounce = (bool)in[i+1];
-	}
-	return rerun;
-}
