@@ -81,16 +81,17 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	} 
 	beep();
 	return x;
+	
 }
 
-
+/*
 std::vector<float> getfancyvars(std::vector<std::string> strin)
 {
 	return wgetfancyvars(stdscr,strin);
-}
-
+}*/
+/*
 std::vector<float> getvecvars(std::vector<std::string> strin)
 {
 	return wgetvecvars(stdscr,strin);
-}
+}*/
 

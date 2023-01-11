@@ -4,11 +4,17 @@
 typedef struct point
 {
     float x,y;
+    point(float,float);
+
 }point;
+
+
 typedef struct stdform
 {
     float a,b,c;
+    stdform(float,float,float);
 }stdform;
+
 
 
 

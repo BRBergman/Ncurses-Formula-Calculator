@@ -26,6 +26,8 @@ std::vector<float> getfancyvars(std::vector<std::string> strin);
 
 std::vector<float> getvecvars(std::vector<std::string> strin);
 
+#define getfancyvars(...) wgetfancyvars(stdscr,__VA_ARGS__);
 
+#define getvecvars(...) wgetvecvars(stdscr,__VA_ARGS__);
 
 #endif
