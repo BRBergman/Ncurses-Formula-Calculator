@@ -134,42 +134,18 @@ int main()
 	int num = ask();
 	switch (num)
 	{
-		case 1:
-			pythag();
-			break;
-		case 2:
-			revpythag();
-			break;
-		case 3:
-			dist();
-			break;
-		case 4:
-			slop();
-			break;
-		case 5:
-			classifytri();
-			break;
-		case 6:
-			circumph();
-			break;
-		case 7:
-			cylarea();
-			break;
-		case 8:
-			mid();
-			break;
-		case 9:
-			csar();
-			break;
-		case 10:
-			intercept();
-			break;
-		case 11:
-			sttover();
-			break;
-		case 12:
-			quadform();
-			break;
+		casebreak(1,pythag());
+		casebreak(2,revpythag());
+		casebreak(3,dist());
+		casebreak(4,slop());
+		casebreak(5,classifytri());
+		casebreak(6,circumph());
+		casebreak(7,cylarea());
+		casebreak(8,mid());
+		casebreak(9,csar());
+		casebreak(10,intercept());
+		casebreak(11,sttover());
+		casebreak(12,quadform());
 		default:
 			endwin();
 			return 0 ;

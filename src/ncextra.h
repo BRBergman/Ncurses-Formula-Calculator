@@ -22,12 +22,10 @@ std::vector<float> wgetvecvars(std::vector<std::string> ar);
 
 std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin);
 
-std::vector<float> getfancyvars(std::vector<std::string> strin);
-
-std::vector<float> getvecvars(std::vector<std::string> strin);
-
 #define getfancyvars(...) wgetfancyvars(stdscr,__VA_ARGS__);
 
 #define getvecvars(...) wgetvecvars(stdscr,__VA_ARGS__);
+
+#define casebreak(num,func) case num: func; break;
 
 #endif
