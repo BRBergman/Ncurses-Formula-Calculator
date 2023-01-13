@@ -125,8 +125,7 @@ int main()
 		initscr();
 		init = true;
 	}		
-	int num = ask();
-	switch (num)
+	switch (ask())
 	{
 		casebreak(1,pythag());
 		casebreak(2,revpythag());

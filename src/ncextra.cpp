@@ -29,7 +29,7 @@ int ask()
 	"find the area of a certan section of a circle",
 	"find the y intercept of a line",
 	"get the vertex from a standard form equasion",
-	{"preform the quadratic equasion"}};
+	"preform the quadratic equasion"};
 
 	int size = sizeof(askev)/sizeof(askev[0]);
 	for (int i = 0; i < size; i++ )

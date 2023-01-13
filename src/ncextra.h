@@ -7,7 +7,7 @@
 #include "maths_typedefs.h"
 //to be used with ncextra.cpp
 
-extern int row,col;  
+ 
 
 //functions
 
