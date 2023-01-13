@@ -9,18 +9,19 @@
 
 extern int row,col;  
 
+//functions
+
 int main();
-
 int error();
-
 int ask();
+//print strings and return inputs as a float vector
+std::vector<float> wgetvecvars(WINDOW *scr, std::vector<std::string> ar);
+//print strings and return inputs as a float vector
+std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin); 
+
+//defines
 
 #define strto(out,strin,fletter) try {out=0+std::sto ## fletter(strin);}catch(...){out=0;}
-
-//print strings and return inputs as a float vector
-std::vector<float> wgetvecvars(std::vector<std::string> ar);
-
-std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin);
 
 #define getfancyvars(...) wgetfancyvars(stdscr,__VA_ARGS__);
 

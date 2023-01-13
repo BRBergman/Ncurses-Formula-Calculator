@@ -15,15 +15,9 @@ void quadform()
 	std::vector<float> quad = quadraticformula(x[0],x[1],x[2]);
 	switch (quad.size())
 	{
-		case 2:
-			printnccenter("The Points Are: %f, %f",quad[0],quad[1]);
-			break;
-		case 1:
-			printnccenter("The Points Is: %f",quad[0]);		
-			break;
-		default:
-			printnccenter("There Are No Real Points");
-			break;
+		casebreak(2,printnccenter("The Points Are: %f, %f",quad[0],quad[1]));
+		casebreak(1,printnccenter("The Points Is: %f",quad[0]))
+		default: printnccenter("There Are No Real Points"); break;
 	}
 	return;	
 }
@@ -146,9 +140,7 @@ int main()
 		casebreak(10,intercept());
 		casebreak(11,sttover());
 		casebreak(12,quadform());
-		default:
-			endwin();
-			return 0 ;
+		default: endwin(); return 0;
 	}
 	getch();
 	clear();
