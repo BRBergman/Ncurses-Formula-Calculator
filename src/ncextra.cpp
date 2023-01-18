@@ -31,7 +31,7 @@ int ask()
 	"get the vertex from a standard form equasion",
 	"preform the quadratic equasion"};
 
-	int size = sizeof(askev)/sizeof(askev[0]);
+	int size = arrsize(askev);
 	for (int i = 0; i < size; i++ )
 	{
 		wprintnccenter(stdscr,7-i,0,"Press %i to %s",i,askev[i].c_str());
@@ -64,6 +64,7 @@ std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //Strin
 
 //todo: make function that will go from one spot to enter text to another by pressing enter(9) or tab(10)
 
+//take vector for the elements we want to change the formant from elements[2] to element1,element1, etc
 
 std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 {
