@@ -15,7 +15,11 @@ typedef struct stdform
     stdform(float,float,float);
 }stdform;
 
-
+typedef struct exponantf
+{
+    int xexponant;
+    float value;
+}exponantf;
 
 
 #endif // __MATHS_TYPEDEFS_H__

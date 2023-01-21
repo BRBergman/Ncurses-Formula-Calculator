@@ -23,11 +23,11 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin);
 
 #define strto(out,strin,fletter) try {out=0+std::sto ## fletter(strin);}catch(...){out=0;}
 
-#define getfancyvars(strin) wgetfancyvars(stdscr,strin);
+#define getfancyvars(strin) wgetfancyvars(stdscr,strin)
 
-#define getvecvars(strin) wgetvecvars(stdscr,strin);
+#define getvecvars(strin) wgetvecvars(stdscr,strin)
 
-#define casebreak(num,func) case num: func; break;
+#define casebreak(num,func) case num: func; break
 
 #define arrsize(arr) sizeof(arr)/sizeof(arr[0])
 

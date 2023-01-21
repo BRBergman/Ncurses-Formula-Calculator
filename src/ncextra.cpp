@@ -57,7 +57,6 @@ std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //Strin
 		strto(x[i],word,f);
 	}
 	clear();
-	beep();
 	return x;
 }
 
@@ -79,10 +78,8 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 		wprintnccenter(scr,-i,0,strin[i].c_str());
 		wgetstr(scr,in);
 		strto(x[i-1],in,f);
-	} 
-	beep();
+	}
 	return x;
-	
 }
 
 /*

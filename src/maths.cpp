@@ -1,6 +1,7 @@
 #include <cmath>
 #include "maths.h"
 #include <iostream>
+
 //to be used with maths.h
 
 
@@ -125,4 +126,32 @@ std::vector<float> quadraticformula(float a, float b, float c)
 		rerun[0] = (b*-1)/(2*a);
 	}
 	return rerun;
+}
+
+bool compareByLength(const exponantf a, const exponantf b)
+{return a.xexponant < b.xexponant;}
+//make sorting algorythm then add like terms
+//here is something, no idea if it works
+std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
+{	
+	size_t size = in.size();
+	std::vector<exponantf> x;
+	std::sort(in.begin(),in.end(),compareByLength);
+	x.resize(1);
+	x[0]= in[0];
+	//printf("%d\n",x[0].xexponant);
+	for (size_t i = 1; i < size; i++)
+	{
+		if (x[x.size()-1].xexponant==in[i].xexponant)
+		{
+			x[x.size()-1].value+= in[i].value;
+		}
+		else
+		{
+			x.resize(x.size()+1);
+			x[x.size()-1] = in[i];
+		}
+		
+	}
+	return x;
 }
