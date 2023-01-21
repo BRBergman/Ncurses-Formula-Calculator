@@ -119,30 +119,8 @@ void revpythag()
 
 
 int main()
-{
-	std::vector<exponantf> x, y;
-	x.resize(4);
-	x[0].value = 1;
-	x[0].xexponant = 3;
-
-	x[1].value = 3;
-	x[1].xexponant=2;
-
-	x[2].value = 4;
-	x[2].xexponant=3;
-
-	x[3].value = 1;
-	x[3].xexponant=2;
-
-	//4,2|5,3
-	y = addliketermsf(x);
-	for (size_t i = 0; i < y.size(); i++)
-	{
-		printf("%f|%d\n",y[i].value,y[i].xexponant);
-	}
-	
-	
-	if (init)
+{	
+	if (!init)
 	{
 		initscr();
 		init = true;
