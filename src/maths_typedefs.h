@@ -17,7 +17,7 @@ typedef struct stdform
 
 typedef struct exponantf
 {
-    int xexponant;
+    int exponant;
     float value;
 }exponantf;
 

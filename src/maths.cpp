@@ -129,7 +129,7 @@ std::vector<float> quadraticformula(float a, float b, float c)
 }
 
 bool compareByLength(const exponantf a, const exponantf b)
-{return a.xexponant < b.xexponant;}
+{return a.exponant < b.exponant;}
 //make sorting algorythm then add like terms
 //here is something, no idea if it works
 std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
@@ -139,10 +139,10 @@ std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
 	std::sort(in.begin(),in.end(),compareByLength);
 	x.resize(1);
 	x[0]= in[0];
-	//printf("%d\n",x[0].xexponant);
+	//printf("%d\n",x[0].exponant);
 	for (size_t i = 1; i < size; i++)
 	{
-		if (x[x.size()-1].xexponant==in[i].xexponant)
+		if (x[x.size()-1].exponant==in[i].exponant)
 		{
 			x[x.size()-1].value+= in[i].value;
 		}
@@ -154,4 +154,27 @@ std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
 		
 	}
 	return x;
+}
+
+//multiply value and add exponant
+std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> first, const std::vector<exponantf> second)
+{
+	std::vector<exponantf> x;
+	if (first.size()>second.size())
+	{
+		x.resize(first.size());
+	}
+	else
+	{
+		x.resize(second.size());
+	}
+	for (size_t i = 0; i < first.size(); i++)
+	{
+		for (size_t f = 0; f < second.size(); f++)
+		{
+			x[i].value = first[i].value *second[f].value;
+			x[i].exponant = first[i].exponant +second[f].exponant;
+		}
+	}
+	return addliketermsf(x);
 }

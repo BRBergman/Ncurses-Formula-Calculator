@@ -31,6 +31,6 @@ std::vector<float> quadraticformula(float a, float b, float c);
 
 std::vector<exponantf> addliketermsf(std::vector<exponantf> in);
 
-
+std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> first, const std::vector<exponantf> second);
 
 #endif
