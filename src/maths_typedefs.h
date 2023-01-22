@@ -1,5 +1,6 @@
 #ifndef __MATHS_TYPEDEFS_H__
 #define __MATHS_TYPEDEFS_H__
+#include "combinetext.h"
 
 typedef struct point
 {
@@ -19,6 +20,10 @@ typedef struct exponantf
 {
     int exponant;
     float value;
+    std::string display()
+    {
+        return combinetext("%fx^%g",exponant,value);
+    }
 }exponantf;
 
 

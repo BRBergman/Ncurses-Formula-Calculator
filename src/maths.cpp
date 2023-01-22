@@ -159,22 +159,33 @@ std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
 //multiply value and add exponant
 std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> first, const std::vector<exponantf> second)
 {
+	exponantf temp;
 	std::vector<exponantf> x;
-	if (first.size()>second.size())
-	{
-		x.resize(first.size());
-	}
-	else
-	{
-		x.resize(second.size());
-	}
 	for (size_t i = 0; i < first.size(); i++)
 	{
 		for (size_t f = 0; f < second.size(); f++)
 		{
-			x[i].value = first[i].value *second[f].value;
-			x[i].exponant = first[i].exponant +second[f].exponant;
+			temp.value = first[i].value *second[f].value;
+			temp.exponant = first[i].exponant +second[f].exponant;
+			x.push_back(temp);
 		}
 	}
 	return addliketermsf(x);
+}
+
+float xforquadratic(const std::vector<exponantf>in, float x)
+{
+	float rerun = 0;
+	for (size_t i = 0; i < in.size(); i++)
+	{
+		if (in[i].exponant == 0)
+		{
+			rerun+= in[i].value;
+		}
+		else
+		{
+			rerun += in[i].value * pow(x,in[i].exponant);
+		}
+	}
+	return rerun;
 }
