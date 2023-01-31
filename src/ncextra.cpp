@@ -46,7 +46,7 @@ int ask()
 
 std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //String vector in float vector out
 {
-	int length = ar.size(); 			//get size of input vector
+	size_t length = ar.size(); 			//get size of input vector
 	std::vector<float> x(length);		//the float vector that we return
 	char word[20];						//char array to get inputs from
 	for (int i = 0; i< length; i++)
@@ -68,7 +68,7 @@ std::vector<float> wgetvecvars(WINDOW * scr,std::vector<std::string> ar) //Strin
 std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 {
 	clear();
-	int length = strin.size();
+	size_t length = strin.size();
 	char in[10];
 	wprintnccenter(scr,1,0,strin[0].c_str());
 	std::vector<float> x;
@@ -82,14 +82,5 @@ std::vector<float> wgetfancyvars(WINDOW *scr, std::vector<std::string> strin)
 	return x;
 }
 
-/*
-std::vector<float> getfancyvars(std::vector<std::string> strin)
-{
-	return wgetfancyvars(stdscr,strin);
-}*/
-/*
-std::vector<float> getvecvars(std::vector<std::string> strin)
-{
-	return wgetvecvars(stdscr,strin);
-}*/
+
 

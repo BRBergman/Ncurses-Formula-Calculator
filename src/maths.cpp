@@ -39,23 +39,22 @@ int cheiftr(float a, float b, float c)
 		//not a triangle
 		return 0;
 	}
-	double a2 = pow(a,2);
-	double b2 = pow(b,2);
 	double c2 = pow(c,2);
-	if (c2 == a2+b2)
-	{
-		//right
-		return 1;
-	}
-	if (c2 > a2+b2)
+	double a2b2 = pow(a,2) + pow(b,2);
+	if (c2 > a2b2)
 	{
 		//obtuse
 		return 2;
 	}
-	if (c2 < a2+b2)
+	else if (c2 < a2b2)
 	{
 		//accute
 		return 3;
+	}
+	else // (c2 == a2+b2) done last because compairing floats can be wonky 
+	{
+		//right
+		return 1;
 	}
 	return 0;
 }
@@ -79,14 +78,12 @@ std::vector<double> midpoint(float x1,float y1,float x2,float y2)
 double csaria(float radious, float angle)
 {
 	//cylander section angle 
-	double top = angle*(M_PI*pow(radious,2));
-	return top/360;
+	return (angle*M_PI*pow(radious,2))/360;
 }
 
 double slopeintercept(float m, float x, float b)
 {
-	double calc =(m*x)+b;
-	return calc;
+	return (m*x)+b;
 }
 
 //make standard to vertex and vertex to standard
