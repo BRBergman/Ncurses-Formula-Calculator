@@ -1,6 +1,7 @@
 #include <cmath>
 #include "maths.h"
 #include <iostream>
+#include <numeric>
 
 //to be used with maths.h
 
@@ -185,4 +186,73 @@ float xforquadratic(const std::vector<exponantf>in, float x)
 		}
 	}
 	return rerun;
+}
+
+
+//needst to be worked on
+/*
+void factorac(std::vector<exponantf> in)
+{
+	std::sort(in.begin(),in.end(),compareByLength);
+
+	float ac = 	in[0].value * in[2].value;
+	float b = in[1].value;
+
+	int dis = 0;
+	int num[2];
+	for(size_t i = 1; i <= abs(ac); ++i) 
+	{	
+		if (int(fmod(ac,i)) == 0)
+		{
+			dis = ac/i;
+			if (i+dis == abs(b))
+			{
+				num[0] = i;
+				if (b<0)
+				{
+					num[1] = dis*-1;
+				}
+				else
+				{
+					num[1] = dis;
+				}
+			}
+
+		}
+	}
+	int ab = std::gcd(abs(in[0].value),abs(num[0]));
+	int bc = std::gcd(abs(in[2].value),abs(num[1]));
+	if(num[0] <0 && in[0].value <0)
+	{
+		ab*=-1;
+	}
+	if(num[1] <0 && in[2].value <0)
+	{
+		bc*=-1;
+	}
+	
+	int faca = num[0]/ab;
+	int facb = num[1]/bc;
+	return;
+}
+*/
+
+
+std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
+{
+	std::sort(exin.begin(),exin.end(),compareByLength);
+
+	float a = exin[0].value,b = exin[1].value,c=exin[2].value;
+
+	std::vector<exponantf> numbers(3);
+	numbers[0].value = a;
+	numbers[1].value = b-(a*zero);
+	numbers[2].value = c-(b*zero);//this should equal 0
+
+	//should work but who knows until i test it
+	for (size_t i = 3; i > 0; i--)
+	{
+		numbers[i-1].exponant = i-1;
+	}
+	return numbers;
 }
