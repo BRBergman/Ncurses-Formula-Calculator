@@ -33,4 +33,6 @@ std::vector<exponantf> addliketermsf(std::vector<exponantf> in);
 
 std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> first, const std::vector<exponantf> second);
 
+std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin);
+
 #endif

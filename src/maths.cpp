@@ -2,6 +2,7 @@
 #include "maths.h"
 #include <iostream>
 #include <numeric>
+#include <algorithm>
 
 //to be used with maths.h
 
@@ -126,8 +127,8 @@ std::vector<float> quadraticformula(float a, float b, float c)
 	return rerun;
 }
 
-bool compareByLength(const exponantf a, const exponantf b)
-{return a.exponant < b.exponant;}
+bool compareByLength(const exponantf a, const exponantf b) //goes large to small 
+{return a.exponant > b.exponant;}
 //make sorting algorythm then add like terms
 //here is something, no idea if it works
 std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
@@ -241,18 +242,20 @@ void factorac(std::vector<exponantf> in)
 std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
 {
 	std::sort(exin.begin(),exin.end(),compareByLength);
-
-	float a = exin[0].value,b = exin[1].value,c=exin[2].value;
-
-	std::vector<exponantf> numbers(3);
-	numbers[0].value = a;
-	numbers[1].value = b-(a*zero);
-	numbers[2].value = c-(b*zero);//this should equal 0
-
-	//should work but who knows until i test it
-	for (size_t i = 3; i > 0; i--)
+	size_t size = exin.size();
+	std::vector<exponantf> numbers(size);
+	numbers[0].value = exin[0].value;
+	/*
+	numbers[1].value = exin[1].value+(numbers[0].value*zero);
+	numbers[2].value = exin[2].value+(numbers[1].value*zero);
+	numbers[3].value = exin[3].value+(numbers[2].value*zero);*/
+	for (size_t i = 1; i < size; i++)
 	{
-		numbers[i-1].exponant = i-1;
+		numbers[i].value = exin[i].value+(numbers[i-1].value*zero);
+	}
+	for (size_t i = 0; i < size; i++)
+	{
+		numbers[i].exponant = exin[i].exponant -1;
 	}
 	return numbers;
 }

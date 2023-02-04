@@ -120,7 +120,28 @@ void revpythag()
 
 int main()
 {	
-	if (!init)
+	std::vector<exponantf> g(4);
+
+	g[0].value = 6;
+	g[1].value=41;
+	g[2].value=31;
+	g[3].value=6;
+
+	g[0].exponant=3;
+	g[1].exponant=2;
+	g[2].exponant=1;
+	g[3].exponant=0;
+	//g.push_back({3,4});
+
+	std::vector<exponantf> f(syntheticdevision(-6,g));
+	//should equal 6x^2+5x+1
+
+	for (size_t i = 0; i < f.size(); i++)
+	{
+		printf("%fx^%i\n",f[i].value,f[i].exponant);
+	}
+	
+	if (init)
 	{
 		initscr();
 		init = true;
