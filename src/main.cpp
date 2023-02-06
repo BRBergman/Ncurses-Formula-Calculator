@@ -122,16 +122,11 @@ int main()
 {	
 	std::vector<exponantf> g(4);
 
-	g[0].value = 6;
-	g[1].value=41;
-	g[2].value=31;
-	g[3].value=6;
+	g[0]={6,3};
+	g[1]={41,2};
+	g[2]={31,1};
+	g[3]={6,0};
 
-	g[0].exponant=3;
-	g[1].exponant=2;
-	g[2].exponant=1;
-	g[3].exponant=0;
-	//g.push_back({3,4});
 
 	std::vector<exponantf> f(syntheticdevision(-6,g));
 	//should equal 6x^2+5x+1
@@ -141,7 +136,7 @@ int main()
 	printf("%f|%f\n",guh[0],guh[1]);
 
 	
-	if (init)
+	if (!init)
 	{
 		initscr();
 		init = true;
