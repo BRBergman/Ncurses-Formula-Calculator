@@ -135,11 +135,11 @@ int main()
 
 	std::vector<exponantf> f(syntheticdevision(-6,g));
 	//should equal 6x^2+5x+1
+	std::vector<float> guh (quadraticformula(f[0].value,f[1].value,f[2].value));
 
-	for (size_t i = 0; i < f.size(); i++)
-	{
-		printf("%fx^%i\n",f[i].value,f[i].exponant);
-	}
+	
+	printf("%f|%f\n",guh[0],guh[1]);
+
 	
 	if (init)
 	{

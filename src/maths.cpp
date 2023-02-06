@@ -189,66 +189,12 @@ float xforquadratic(const std::vector<exponantf>in, float x)
 	return rerun;
 }
 
-
-//needst to be worked on
-/*
-void factorac(std::vector<exponantf> in)
-{
-	std::sort(in.begin(),in.end(),compareByLength);
-
-	float ac = 	in[0].value * in[2].value;
-	float b = in[1].value;
-
-	int dis = 0;
-	int num[2];
-	for(size_t i = 1; i <= abs(ac); ++i) 
-	{	
-		if (int(fmod(ac,i)) == 0)
-		{
-			dis = ac/i;
-			if (i+dis == abs(b))
-			{
-				num[0] = i;
-				if (b<0)
-				{
-					num[1] = dis*-1;
-				}
-				else
-				{
-					num[1] = dis;
-				}
-			}
-
-		}
-	}
-	int ab = std::gcd(abs(in[0].value),abs(num[0]));
-	int bc = std::gcd(abs(in[2].value),abs(num[1]));
-	if(num[0] <0 && in[0].value <0)
-	{
-		ab*=-1;
-	}
-	if(num[1] <0 && in[2].value <0)
-	{
-		bc*=-1;
-	}
-	
-	int faca = num[0]/ab;
-	int facb = num[1]/bc;
-	return;
-}
-*/
-
-
 std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
 {
 	std::sort(exin.begin(),exin.end(),compareByLength);
 	size_t size = exin.size();
 	std::vector<exponantf> numbers(size);
 	numbers[0].value = exin[0].value;
-	/*
-	numbers[1].value = exin[1].value+(numbers[0].value*zero);
-	numbers[2].value = exin[2].value+(numbers[1].value*zero);
-	numbers[3].value = exin[3].value+(numbers[2].value*zero);*/
 	for (size_t i = 1; i < size; i++)
 	{
 		numbers[i].value = exin[i].value+(numbers[i-1].value*zero);
@@ -257,5 +203,5 @@ std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
 	{
 		numbers[i].exponant = exin[i].exponant -1;
 	}
-	return numbers;
+	return numbers; //put the answer into the quadratic formula
 }
