@@ -6,7 +6,34 @@
 
 
 bool init = false;
-
+void syntheticdiv()
+{
+	//test one enter 3 for degree and then 6,41,31, and 6 for numbers, and then -6 for zero
+	clear();
+	printnccenter("What is the degree? ");
+	char buffer[25];
+	wgetstr(stdscr,buffer);
+	int degree = 0; 
+	strto(degree,buffer,i);
+	clear();
+	std::vector<exponantf> g(degree+1);
+	for (int i = 0; i < degree+1; i++)
+	{
+		wprintnccenter(stdscr,-i,0,"x^%i: ",degree-i);
+		wgetstr(stdscr,buffer);
+		strto(g[i].coefficent,buffer,f);
+		g[i].exponant = degree - i;
+	}
+	clear();
+	printnccenter("What is the known zero? ");
+	clear();
+	wgetstr(stdscr,buffer);
+	strto(degree,buffer,i);//reusing and overwriting degree int.
+	std::vector<exponantf> f(syntheticdevision(degree,g));
+	std::vector<float> guh (quadraticformula(f[0].coefficent,f[1].coefficent,f[2].coefficent));
+	printnccenter("%f|%f\n",guh[0],guh[1]);
+	return;
+}
 
 void quadform()
 {
@@ -120,22 +147,6 @@ void revpythag()
 
 int main()
 {	
-	std::vector<exponantf> g(4);
-
-	g[0]={6,3};
-	g[1]={41,2};
-	g[2]={31,1};
-	g[3]={6,0};
-
-
-	std::vector<exponantf> f(syntheticdevision(-6,g));
-	//should equal 6x^2+5x+1
-	std::vector<float> guh (quadraticformula(f[0].value,f[1].value,f[2].value));
-
-	
-	printf("%f|%f\n",guh[0],guh[1]);
-
-	
 	if (!init)
 	{
 		initscr();
@@ -155,6 +166,7 @@ int main()
 		casebreak(10,intercept());
 		casebreak(11,sttover());
 		casebreak(12,quadform());
+		casebreak(13,syntheticdiv());
 		default: endwin(); return 0;
 	}
 	getch();

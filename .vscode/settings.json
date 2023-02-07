@@ -70,7 +70,8 @@
         "memory_resource": "cpp",
         "fstream": "cpp",
         "version": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "__memory": "cpp"
     },
     "makefile.launchConfigurations": [
         {

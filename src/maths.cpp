@@ -143,7 +143,7 @@ std::vector<exponantf> addliketermsf(std::vector<exponantf> in)
 	{
 		if (x[x.size()-1].exponant==in[i].exponant)
 		{
-			x[x.size()-1].value+= in[i].value;
+			x[x.size()-1].coefficent+= in[i].coefficent;
 		}
 		else
 		{
@@ -164,7 +164,7 @@ std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> f
 	{
 		for (size_t f = 0; f < second.size(); f++)
 		{
-			temp.value = first[i].value *second[f].value;
+			temp.coefficent = first[i].coefficent *second[f].coefficent;
 			temp.exponant = first[i].exponant +second[f].exponant;
 			x.push_back(temp);
 		}
@@ -179,11 +179,11 @@ float xforquadratic(const std::vector<exponantf>in, float x)
 	{
 		if (in[i].exponant == 0)
 		{
-			rerun+= in[i].value;
+			rerun+= in[i].coefficent;
 		}
 		else
 		{
-			rerun += in[i].value * pow(x,in[i].exponant);
+			rerun += in[i].coefficent * pow(x,in[i].exponant);
 		}
 	}
 	return rerun;
@@ -194,10 +194,10 @@ std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
 	std::sort(exin.begin(),exin.end(),compareByLength);
 	size_t size = exin.size();
 	std::vector<exponantf> numbers(size);
-	numbers[0].value = exin[0].value;
+	numbers[0].coefficent = exin[0].coefficent;
 	for (size_t i = 1; i < size; i++)
 	{
-		numbers[i].value = exin[i].value+(numbers[i-1].value*zero);
+		numbers[i].coefficent = exin[i].coefficent+(numbers[i-1].coefficent*zero);
 	}
 	for (size_t i = 0; i < size; i++)
 	{

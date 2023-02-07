@@ -18,11 +18,11 @@ typedef struct stdform
 
 typedef struct exponantf
 {
-    float value;
+    float coefficent;
     int exponant;
     std::string display()
     {
-        return combinetext("%gx^%f",value,exponant);
+        return combinetext("%gx^%f",coefficent,exponant);
     }
 }exponantf;
 

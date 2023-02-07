@@ -29,6 +29,8 @@ std::vector<double> standardtovertex(float a, float b, float c);
 
 std::vector<float> quadraticformula(float a, float b, float c);
 
+bool compareByLength(const exponantf a, const exponantf b); //goes large to small 
+
 std::vector<exponantf> addliketermsf(std::vector<exponantf> in);
 
 std::vector<exponantf> multiplyquadraticequasions(const std::vector<exponantf> first, const std::vector<exponantf> second);
