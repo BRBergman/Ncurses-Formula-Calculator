@@ -5,9 +5,9 @@
 #include "maths_typedefs.h" 
 //to be used with maths.cpp
 
-double distance(float x1,float y1,float x2,float y2);
+double distance(point one, point two);
 
-double slope(float x1,float y1,float x2,float y2);
+double slope(point one, point two);
 
 double pythagorean(float a, float b);
 

@@ -115,7 +115,7 @@ void dist()
 {
 	std::vector<std::string> normal{"Distance Formula","Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
 	std::vector<float> x = getfancyvars(normal);
-	printnccenter("The Distance Is: %f",distance(x[0],x[1],x[2],x[3]));
+	printnccenter("The Distance Is: %f",distance({x[0],x[1]},{x[2],x[3]}));
 	return;
 }
 
@@ -123,7 +123,7 @@ void slop()
 {
 	std::vector<std::string> normal{"Slope Formula","Enter X1: ","Enter Y1: ","Enter X2: ","Enter Y2: "};
 	std::vector<float> x = getfancyvars(normal);
-	printnccenter("The Slope Is: %f",slope(x[0],x[1],x[2],x[3]));
+	printnccenter("The Slope Is: %f",slope({x[0],x[1]},{x[2],x[3]}));
 	return;
 }
 

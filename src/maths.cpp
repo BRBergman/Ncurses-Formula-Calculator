@@ -9,16 +9,16 @@
 
 
 
-double distance(float x1,float y1,float x2,float y2)
+double distance(point one,point two)
 {
 	//distance formula
-	return sqrt(pow(x2-x1,2)+pow(y2-y1,2));
+	return sqrt(pow(two.x-one.x,2)+pow(two.y-one.y,2));
 }
 
-double slope(float x1,float y1,float x2,float y2)
+double slope(point one,point two)
 {
 	//slope formula
-	return (y2-y1)/(x2-x1);
+	return (two.y-one.y)/(two.x-one.x);
 }
 
 double pythagorean(float a, float b)
