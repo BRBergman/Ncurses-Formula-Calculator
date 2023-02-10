@@ -12,27 +12,12 @@ int error()
 	getch();
 	return 1;
 }
-
-int ask()
+int asks(std::vector<std::string> askev)
 {
 	clear();
-	printnc("Made By BRBergman!\nFeel Free to Contribute.");
-	std::string askev[] = {"quit",
-	"do the pythagorean theorem",
-	"do the inverse pythagorean theorem",
-	"do the distance formula",
-	"do the slope formula", 
-	"classify a triangle",
-	"check the circumference of a circle",
-	"check the area of a circle",
-	"preform the midpoint formula",
-	"find the area of a certan section of a circle",
-	"find the y intercept of a line",
-	"get the vertex from a standard form equasion",
-	"preform the quadratic equasion"};
 
-	int size = arrsize(askev);
-	for (int i = 0; i < size; i++ )
+	size_t size = askev.size();
+	for (size_t i = 0; i < size; i++ )
 	{
 		wprintnccenter(stdscr,7-i,0,"Press %i to %s",i,askev[i].c_str());
 		wprintnccenter(stdscr,5-i,-1,"");

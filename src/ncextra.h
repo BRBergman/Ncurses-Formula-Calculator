@@ -13,7 +13,7 @@
 
 int main();
 int error();
-int ask();
+int asks(std::vector<std::string> askev);
 //print strings and return inputs as a float vector
 std::vector<float> wgetvecvars(WINDOW *scr, std::vector<std::string> ar);
 //print strings and return inputs as a float vector

@@ -8,6 +8,7 @@
 bool init = false;
 void syntheticdiv()
 {
+	//make so that i dont need to provide a zero, and it will do all the steps itself
 	//test one enter 3 for degree and then 6,41,31, and 6 for numbers, and then -6 for zero
 	clear();
 	printnccenter("What is the degree? ");
@@ -144,15 +145,20 @@ void revpythag()
 }
 
 
-
-int main()
-{	
-	if (!init)
-	{
-		initscr();
-		init = true;
-	}		
-	switch (ask())
+void geometry()
+{
+	std::vector<std::string> askev = {"quit",
+	"do the pythagorean theorem",
+	"do the inverse pythagorean theorem",
+	"do the distance formula",
+	"do the slope formula", 
+	"classify a triangle",
+	"check the circumference of a circle",
+	"check the area of a circle",
+	"preform the midpoint formula",
+	"find the area of a certan section of a circle",
+	"find the y intercept of a line"};
+	switch (asks(askev))
 	{
 		casebreak(1,pythag());
 		casebreak(2,revpythag());
@@ -164,9 +170,36 @@ int main()
 		casebreak(8,mid());
 		casebreak(9,csar());
 		casebreak(10,intercept());
-		casebreak(11,sttover());
-		casebreak(12,quadform());
-		casebreak(13,syntheticdiv());
+		default: return;
+	}
+}
+
+void algebratwo()
+{
+	std::vector<std::string> askev = {"quit",
+	"get the vertex from a standard form equasion",
+	"preform the quadratic equasion"};
+	switch (asks(askev))
+	{
+		casebreak(1,sttover());
+		casebreak(2,quadform());
+		casebreak(3,syntheticdiv());
+		default: return;
+	}
+}
+
+int main()
+{	
+	if (!init)
+	{
+		initscr();
+		init = true;
+	}	
+	std::vector<std::string>in{"quit","do Geometry","do Algebra II"};
+	switch (asks(in))
+	{
+		casebreak(1,geometry());
+		casebreak(2,algebratwo());
 		default: endwin(); return 0;
 	}
 	getch();
