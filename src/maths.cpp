@@ -70,10 +70,10 @@ double carea(float rad)
 	return M_PI*pow(rad, 2);
 }
 
-std::vector<double> midpoint(float x1,float y1,float x2,float y2)
+std::vector<double> midpoint(point one,point two)
 {
 	//returns x and y
-	std::vector<double> ans{(x1+x2)/2,(y1+y2)/2};
+	std::vector<double> ans{(one.x+two.x)/2,(one.y+two.y)/2};
 	return ans;
 }
 

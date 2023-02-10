@@ -19,7 +19,7 @@ double circ(float rad);
 
 double carea(float rad);
 
-std::vector<double> midpoint(float x1,float y1,float x2,float y2);
+std::vector<double> midpoint(point one,point two);
 
 double csaria(float radious, float angle);
 
