@@ -143,8 +143,6 @@ void revpythag()
 	printnccenter("Leg Value: %f",reversepythagorean(x[0],x[1]));
 	return;
 }
-
-
 void geometry()
 {
 	std::vector<std::string> askev = {"quit",
@@ -173,7 +171,6 @@ void geometry()
 		default: return;
 	}
 }
-
 void algebratwo()
 {
 	std::vector<std::string> askev = {"quit",
@@ -187,7 +184,6 @@ void algebratwo()
 		default: return;
 	}
 }
-
 int main()
 {	
 	if (!init)
@@ -202,7 +198,6 @@ int main()
 		casebreak(2,algebratwo());
 		default: endwin(); return 0;
 	}
-	getch();
 	clear();
 	main();	
 	return 0;
