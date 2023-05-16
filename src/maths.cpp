@@ -205,3 +205,17 @@ std::vector<exponantf> syntheticdevision(int zero, std::vector<exponantf> exin)
 	}
 	return numbers; //put the answer into the quadratic formula
 }
+
+
+
+double expgrowth(float p,float r, float n, float t, bool up)
+{
+	if (up)
+	{
+		return pow((p*(1+r/n)),n*t);
+	}
+	else
+	{
+		return pow((p*(1-r/n)),n*t);	
+	}
+}
