@@ -198,6 +198,7 @@ int main()
 		casebreak(2,algebratwo());
 		default: endwin(); return 0;
 	}
+	getch();
 	clear();
 	main();	
 	return 0;

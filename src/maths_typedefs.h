@@ -21,10 +21,6 @@ typedef struct exponantf
 {
     float coefficent;
     size_t exponant;
-    std::string display()
-    {
-        return combinetext("%gx^%f",coefficent,exponant);
-    }
 }exponantf;
 
 

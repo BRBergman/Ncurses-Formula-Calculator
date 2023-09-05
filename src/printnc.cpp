@@ -1,23 +1,25 @@
 #include "printnc.h"
 #include <stdarg.h>
-int printncrow,printnccol;
+
 
 int wprintnccenter (WINDOW *win, const char *format, ...)
 {
+	int printncrow,printnccol;
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
   	va_list args;
   	va_start (args, format);
   	int done = vsprintf (buffer,format, args);
   	va_end (args);
-	std::string in = buffer;
-	mvwprintw(win,printncrow/2,(printnccol-done)/2,"%s",in.c_str()); //print string to center of screen
+	//std::string in = buffer;
+	mvwprintw(win,printncrow/2,(printnccol-done)/2,"%s",buffer); //print string to center of screen
 	return done;
 }
 //		mvprintw(row/2-7+i, (col-strlen(askev[i])-11)/2, "Press %i to %s",i,askev[i] );
 
 int wprintnccenter (WINDOW *win, int ver, int hoz, const char *format, ...)
 {
+	int printncrow,printnccol;
 	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
   	va_list args;
@@ -31,7 +33,6 @@ int wprintnccenter (WINDOW *win, int ver, int hoz, const char *format, ...)
 
 int wprintnc (WINDOW *win, int ver, int hoz, const char *format, ...)
 {
-	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
   	va_list args;
   	va_start (args, format);
@@ -43,7 +44,6 @@ int wprintnc (WINDOW *win, int ver, int hoz, const char *format, ...)
 }
 int wprintnc (WINDOW *win, int ver, const char *format, ...)
 {
-	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
   	va_list args;
   	va_start (args, format);
@@ -56,7 +56,6 @@ int wprintnc (WINDOW *win, int ver, const char *format, ...)
 
 int wprintnc (WINDOW *win, const char *format, ...)
 {
-	getmaxyx(win,printncrow,printnccol);
    	char buffer[256];
   	va_list args;
   	va_start (args, format);
